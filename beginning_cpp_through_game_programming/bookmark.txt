@@ -1,0 +1,74 @@
+ch1:
+
+ch2:
+
+  score_rater.cpp
+    $ g++ score_rater.cpp -o score_rater
+    $ ./score_rater
+
+  score_rater2.cpp
+    $ g++ score_rater2.cpp -o score_rater2
+    $ ./score_rater2
+
+  score_rater3.cpp
+    $ g++ score_rater3.cpp -o score_rater3
+    $ ./score_rater3
+
+  menu_chooser.cpp
+    $ g++ menu_chooser.cpp -o menu_chooser
+    $ ./menu_chooser
+
+  play_again.cpp
+    $ g++ play_again.cpp -o play_again
+    $ ./play_again
+
+  play_again2.cpp
+    $ g++ play_again2.cpp -o play_again2
+    $ ./play_again2
+
+  finicky_counter.cpp
+    $ g++ finicky_counter.cpp -o finicky_counter
+    $ ./finicky_counter
+
+  designers_network.cpp
+    $ g++ designers_network.cpp -o designers_network
+    $ ./finicky_counter
+
+  die_roller.cpp
+    $ g++ die_roller.cpp -o die_roller
+    $ ./die_roller
+
+  guess_my_number.cpp
+    $ g++ guess_my_number.cpp -o guess_my_number
+    $ ./guess_my_number
+
+
+ch3:
+
+  counter.cpp
+    $ g++ counter.cpp -o counter
+    $ ./counter
+
+  string_tester.cpp
+    $ g++ string_tester.cpp -o string_tester
+    $ ./string_tester
+
+  tic-tac-toe_board.cpp
+    $ g++ tic-tac-toe_board.cpp -o tic-tac-toe_board
+    $ ./tic-tac-toe_board
+
+  heros_inventory.cpp
+    $ g++ heros_inventory.cpp -o heros_inventory
+    $ ./heros_inventory
+
+  word_jumble.cpp
+    $ g++ word_jumble.cpp -o word_jumble
+    $ ./word_jumble
+
+ch4:
+ch5:
+ch6:
+ch7:
+ch8:
+ch9:
+ch10:

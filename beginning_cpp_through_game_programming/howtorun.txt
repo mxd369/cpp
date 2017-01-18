@@ -1,0 +1,1 @@
+g++ counter.cpp -o counter
