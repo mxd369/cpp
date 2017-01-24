@@ -12,7 +12,7 @@ int main() {
 	cout << a << " squared: " << square(a) << endl; // display a squared 
 }
 
-// returns teh square of an integer
+// returns the square of an integer
 int square(int x) { // x is a local variable
 	return x * x;	// calculate a square and return result
 }
