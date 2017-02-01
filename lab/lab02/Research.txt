@@ -1,0 +1,14 @@
+/*
+Textbook & Other Resources
+Students may find the following sections of the textbook useful for this assignment:
+DEITEL 2.1-2.8
+DEITEL 4.1-4.15
+DEITEL 5.1-5.14
+Students may also find the following resources useful for this assignment:
+std::cout { http://en.cppreference.com/w/cpp/io/cout
+std::cin { http://en.cppreference.com/w/cpp/io/cin
+std::dec, std::hex, std::oct { http://en.cppreference.com/w/cpp/io/manip/hex
+std::showbase { http://en.cppreference.com/w/cpp/io/manip/showbase
+std::getline { http://en.cppreference.com/w/cpp/string/basic_string/getline
+std::stringstream { http://en.cppreference.com/w/cpp/io/basic_stringstream
+*/
