@@ -1,0 +1,311 @@
+--------------------------------------------------
+
+Self-review Exercises Ch2
+
+2.1
+
+a) main
+b) { , }
+c) ;
+d) newline
+e) if
+
+2.2
+
+a) false: comments are ignored by the compiler
+b) true
+c) true
+d) true
+e) false: variable identifiers are case sensivitive therefore number and NuMbEr are different
+f) true
+g) true
+h) false: first is ( ); second is * / %; last is + -
+i) false: can use \n to acheive separate lines of output, there can use one cout and the stream insertion operator
+
+2.3
+
+a) int c{0}, thisIsAVariable{0}, q76354{0};
+b) std::cout << "Please Enter an Integer: " << std::endl;
+c) std::cin >> age;
+d) if(number != 7) { std::cout << "The variable number is not equal to 7.\n";}
+e) std::cout << "This is a C++ program\n";
+f) std::cout << "This is a C++\nprogram\n";
+g) std::cout << "This\nis\na\nC++\nprogram\n";
+h) std::cout << "This\tis\ta\tC++\tprogram\n";
+
+2.4
+
+a)  int product = x * y * z;// calculates the product of three integers
+b)
+int x{0};
+int y{0};
+int z{0};
+int result{0};
+c) std::cout << "Enter three integers: " << std::endl;
+d) std::cin >> x >> y >> z;
+e) result = x * y * z;
+f) std::cout << "The product is "<< product <<;
+g) int main() {
+	return 0;// program terminated successfully
+}
+
+2.5
+// write a program that calculates and displays the product of three integers
+#include <iostream> //  enables program to perform input and output
+using namespace std; // program uses names from the std namespace
+// function main begins program execution
+int main(){
+	int a{0};// first integer to multiply
+	int b{0};// second integer to multiply
+	int c{0};// third integer to multiply
+	int product{0};// the product of three integers a, b, c
+	cout << "Enter three integers: " << endl;// prompt user for data
+	cin >> a >> b >> c;// read three integers from user
+	product = a * b * c;//multiply the three integers: store result
+	cout << "The product is " << product << endl;// print result: end line
+} // end main function
+
+2.6
+
+a)
+// incorrect
+if (c < 7); {
+	cout << "c is less than 7\n";
+}
+// corrected
+if (c < 7) {
+	cout << "c is less than 7\n";
+}
+
+b)
+// incorrect
+if (c => 7) {
+	cout << "c is equal to or greater than 7\n";
+}
+// correct
+if (c >= 7) {
+	cout << "c is equal to or greater than 7\n";
+}
+
+-----
+
+Exercises Ch2
+
+2.7
+a) takes in user input
+b) displays to the screen
+
+2.8
+a) comments
+b) std::cout
+c) comments
+d) arithmetic
+e) std::cin
+
+2.9
+a) std::cout << "Enter two numbers";
+b) a = b * c;
+c) // Program performs a payroll calculation
+d) std::cin >> a >> b >> c;
+
+2.10
+a) true if there are no parenthesis', following order of operations
+b) true
+c) false, there is no assigning, it is a string
+d) true
+e) true
+
+2.11
+a) / and %
+b) inner most
+c) variable
+
+2.12
+a) 2
+b) 4
+c) x=
+d) x = 2
+e) 5 = 5
+f) nothing
+g) nothing
+h) nothing
+i) blank line
+
+2.13
+a) cin >> b >> c >> d >> e >> f;
+
+2.14
+a) 
+b) 
+c) 
+d) 
+e) y = a * (x * x * x) + 7;
+f) 
+
+2.15 (Order of Operations)
+a) x = 7 + 3 * 6 / 2 - 1;
+x = 7 + 18 / 2 - 1;
+x = 7 + 9 - 1;
+x = 16 - 1;
+x = 15;
+b) x = 2 % 2 + 2 * 2 - 2 / 2;
+x = 0 + 4 - 2 / 2;
+x = 0 + 4 - 1;
+x = 4 - 1;
+x = 3;
+c) x = (3 * 9 * (3 + (9 * 3 / (3))));
+x = (3 * 9 * (3 + (27 / (3))));
+x = (3 * 9 * (3 + (9)));
+x = (3 * 9 * (12));
+x = (27 * (12));
+x = (27 * (12));
+x = 324;
+
+2.16 (Arithmetic)
+// write a program that asks the user to enter two numbers, obtain the two numbers from the user and prints the sum, product, difference, and quotient of the two numbers.
+#include <iostream>
+int main(){
+	int num1{0};
+	int num2{0};
+	int sum{0};
+	int product{0};
+	int difference{0};
+	int quotient{0};
+	std::cout << "Enter 2 numbers: " << endl;
+	std::cin >> num1 >> num2;
+	sum = num1 + num2;
+	product = num1 * num2;
+	difference = num1 - num2;
+	quotient = num1 / num2;
+	std::cout << "The sum is " << sum << std::endl;
+	std::cout << "The product is " << product << std::endl;
+	std::cout << "The difference is " << difference << std::endl;
+	std::cout << "The quotient is " << quotient << std::endl;
+	return 0;
+}
+
+2.17 (Printing)
+// Write a program that prints the numbers 1 to 4 on the same line with each pair of adjacent numbers separated by one space.
+a) Using one statement with one stream insertion operator.
+b) Using one statement with four stream insertion operators.
+c) Using four statements
+
+a)
+#include <iostream>
+int main() {
+	std::cout << "1 2 3 4" << std::endl;
+}
+
+b)
+#include <iostream>
+int main() {
+	std::cout << "1 " << "2 " << "3 " << "4" << std::endl;
+}
+
+c)
+#include <iostream>
+int main() {
+	std::cout << "1" << std::endl;
+	std::cout << "2" << std::endl;
+	std::cout << "3" << std::endl;
+	std::cout << "4" << std::endl;
+}
+
+2.18 (Comparing Integers)
+// Write a program that asks the user to enter two integers, obtains the numbers from the user, then prints the larger number followed by the words "is larger." If the numbers are equal, print the message "These numbers are equal."
+#include <iostream>
+int main() {
+	int num1{0};
+	int num2{0};
+	std::cout << "Enter two intergers: " << std::endl;
+	std::cin >> num1 >> num2;
+	if(num1 > num2){ std::cout << num1 << " is larger.\n"; } else if (num2 > num1) { std::cout << num2 << " is larger.\n"; } else if (num1 == num2) { std::cout << "These numbers are equal.";}
+}
+
+2.19 (Arthmetic, Smallest and Largest)
+// Write a program that inputs three integers from the keyboard and prints the sum, average, and largest of these numbers. The screen dialog should appear as follows:
+
+/*
+Input three different integers: 13 27 14
+Sum is 54
+Average is 18
+Product is 4914
+Smallest is 13
+Largest is 27
+*/
+
+#include <iostream>
+int main() {
+	int num1{0};
+	int num2{0};
+	int num3{0};
+	int Sum{0};
+	int Average{0};
+	int Product{0};
+	int Smallest{0};
+	int Largest{0};
+	std::cout << "Enter three integers: " << std::endl;
+	std::cin >> num1 >> num2 >> num3 >> std::endl;
+	Sum = num1 + num2 + num3;
+	Average = Sum/3;
+	Smallest = num1;
+	if(num1 > num2){ Smallest = num2;} else if (num1 > num3){ Smallest = num3;}
+	Largest = num1;
+	if(num1 < num2){ Largest = num2;} else if (num1 < num3){ Largest = num3;}
+	std::cout << "Sum is " << Sum << std::endl;
+	std::cout << "Average is " << Average << std::endl;
+	std::cout << "Product is " << Product << std::endl;
+	std::cout << "Smallest is " << Smallest << std::endl;
+	std::cout << "Largest is " << Largest << std::endl;
+}
+
+
+2.20 (Diameter, Circumference and Area of A Circle)
+
+2.21 (Displaying Shapes with Asterisks)
+
+2.22 
+
+2.23 (Largest and Smallest Integers)
+
+2.24 (Odd or Even)
+
+2.25 (Multiples)
+
+2.26 (Checkerboard Pattern)
+
+2.27 (Integer Equivalent of a Character)
+
+2.28 (Digits of an Integer)
+
+2.29 (Table)
+
+2.30 (Body Mass Index Calculator)
+
+2.31 (Car-Pool Ssvings Calculator)
+--------------------------------------------------
+
+Self-review Exercises Ch4
+
+-----
+
+Exercises Ch4
+
+--------------------------------------------------
+
+Self-review Exercises Ch5
+
+-----
+
+Exercises Ch5
+
+--------------------------------------------------
+
+Self-review Exercises Ch8
+
+-----
+
+Exercises Ch8
+
+
+--------------------------------------------------
