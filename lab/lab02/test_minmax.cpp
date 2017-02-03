@@ -1,0 +1,29 @@
+/*
+minmax.cpp:
+Let the user input a one or more integers, space separated, on a single line (as seen below), then work out and display the largest and smallest values. Remember, you do not need nor should you use an array to solve this problem.
+
+Enter integers: 1 9 3 7 5 6 4 8 2 10
+Min: 1
+Max: 10
+*/
+#include<iostream>
+using namespace std;
+
+int main()
+{
+int n,minimum = 99999, maximum = -1,i,num;
+cout<<"Enter the number you want to enter: ";
+cin>>n;
+cout<<"Enter integers: ";
+for(i=0; i<n; i++)
+{
+cin>>num;
+if(num<minimum)
+minimum = num;
+if(num>maximum)
+maximum = num;
+}
+cout<<"Minimum: "<<minimum<<endl;
+cout<<"Maximum: "<<maximum<<endl;
+return 0;
+}//end of main function
