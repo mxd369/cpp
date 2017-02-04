@@ -1,0 +1,25 @@
+/*
+greetings.cpp
+Feb 4, 2017
+michaeldang
+*/
+#include <iostream>
+using namespace std;
+int main(){
+
+	string input;
+	int number;
+	int count;
+	getliine(cin,input);
+	stringstream steam(input);
+
+	while(stream >> number){
+		// code here
+		++count;
+	}
+
+
+	cout << "Hello" << endl;
+	cout << "Count is: " << count << endl;
+	return 0;
+} // main

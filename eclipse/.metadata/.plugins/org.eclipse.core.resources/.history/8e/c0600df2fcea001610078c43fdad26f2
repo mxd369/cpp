@@ -1,0 +1,30 @@
+/*
+greetings.cpp
+Feb 4, 2017
+michaeldang
+*/
+#include <iostream>
+#include <sstream>
+using namespace std;
+int main(){
+
+	string input;
+	int count;
+	getline(cin,input);
+	int number;
+	int sum;
+	stringstream stream(input);
+
+	while(stream >> number){
+		// code here
+		sum += number;
+		++count;
+	}
+
+
+	cout << "Hello" << endl;
+	cout << "Count is: " << count << endl;
+	cout << "Sum: " << sum << endl;
+	cout << "Number: " << number << endl;
+	return 0;
+} // main

@@ -1,4 +1,17 @@
-//degree to fahrenheit
+/*
+degrees.cpp:
+
+Celsuis (degrees) -> Fahrenheit (degrees)
+
+Write a program to read a 
+floating point number representing degrees Celsius,
+and print the equivalent temperature in degrees Fahrenheit.
+Print your results in a form such that the numbers are represented up to two decimal places.
+
+Enter in a temperature in Celsius: 100
+100.00 degrees Celsius converts to 212.00 degrees Fahrenheit.
+*/
+
 #include<iostream>
 #include<iomanip>
 using namespace std;
