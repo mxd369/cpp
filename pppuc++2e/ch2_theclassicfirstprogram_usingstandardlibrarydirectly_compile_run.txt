@@ -1,0 +1,6 @@
+$ g++ -std=c++14 -c ch2_theclassicfirstprogram_usingstandardlibrarydirectly.cpp
+$ g++ -o ch2_theclassicfirstprogram_usingstandardlibrarydirectly ch2_theclassicfirstprogram_usingstandardlibrarydirectly.o
+$ ./ch2_theclassicfirstprogram_usingstandardlibrarydirectly
+Hello, World!
+
+1

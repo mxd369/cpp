@@ -1,0 +1,258 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED8C932D1C7BAC4F00C2F12F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED8C932C1C7BAC4F00C2F12F /* main.cpp */; };
+		ED8C93341C7BAC7400C2F12F /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8C93331C7BAC7400C2F12F /* SDL2.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ED8C93271C7BAC4F00C2F12F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		ED8C93291C7BAC4F00C2F12F /* SDL_tutorial2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SDL_tutorial2; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED8C932C1C7BAC4F00C2F12F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		ED8C93331C7BAC7400C2F12F /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		ED8C93371C7BBE7100C2F12F /* epyon.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = epyon.bmp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED8C93261C7BAC4F00C2F12F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED8C93341C7BAC7400C2F12F /* SDL2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED8C93201C7BAC4F00C2F12F = {
+			isa = PBXGroup;
+			children = (
+				ED8C93331C7BAC7400C2F12F /* SDL2.framework */,
+				ED8C932B1C7BAC4F00C2F12F /* SDL_tutorial2 */,
+				ED8C932A1C7BAC4F00C2F12F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED8C932A1C7BAC4F00C2F12F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED8C93291C7BAC4F00C2F12F /* SDL_tutorial2 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED8C932B1C7BAC4F00C2F12F /* SDL_tutorial2 */ = {
+			isa = PBXGroup;
+			children = (
+				ED8C932C1C7BAC4F00C2F12F /* main.cpp */,
+				ED8C93371C7BBE7100C2F12F /* epyon.bmp */,
+			);
+			path = SDL_tutorial2;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED8C93281C7BAC4F00C2F12F /* SDL_tutorial2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED8C93301C7BAC4F00C2F12F /* Build configuration list for PBXNativeTarget "SDL_tutorial2" */;
+			buildPhases = (
+				ED8C93251C7BAC4F00C2F12F /* Sources */,
+				ED8C93261C7BAC4F00C2F12F /* Frameworks */,
+				ED8C93271C7BAC4F00C2F12F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SDL_tutorial2;
+			productName = SDL_tutorial2;
+			productReference = ED8C93291C7BAC4F00C2F12F /* SDL_tutorial2 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED8C93211C7BAC4F00C2F12F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = MXD;
+				TargetAttributes = {
+					ED8C93281C7BAC4F00C2F12F = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = ED8C93241C7BAC4F00C2F12F /* Build configuration list for PBXProject "SDL_tutorial2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ED8C93201C7BAC4F00C2F12F;
+			productRefGroup = ED8C932A1C7BAC4F00C2F12F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED8C93281C7BAC4F00C2F12F /* SDL_tutorial2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED8C93251C7BAC4F00C2F12F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED8C932D1C7BAC4F00C2F12F /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		ED8C932E1C7BAC4F00C2F12F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		ED8C932F1C7BAC4F00C2F12F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		ED8C93311C7BAC4F00C2F12F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ED8C93321C7BAC4F00C2F12F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED8C93241C7BAC4F00C2F12F /* Build configuration list for PBXProject "SDL_tutorial2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED8C932E1C7BAC4F00C2F12F /* Debug */,
+				ED8C932F1C7BAC4F00C2F12F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED8C93301C7BAC4F00C2F12F /* Build configuration list for PBXNativeTarget "SDL_tutorial2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED8C93311C7BAC4F00C2F12F /* Debug */,
+				ED8C93321C7BAC4F00C2F12F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED8C93211C7BAC4F00C2F12F /* Project object */;
+}

@@ -1,0 +1,1 @@
+Exercise 19: read and write (name,value) pairs

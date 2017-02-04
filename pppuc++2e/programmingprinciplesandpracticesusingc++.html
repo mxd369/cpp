@@ -1,0 +1,2232 @@
+<!doctype html>
+<body>
+
+<style>
+body {
+	padding-left: 8px;
+	padding-right: 8px;
+}
+pre {
+	white-space: pre-wrap;       /* css-3 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+	padding-left: 5px;
+	padding-right: 5px;
+}
+</style>	
+
+<h4>C++</h4>
+<p><a href="cplusplus.html">Branch1</a></p>
+<p>C++ Programming Principles and Practice</p>
+<p>How to develop software</p>
+<p>Well-designed code: correct, reliable and maintainable system</p>
+<p>software construction and maimenance (if your aim is to become a programmer
+or a software engineer)</p>
+<p>Consider programming itself a form of problem solving: only through complete understanding of a problem and its solution can you express a correct program for it, and only through constructing and testing a program can you be certain that your understanding is complete.</p>
+<p>A crucial tool for making a positive contribution to the world.</p>
+<p>teaching philosophy and general approach, have a look at Chapter 0 (,'Notes to the Reader") .</p>
+<p>Traditional Computer Science 101 Turing completeness, state machine PREFACE chines, discrete math, Chomsky grammars, etc.).</p>
+<p>Turing completeness, state machines, discrete math, Chomsky grammars, etc.).</p>
+<pre>
+http://www.stroustrup.com/Programming/
+</pre>
+<p>The basics</p>
+<p>Input and output</p>
+<p>Data and Algorithms</p>
+<p>Broadening the View</p>
+<h4>Take part in a project that is a complete and useful program</h4>
+<h4>Read A professional-level general textbook (Stroustrup: The C++ Programming Language)</h4>
+<pre>Philosophy of teaching and learning
+* Program organization
+* Debugging and testing
+* Class design
+* Computation
+* Function and algorithm design
+* Graphics (two-dimensional only)
+* Graphical user interface (GUIs)
+* Text manipulation
+* Regular expression matching
+* File and stream input and output(I/O)
+* Memory management
+* Scientific/numerical/engineering calculations
+* Design and programming ideals
+* The C++ standard library
+* Software development strategies
+* C-Language programming techniques
+</pre>
+<p>Programming: The ideals, techniques, and tools of expressing ideas in code</p>
+<hr>
+<p>Portibility</p>
+<pre>compile, link, and execute a simple program consisting of two source files:
+my_file.cpp
+my_file.cpp
+using the GNU C++ compiler(g++) on a Unix or Linux machine
+
+g++ -o my_program my_file.cpp my_file.cpp
+my_program
+</pre>
+
+<p>Applications of C++ www.research.att/~bs/applications.html</p>
+<p>Analysis: Whats the problem? What does the user want? What does the user need? What can the user afford? What kind of reliability do we need?</p>
+<p>Design: How do we solve the problem? What should be the overall structure of the system? Which parts does it consist of? How do those parts communicate with each other? How does the system communicate with its users?</p>
+<p>Programming: Express the solution to the problem (the design) in code. Write the code in a way that meets all constraints (time, space, money, reliability, and so on). Mkae sure that the code is correct and maintianable</p>
+<p>Testing: Make sure the system works correctly under all circumstances required by systematically trying it out</p>
+
+<br>
+<hr>
+<br>
+
+<h3>Part 1 The Basics</h3>
+<h4>Chapter 2 Hello, World</h4>
+<h4>"Programming is learned by writing programs."- Brian Kernighan</h4>
+<pre>$ vi helloworld.cpp
+//
+// This is a standard library support code to the chapters of the book
+// "Programming -- Principles and Practice Using C++" by Bjarne Stroustrup
+//
+
+//#ifndef STD_LIB_FACILITIES_GUARD
+//#define STD_LIB_FACILITIES_GUARD 1
+
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+	cout&lt;&lt;"Hello, World!\n"; // output Hello World!
+	return 0;
+}
+
+/*	
+$ g++ helloworld.cpp
+$ ./a.out
+Hello, World!	
+*/	
+</pre>
+
+<p>hello_world.cpp</p>
+<pre>#include &lt;iostream &gt;
+#include &lt;string &gt;
+#include &lt;vector &gt;
+#include &lt;algorithm &gt;
+#include &lt;cmath &gt;
+using namespace std;
+inline void keep_window_open() { char ch; cin &gt; &gt;ch; }
+int main()
+{
+    cout &lt; &lt;"Hello,World!\n";  // output "Hello, World!"
+    keep_window_open();      // wait for a character to be entered
+    return 0;
+}
+</pre>
+<p>build and run hello_world.cpp</p>
+<pre>$ g++ hello_world.cpp
+$ ./a.out
+Hello,World!
+^C
+</pre>
+<p>Review</p>
+<pre>1. What is the purpose of the "Hello, World!" Program?
+2. Name the four parts of a function.
+3. Name a function that must appear in every C++ program
+4. In the "Hello, World" program, what is the purpose of the line return 0;?
+5. What is the purpose of the compiler?
+6. What is the purpose of the #include directive?
+7. What does a .h suffix at the end of a file signify in C++?
+8. What does the linker do for your program?
+9. What is the difference between a source file and an object file?
+10. What is an IDE and what does it do for you?
+11. If you understand everything in the textbook, why is it necessary to
+practice?
+
+1. To understand out to output a string and the minimal basics of a C++ program
+2. four parts:
+return type,
+name,
+parameter list,
+function body.
+3. main 
+4. return value, to indicate that the program terminated successfully
+5. translates source code to an executable(aka object code or machine code)
+6. To make available ("To include facilities from a file")
+7. .h is called a header or a header file. A header contains definition of terms, such as cout
+8. links together the separate parts to form an executable program
+9. object file can be read by the machine and the source file can be read by the programmer
+10. will compile and link in a simplistic way versus issuing the compile and link commands manually in the command line window
+11. reinforce terminology, design and development patterns, increase knowledge, improve skills by following exercises.
+</pre>
+<p>Terms</p>
+<pre>//
+  myguess: a single line comment
+  solution: one ine comment
+&lt;&lt;
+  myguess: code that goes out
+  solution: output operator
+C++
+  myguess: a programming language with classes, strict, oo
+  solution: a programming language
+comment
+  myguess: helps a programmer understand sections of code or purpose of code
+  solution: comments are ignored by the compiler and written fro the benefit of programmers
+compiler
+  myguess: tool used to make source code readerable to the computer
+  solution: translater
+compile-time error
+  myguess: will not compile due to error in compilation
+  solution: errors found by the compiler
+executable
+  myguess: file that can be understood by the computer
+  solution: what the computer executes (object code/machine code)
+function
+  myguess: code that keeps simplifies code 
+  solution: a named sequence of instructions for the computer to execute 
+header
+  myguess: the link to other files
+  solution: a file included using #include directive has the suffix .h
+IDE
+  myguess: integrated development environment used for programmer
+  solution: simplifies programmer into a programming environment
+#include
+  myguess: include is the link to other files
+  solution: #innclude directive, instructs computer to make available
+library
+  myguess: prewritten code for various uses
+  solution: some code, usually written by others, that we access using declarations
+linker
+  myguess: connects together code meant to run together
+  solution: program that links(several)separate parts
+main()
+  myguess: the main function
+  solution: tells where to start executing, a named sequence of instructions
+object code
+  myguess: also known as executable code
+  solution: source code the compiler translates into object code then links to an executable
+output
+  myguess: code that is the result of outputting
+  solution: output operator cout, the output stream
+program
+  myguess: a file meant for a task
+  solution: a description of what to do
+source code
+  myguess: code the programmer understands
+  solution: what the programmer reads and writes(program text)
+statement
+  myguess: a line of code
+  solution: the actions that the function is to perform
+delimiter
+  myguess: string literals are delimited by double quotes
+  solution: use quotes to delimit the string
+</pre>
+<p>Exercises</p>
+<pre>1. Change the program to output the two lines
+Hello, programming!
+Here we go!</pre>
+<pre>// hello_world2.cpp
+#include &lt;iostream &gt;
+#include &lt;string &gt;
+#include &lt;vector &gt;
+#include &lt;algorithm &gt;
+#include &lt;cmath &gt;
+using namespace std;
+inline void keep_window_open() { char ch; cin &gt; &gt;ch; }
+int main()
+{
+    cout&lt;&lt;"Hello, programming!\n"&lt;&lt;endl;
+	cout&lt;&lt;"Here we go!\n"&lt;&lt;endl;
+    return 0;
+}
+
+$ ./a.out
+Hello, programming!
+
+Here we go!
+</pre>
+<pre>2. Expanding on what you have learned, write a program that lists the instructions for a computer to find the upstairs bathroom, discussed in §2. 1. Can you think of any more steps that a person would assume, but that a computer would not? Add them to your list. This is a good start in "thinking like a computer." Warning: For most people, "go to the bathroom" is a perfectly adequate instruction. For someone with no experience with houses or bathrooms (imagine a stone-age person, somehow transported into your dining room) the list of necessary instructions could be very long. Plcase don't use more than a page. For the benefit of
+the reader, you may add a short description of the layout of thc house you are imagining.</pre>
+<pre>myprogram: 
+</pre>
+<pre>3. Write a description of how to get from the from door of your dorm room, apartment, house, whatever, to the door of your classroom (assuming you are attending some school; if you are not, pick another target). Have a friend try to follow the instructions and annotate them with improvements as he or she goes along. To keep friends, it may be a good idea to
+"field lest" those instructions before giving them to a friend .</pre>
+<pre>myprogram:
+</pre>
+<pre>4. Find a good cookbook. Read the instmctions for baking blueberry muffins (if you are in a country where "blueberry muffins" is a strange, exotic dish, usc a more familiar dish instead). Please note that with a bit of help and instruction, most of the people in the world can bake delicious blueberry muffins. It is not considered advanced or difficuh fine cooking. However, for the author, few exercises in this book arc as difficult as this one. It is amazing what you can do with a bit of practice.
+
+* Rewrite those instmctions so that each individual action is in its own numbered paragraph. Be careful to list all ingredients and aU kitchen utensils used at each step. Be careful about crucial details, such as the desired oven temperature, preheating the oven, the preparation of the baking sheet, the way to time the cooking, and the need to protect your hands when removing the muffins from the oven.
+
+* Consider those instructions from the point of view of a cooking
+novice (if you are not one, get help from a friend who does not know
+how to cook). Fill in the steps that the book's author (almost certainly an experienced cook) left out for being obvious.
+
+* Build a glossary of terms used. (what's a muffin pan? What does
+preheat do? What do you mean by "oven"?)
+
+* Now bake some muffins and enjoy your results.</pre>
+<pre>myprogram:
+</pre>
+<pre>5. Write a definition for each of the terms from "Terms." First try to see if you
+can do it without looking at the chapter (not likely), then look through the
+chapter to ftnd definitions. You might find the difference between your first
+attempt and the book's version interesting. You might consult some suitable
+online glossary, such as www.research.att.com/~bs/glossary.html. By
+writing your own definition before looking it up, you reinforce the learning
+you achieved through your reading. If you have to reread a section to form
+a definition, that just helps you to understand. Feel free to use your own
+words for the definitions, and make the definitions as detailed as you think
+reasonable. Often, an example after the main in definition will be helpful. You
+may like to store the definitions in a file so them you can add to them from
+the "Terms" sections of later chapters.</pre>
+<pre>myprogram:
+</pre>
+<p>Postscript: Get acquainted with the basic tools of programming. first learn the basics of our tool with a trivial program, later learn about more complicated programs without being distracted by our tools. Learning the tools and the language simultaneously is far harder than doing first one and then the other. This simplifying approach to learning a complex task by breaking it into a series of small and more manageable steps is useful</p>
+
+<br>
+<hr>
+<br>
+
+<h3>Chatper 3: Objects, Types, and Values</h3>
+<h4>"Fortune favors the prepared mind." - Louis Pasteur</h4>
+<pre>fundamental notions of objects, types, values, and variables
+introduce several operators:
+char
+int
+double
+string
+
+key points:
+Input
+Variables
+Input and type
+Operations and operators
+Assignment and initlaization
+Composite assignment operators
+  An example: count repeated words
+Names
+Types and objects
+Type safety
+  Safe conversions
+  Unsafe conversions
+</pre>
+
+<p>Reading input: real programs produce results based on some input we give them (inputs from user)</p>
+<p>Object a place (somewhere in the computers memory to place what we read)</p>
+<p>Object is a region of memory with a type that specifies what kind of information can be placed in it</p>
+<p>A named object is called a variable</p>
+<p>Example: character strings are put into string variables and integers are out into int variables</p>
+<p>Example: object of type int named age containing the integer value 42</p>
+<pre>// name.cpp
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+using namespace std;
+
+int main()
+{
+    cout&lt;&lt;"Please enter your first name(followed by 'enter'):\n";
+	string first_name;
+	cin&gt;&gt;first_name;
+	cout&lt;&lt;"Hello, "&lt;&lt;first_name&lt;&lt;"!\n";
+}
+
+/*
+$ g++ name.cpp
+$ ./a.out
+Please enter your first name(followed by 'enter'):
+Michael
+Hello, Michael!
+*/
+</pre>
+<p>Prompt: a message that prompts the user to take an action</p>
+<p>Reading input from the keyboard into the variable(store the input into the variable)</p>
+<p>A statement that introduces a new name into a program and sets aside memory for a variable is called a definition</p>
+<pre>cin &lt;&lt;first_name; // read characters into a name</pre>
+<p>Repetition provides opportunity for errors</p>
+<p>Variables</p>
+<p>The "places" in which we store data are called objects.</p>
+<p>A named object is called a variabl and has a specific type (such as int or string)</p>
+<p>A statement that defines a variable is called a definition, and a definition can and usually should provide an initial value.</p>
+<pre>
+string name = "Annemarie";
+int number_of_steps = 39;
+
+name: string: Annemarie
+
+number_of_steps: int: 39
+
+error:
+//cannot put values of the wrong type into a variable:
+string name2 = 39;                 //error: 39 isn't a string
+int number_of_steps = "Annemarie"; //error: "Anniemarie" is not an int
+
+here are 5 types:
+1) int for integers
+2) double for floating-point numbers (double percision floating point)
+3) char for individual characters
+4) string for character strings
+5) bool for logical variables
+
+1) 39           // int: an integer
+2) 3.5          // double: a floating-point number
+3) '.'          // char: an individual character enclosed in single quotes
+4) "Annemarie"  // string: a sequence of characters delimited by double quotes
+5) true         // bool: true or false
+</pre>
+<pre>// read name and age
+int main()
+{
+    cout&lt;&lt;"Please enter your first name and age\n";
+	string first_name;
+	int age;
+	cin &lt;&lt; first_name;
+	cin &gt;&gt; age;
+	cout&lt;&lt;"Hello, "&lt;&lt;first_name&lt;&lt;"(age"&lt;&lt;age&lt;&lt;")\n";
+}
+
+/*
+Hello, John (age 55)
+*/
+</pre>
+<p>character literal '\n' | string literals "Hello,"</p>
+<pre>int main()
+{
+    cout&lt;&lt;"Please enter your first and second names\n";
+	string first;
+	string second;
+	cin &gt;&gt;first&gt;&gt; //read two strings
+	cout &lt;&lt;"Hello,"&lt;&lt;first&lt;&lt;''&lt;&lt;second&lt;&lt;'\n';
+}
+</pre>
+<p><b>Try This</b></p>
+<p>Get the "name and age" example to run. Then, modify it to write out the age
+in months: read the input in years and multiply (using the * operator) by 12.
+Read the age into a double to allow for children who can be very proud of
+being 5.5 years old rather than just 5.</p>
+<p>Try This</p>
+<pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+using namespace std;
+
+int main()
+{
+	cout&lt;&lt;"Please enter your first name and age\n";
+	string first_name;
+	double age;
+	cin>>first_name;
+	cin>>age;
+	cin&gt;&gt;first_name;
+	cin&gt;&gt;age;
+	cout&lt;&lt;"Hello, "&lt;&lt;first_name&lt;&lt;" (age in months "&lt;&lt;(age*12)&lt;&lt;")\n";
+}
+/*
+1)
+Get the "name and age" example to run.
+  Test: Pass
+
+2)
+Then, modify it to write out the age in months:
+read the input in years and multiply (using the * operator) by 12.
+  Test: Pass
+
+3)
+Read the age into a double to allow for children who can be very
+proud of being 5.5 years old rather than just 5
+  Test: Pass
+*/
+</pre>
+<p>3.4 Operations and operators</p>
+<p>Simple program to exercise operators</p>
+<pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+using namespace std;
+
+int main()
+{
+	cout&lt;&lt;"Please enter a floating-point value: ";
+	double n;
+	cin&gt;&gt;n;
+	cout&lt;&lt;"n=="&lt;&lt;n
+		&lt;&lt;"\nn+1=="&lt;&lt;n+1
+		&lt;&lt;"\nthree times n =="&lt;&lt;3*n
+		&lt;&lt;"\ntwice n =="&lt;&lt;n+n
+		&lt;&lt;"\nn squared =="&lt;&lt;n*n
+		&lt;&lt;"\nhalf of n =="&lt;&lt;n/2
+		&lt;&lt;"\nsquare root of n =="&lt;&lt;sqrt(n)
+		&lt;&lt;endl;  // another name for newline ("end of line")
+}
+</pre>
+<p>build and run simpleprogramtoexerciseoperators.cpp</p>
+<pre>$ g++ simpleprogramtoexerciseoperators.cpp
+$ ./a.out
+Please enter a floating-point value: 12.12
+n==12.12
+n+1==13.12
+three times n ==36.36
+twice n ==24.24
+n squared ==146.894
+half of n ==6.06
+square root of n ==3.48138
+</pre>
+<p><b>Try this</b></p>
+<pre>Get this little program to run. Then, modify it to read an int rather than a
+double. Note that sqrt() is not defined for an int so assign n to a double and
+take sqrt() of that. Also, "exercise" some other operations. Note that for ints /
+is integer division and % is remainder (modulo), so that 512 is 2 (and not 2.5
+or 3) and 5%2 is 1. The definitions of integer *,/, and % guarantee that for
+two positive ints a and b we have a/b • b + a%b == a
+</pre>
+<p>simpleprogramtoexerciseoperatorsmodified.cpp</p>
+<pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+using namespace std;
+
+int main()
+{
+	cout&lt;&lt;"Please enter a floating-point value: ";
+	double n;
+	cin&gt;&gt;n;
+	cout&lt;&lt;"n=="&lt;&lt;n
+		&lt;&lt;"\nn+1=="&lt;&lt;n+1
+		&lt;&lt;"\nthree times n =="&lt;&lt;3*n
+		&lt;&lt;"\ntwice n =="&lt;&lt;n+n
+		&lt;&lt;"\nn squared =="&lt;&lt;n*n
+		&lt;&lt;"\nhalf of n =="&lt;&lt;n/2
+		&lt;&lt;"\nsquare root of n =="&lt;&lt;sqrt(n)
+		&lt;&lt;endl;  // another name for newline ("end of line")
+}
+</pre>
+<p>Build and run simpleprogramtoexerciseoperatorsmodified.cpp</p>
+<pre>$ g++ simpleprogramtoexerciseoperatorsmodified.cpp
+$ ./a.out
+Please enter a floating-point value: 12.12
+n==12
+n+1==13
+three times n ==36
+twice n ==24
+n squared ==144
+half of n ==6
+square root of n ==3.4641
+</pre>
+<p>read and compare names read and comparenames.cpp</p>
+<pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+using namespace std;
+
+int main()
+{
+    cout&lt;&lt;"Please enter two names\n";
+	string first;
+	string second;
+	cin&gt;&gt;first&gt;&gt;second;
+	if(first==second)cout&lt;&lt;"that's the same name twice\n";
+	if(first &lt; second)
+		cout&lt;&lt;first&lt;&lt;" is alphabetically before "&lt;&lt;second&lt;&lt;'\n';
+	if(first &gt; second)
+		cout&lt;&lt;first&lt;&lt;" is aphabetically after "&lt;&lt;second&lt;&lt;'\n';	
+}
+</pre>
+<pre>$ g++ readandcomparenames.cpp
+$ ./a.out
+Please enter two names
+Billy  
+Bob
+Billy is alphabetically before Bob
+</pre>
+<p>3.5 Assignment and initialization</p>
+<pre>
+int a = 3; // a gets the value 3
+           // solution: a starts out with the value 3
+a = 4;     // a becomes 4
+           // solution: a gets the value 4("becomes 4") 
+int b = a; // b = a(a is 4)
+           // solution: b starts out with a copy of a's value
+b = a + 5; // 4 = 4 + 5 (b now equals 9)
+           // solution: b gets the value a+5(this,9)
+a = a + 7  // 4 = 4 + 7 (a: 11)
+           // a gets the value a+7 (that is, 11)
+a = a + 7
+1) first, get the value of a; thats the integer 4
+2) next, add 7 to that 4, yielding the integer 11
+3) finally, oyt that 11 into a
+</pre>
+<p>Delete repeated words deleterepeatedwords.cpp</p>
+<pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+using namespace std;
+
+int main()
+{
+    string previous = " "; // previous word; initialized to "not a word"
+	string current;        // current word
+	while(cin&gt;&gt;current) {  // read a stream of words
+		if(previous==current) // check if the word is the same as last
+			cout&lt;&lt;"repeated word:"&lt;&lt;current&lt;&lt;'\n';
+		previous = current;
+	}
+}
+</pre>
+<p>build and run deleterepeatedwords.cpp</p>
+<p><b>Try this</b></p>
+<p>Use the input "The cat cat jumped"</p>
+<pre>$ g++ deleterepeatedwords.cpp
+$ ./a.out
+The cat cat jumped
+repeated word:cat
+ctrl+d
+$ 
+</pre>
+<p><b>Try this</b></p>
+<p>test deleterepeatedwords.cpp with "She she laughed He He He because what he did did not look very very good good"</p>
+<pre>$ ./a.out
+She she laughed He He He because what he did did not look very very good good
+repeated word:He
+repeated word:He
+repeated word:did
+repeated word:very
+repeated word:good
+$
+</pre>
+<p>How many repeated words were there? 4</p>
+<p>Why? capital case doesn't match</p>
+<p>What is the definition of word used here? matching string</p>
+<p>What is the definition of repeated word? must match including case</p>
+<p><b>3.6 Composite assignment operators</b></p>
+<p>incrementing a variable has a special syntax provided for it</p>
+<pre>  ++counter
+means:
+  counter = counter + 1
+
+a += 7; //means a=a+7
+b -= 9; //means b=b-9
+c *= 2; //means c=c*2
+</pre>
+<p>countrepeatedwords.cpp</p>
+<pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+using namespace std;
+
+int main()
+{
+	int number_of_words = 0;
+	string previous = " "; // not a word
+	string current;
+	while(cin&gt;&gt;current) {
+		++number_of_words; // increase word count
+		if (previous==current)
+			cout&lt;&lt;"word number "&lt;&lt;number_of_words
+				&lt;&lt;" repeated: "&lt;&lt;current&lt;&lt;'\n';
+		previous = current;
+	}
+}
+</pre>
+<p>build and run countrepeatedwords.cpp</p>
+<pre>$ g++ countrepeatedwords.cpp
+$ ./a.out
+She sells sea shells by the sea shore by selling sea shells she makes a living in a place where selling sea shells is a hyper competitive business
+
+$ ./a.out
+she she went went why why did did he I don't
+word number 2 repeated: she
+word number 4 repeated: went
+word number 6 repeated: why
+word number 8 repeated: did
+</pre>
+<p>The first input did not work because the first two words did not repeat and the program did not account for it. Also not that the program looks similar to the previous program and it is efficient to use code that was already written with only modifications</p>
+<p><b>3.7 Names</b></p>
+<p>in C++, a name starts with a letter and contains only letters, digits, and underscores</p>
+<p><b>Try this</b></p>
+<pre>Compile the "Goodbye, cruel world!" program and examine the error messages.
+Did the compiler find all the errors? What did it suggest as the problems?
+Did the compiler get confused and diagnose more than four errors?
+Remove the errors one by one, Starting with the lexically first, and see how
+the error messages change (and improve).</pre>
+<p>goodbyecruelworld.cpp</p>
+<pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+using namespace std;
+
+int main()
+{
+	String s = "Goodbye, cruel world!";
+	cOut&lt;&lt;S&lt;&lt;'\n';
+}
+</pre>
+<p>build and run goodbyecruelworld.cpp</p>
+<pre>$ g++ goodbyecruelworld.cpp
+goodbyecruelworld.cpp:10:2: error: unknown type name 'String'; did you mean 'string'?
+        String s = "Goodbye, cruel world!";
+        ^~~~~~
+        string
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iosfwd:194:65: note: 
+      'string' declared here
+typedef basic_string&lt;char, char_traits&lt;char&gt;, allocator&lt;char&gt; &gt; string;
+                                                                ^
+goodbyecruelworld.cpp:11:2: error: use of undeclared identifier 'cOut'; did you mean 'cout'?
+        cOut&lt;&lt;S&lt;&lt;'\n';
+        ^~~~
+        cout
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iostream:50:33: note: 
+      'cout' declared here
+extern _LIBCPP_FUNC_VIS ostream cout;
+                                ^
+goodbyecruelworld.cpp:11:8: error: use of undeclared identifier 'S'
+        cOut&lt;&lt;S&lt;&lt;'\n';
+              ^
+3 errors generated.
+</pre>
+<pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+using namespace std;
+
+int main()
+{
+	string s = "Goodbye, cruel world!";
+	cout&lt;&lt;s&lt;&lt;'\n';
+}
+</pre>
+<p>build and run goodbyecruelworld.cpp</p>
+<pre>
+$ g++ goodbyecruelworld.cpp
+$ ./a.out
+Goodbye, cruel world!</pre>
+<p><b>3.8 Types and objects</b></p>
+<pre>A type defines a set of possible values and a set of operations(for an object).
+An object is some memory that holds a value of a given type.
+A value is a set of bits in memory that holds a value of a given type.
+A variable is a named object.
+A declaration is a statement that gives a name to an object.
+A definition is a declaration that sets aside memory for an object.
+</pre>
+<p><b>3.9 Type safety</b></p>
+<p>Always initialize your variables. We can avoid type safety violations through a combination of good coding practice and run-time checks</p>
+<p><b>3.9.1 Safe conversions</b></p>
+<pre>bool to char
+bool to int
+bool to double
+char to int
+char to double
+int to double
+</pre>
+<p><b>3.9.1 Unsafe conversions</b></p>
+<p>unsafeconversion.cpp</p>
+<p><b>build and run unsafeconversion.cpp</b></p>
+<pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+using namespace std;
+
+int main()
+{
+	double d = 0;
+	while (cin&gt;&gt;d) {    // repeat the statement below
+		                // as long as we type in numbers
+		int i = d;      // try to squeeze a double into an int
+		char c = i;     // try to squeeze an int into a char
+		int i2 = c;     // get the integer value of a character
+		cout&lt;&lt;"d=="&lt;&lt;d            // the original double
+			&lt;&lt;"i=="&lt;&lt;i            // converted to int
+			&lt;&lt;"i2=="&lt;&lt;i2          // int value of char
+			&lt;&lt;"char("&lt;&lt;c&lt;&lt;")\n";  // the char
+	}
+}
+</pre>
+<p><b>Try This</b></p>
+<pre>Run this program with a variety of inputs. Try small values (e.g., 2 and 3);
+try large values Oarger than 127, larger than 1000); try negative values; try
+56; try 89; try 128; try non·integer values (e.g., 56.9 and 56.2). In addition to
+showing how conversions from double to int and conversions from int to
+char are done on your machine, this program shows you what character (if
+any) your machine will print for a given integer value.
+</pre>
+<pre>$ g++ unsafeconversion.cpp
+$ ./a.out
+2
+d==2i==2i2==2char()
+3
+d==3i==3i2==3char()
+128
+d==128i==128i2==-128char(?)
+1001
+d==1001i==1001i2==-23char(?)
+-10
+d==-10i==-10i2==-10char(?)
+56
+d==56i==56i2==56char(8)
+89
+d==89i==89i2==89char(Y)
+128
+d==128i==128i2==-128char(?)
+56.9
+d==56.9i==56i2==56char(8)
+56.2
+d==56.2i==56i2==56char(8)
+8888
+d==8888i==8888i2==-72char(?)
+12801280130923013
+d==1.28013e+16i==-2147483648i2==0char()
+</pre>
+<p><b>Drill</b></p>
+<pre>After each step of this drill, run your program to make sure it is really doing what you expect it to. Keep a list or what mistakes you make so you can try to avoid those in the future.
+
+1. This drill is to write a program that produces a simple form letter based on user input. Begin by typing the code from §3.1 prompting a user to enter his or her first name and writing "Hello, first_name" where first_name is the name entered by the user. Then modify your code as follows: change the prompt to "Enter the name or the person you want to write to" and change the output to "Dear first_name,". Don't forget the comma.
+
+simpleformletter.cpp
+#include iostream
+#include string
+#include vector
+#include algorithm
+#include cmath
+using namespace std;
+int main()
+{
+    cout&lt;&lt;"please enter your first name to be address in a letter\n";
+	string first_name;
+	cin&gt;&gt;first_name;
+	cout&lt;&lt;"Dear, "&lt;&lt;first_name&lt;&lt;'\n';
+}
+
+2. Add an introductory line or two, like "How are you? I am fine. I miss you." Be sure to indent the first line. Add a few more lines of your choosing - it's your letter.
+
+simpleformletter.cpp
+#include iostream
+#include string
+#include vector
+#include algorithm
+#include cmath
+using namespace std;
+int main()
+{
+    cout&lt;&lt;"please enter your first name followed by (enter)\n";
+	string first_name;
+	cin&gt;&gt;first_name;
+	cout&lt;&lt;"Dear, "&lt;&lt;first_name&lt;&lt;'\n';
+	cout&lt;&lt;"    How are you? I am fine. I miss you "&lt;&lt;first_name+"."&lt;&lt;'\n';
+}
+
+3. Now prompt the user for the name or another friend, and store it in friend_name. Add a line to your letter: "Have you seen friend_name lately?"
+
+simpleformletter.cpp
+#include iostream
+#include string
+#include vector
+#include algorithm
+#include cmath
+using namespace std;
+int main()
+{
+    cout&lt;&lt;"Please enter your first name followed by (enter)\n";
+	string first_name;
+	cin&gt;&gt;first_name;
+	cout&lt;&lt;"Dear, "&lt;&lt;first_name&lt;&lt;'\n';
+	cout&lt;&lt;"    How are you? I am fine. I miss you "&lt;&lt;first_name+"."&lt;&lt;'\n';
+	cout&lt;&lt;"Please enter the name of our friend followed by (enter)\n";
+	string friend_name;
+	cin>>friend_name;
+	cout&lt;&lt;"Have you seen "&lt;&lt;friend_name&lt;&lt;" lately?\n";
+}
+
+4. Declare a char variable called friend_sex and initialize its value to O. Prompt the user to enter an m if the friend is male and an f if the friend is female. Assign the value entered to the variable friend_sex. Then use two if-statements to write the following: If the friend is male, write "If you see friend_name please ask him to call me." If the friend is female, write "If you see friend_name please ask her to call me."
+
+simpleformletter.cpp
+#include iostream
+#include string
+#include vector
+#include algorithm
+#include cmath
+using namespace std;
+int main()
+{
+    cout&lt;&lt;"Please enter your first name to be addressed in a formal letter followed by (enter)\n";
+	string first_name;
+	cin&gt;&gt;first_name;
+	cout&lt;&lt;"Dear, "&lt;&lt;first_name&lt;&lt;'\n';
+	cout&lt;&lt;"    How are you? I am fine. I miss you "&lt;&lt;first_name+"."&lt;&lt;'\n';
+	cout&lt;&lt;"Please enter the name of our friend followed by (enter)\n";
+	string friend_name;
+	cin>>friend_name;
+	cout&lt;&lt;"Have you seen "&lt;&lt;friend_name&lt;&lt;" lately?\n";
+	char friend_sex = 0;
+	cout&lt;&lt;"Please enter an m if "&lt;&lt;friend_name&lt;&lt;" is a male and an f if "&lt;&lt;friend_name&lt;&lt;" a female\n";
+	cin>>friend_sex;
+	if(friend_sex == 'm')
+	{
+		cout&lt;&lt;"If you see "&lt;&lt;friend_name&lt;&lt;" please as him to call me\n";
+	}
+	else if (friend_sex == 'f')
+	{
+		cout&lt;&lt;"If you see "&lt;&lt;friend_name&lt;&lt;" please as her to call me\n";
+	}
+	
+}
+
+5. Prompt the user to enter the age of the recipient and assign it to an int variable age. Have your program write "I hear you just had a birthday
+and you are age years old." If age is 0 or less or 110 or more, call
+error("you're kidding!").
+6. Add this to your letter:
+If your friend is under 12, write "Next year you will be age+1."
+If your friend is 17, write "Next year you will be able to vote."
+If your friend is over 70, write "I hope you are enjoying retirement."
+Check your program to make sure it responds appropriately to each kind
+of value.
+7. Add "Yours sincerely," followed by two blank lines for a signature, followed by your name.
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+using namespace std;
+
+int main()
+{
+    cout&lt;&lt;"Please enter your first name to be addressed in a letter followed by (enter)\n";
+	string first_name;
+	cin&gt;&gt;first_name;
+	cout&lt;&lt;"Dear, "&lt;&lt;first_name&lt;&lt;'\n';
+	cout&lt;&lt;"    How are you? I am fine. I miss you "&lt;&lt;first_name+"."&lt;&lt;'\n';
+	cout&lt;&lt;"Please enter the name of our friend followed by (enter)\n";
+	string friend_name;
+	cin&gt;&gt;friend_name;
+	cout&lt;&lt;"Have you seen "&lt;&lt;friend_name&lt;&lt;" lately?\n";
+	char friend_sex = 0;
+	cout&lt;&lt;"Please enter an m if "&lt;&lt;friend_name&lt;&lt;" is a male and an f if "&lt;&lt;friend_name&lt;&lt;" a female\n";
+    cin&gt;&gt;friend_sex;
+	if(friend_sex == 'm')
+	{
+		cout&lt;&lt;"If you see "&lt;&lt;friend_name&lt;&lt;" please as him to call me\n";
+	}
+	else if (friend_sex == 'f')
+	{
+		cout&lt;&lt;"If you see "&lt;&lt;friend_name&lt;&lt;" please as her to call me\n";
+	}
+	//ask for age
+	cout&lt;&lt;"What is the age of "&lt;&lt;friend_name&lt;&lt;"?\n";
+	int age;
+	cin&gt;&gt;age;
+	cout&lt;&lt;"I hear you just had a birthday and you are "&lt;&lt;age&lt;&lt;" years old.\n";
+	if(age &lt;= 0 && age &gt;= 110)
+	{
+		cout&lt;&lt;"you're kidding!\n";
+	}
+	else if(age &lt; 12)
+	{
+	    cout&lt;&lt;"Next year you will be "&lt;&lt;age+1;	
+	}
+	else if(age == 17)
+	{
+		cout&lt;&lt;"Next year you will be able to vote.";
+	}
+	else if(age &gt; 70)
+	{
+		cout&lt;&lt;"I hope you are enjoying retirement.";
+	}
+	cout&lt;&lt;"Yours sincerely \n\n Mokoto.";	
+}
+</pre>
+<p><b>Review</b></p>
+<pre>1. 'What is meant by the term prompt?
+  myguess: serves as a way to ask a question and get input
+  solution: prompts user to take action
+2. Which operator do you use to read into a variable?
+  myguess: two greater than symbols
+
+3. If you want the user to input an integer value into your program for a variable named number, what are two lines of code you could write to ask the user to do it and to input the value into your program? 
+  myguess:
+  int number;
+  cout&lt;&lt;"please enter two an integer value";
+  cin>>number;
+  
+4. What is \n called and what purpose does it serve?
+  myguess: newline, creates a new line to keep from clutter
+  solution: newline, created a newline on the screen
+5. What terminates input into a string?
+  myguess: A string read using cin» is (by default) terminated by whitespace; that is, it reads a single word.
+  solution:
+6. What terminates input into an integer?
+  myguess: cin» reads an integer into count
+  solution: 
+7. How would you write
+cout &lt; "Hello, ";
+cout &lt; first_name;
+coul &lt; "!\n";
+as a single line of code?
+  myguess:
+  cout&lt;"Hello, "&lt;&lt;first_name&lt;&lt;"!\n";
+
+8. What is an object?
+  myguess: the space a variable takes up
+  solution: a region of memory with a type that specifies what kind of information can be placed in it
+
+9. What is a literal?
+  myguess: what something literally is
+  solution:
+
+10. What kinds of literals are there?
+  myguess: string literals
+  solution:
+
+11. What is a variable?
+  myguess: is a named object
+  solution: a named object
+
+12. What are typical sizes for a char, an int, and a double?
+  myguess: char = 4 bytes, int = 8 bytes, double = 8 bytes
+  solution:
+
+int    = 4 bytes (32 bits)
+bool   = 1 byte  (8 bits)
+char   = 1 byte  (8 bits) 
+double = 8 bytes (64 bits)
+
+13. What measures do we use for the size of small entities in memory, such as ints and strings?
+  myguess: bits and bytes
+  solution: bits and bytes
+
+14. What is the difference between = and ==?
+  myguess: assignment and equivalence
+  solution:
+  
+15. What is a definition?
+  myguess:
+  solution: a statement that introduces a new name into a program and sets aside memory for a variable is called a definition, i.e. a statement that defines a variable
+
+16. What is an initialization and how does it differ from an assignment?
+  myguess: initializing means the first assignment, assignment means its new role
+  solution: initialization(giving a variable its initial value), assignment (giving a variable a new value)
+
+17. What is string concatenation and how do you make it work in C++?
+  myguess: adding two strings together with a plus operator
+  solution: 
+
+18. Which of the following are legal names in C++? If a name is not legal, why not?
+This_little_pig    (starts with capital)
+latest thing       (contains a space)
+MiniMineMine       (useless)
+This_1_is_fine     (starts with capital)
+the_$12_method     ($ character)
+number
+2_For_1_special    (starts with number)
+_this_is_ok        (starts with underscore)
+correct?
+
+19. Give five examples of legal names that you shouldn't use because they are likely to cause confusion.
+  myguess: abbreviations, capitalcases, do not start with underscore, do not use reserved(keywords) such as int,if,while,double
+  solution:
+
+20. What are some good rules for choosing names?
+  myguess: no abbreviations, shortened, don't mix numbers
+  solution:
+
+21. What is type safety and why is it important?
+  myguess: keeps from getting unseen errors
+  solution: every object is given a type when it is defined. A program or part of a program - is type-safe when objects are used only according to the rules for their type.
+
+22. Why can conversion from double to int be a bad thing?
+  myguess:
+  solution: the conversion results into information loss
+
+23. Define a rule to help decide if a conversion from one type to 
+another is safe or unsafe.
+  myguess:
+  solution:
+
+uninitialized variable
+"narrowing": narrowing conversion put a value into an object that may be too small to hold it.
+
+bool to char
+bool to int
+bool to double
+char to int
+char to double
+int to double
+</pre>
+<p><b>Terms</b></p>
+<pre>assignment
+  myguess: assign a name to a variable
+  solution: to place a value in a variable, giving a variable a new value
+cin
+  myguess: receive input
+  solution: reads	
+concatenation
+  myguess: connect two or more strings together
+  solution:	 
+conversion
+  myguess: switching from one type to another type
+  solution:	 
+declaration 
+  myguess: similar to initialization
+  solution:	is a statement that gives a name to an object
+decrement
+  myguess: reduce a value in a particular way
+  solution: negative repetition
+definition
+  myguess: a definition is naming an object
+  solution: is a declaration that sets aside memory for an object
+increment
+  myguess: increase a value in a particular way 
+  solution: positive repetition
+intialization
+  myguess: declaring a variable
+  solution: giving a variable its initial value
+name
+  myguess: given to objects/variables
+  solution: we name our variables so that we can remember them and refer to them from other parts of a program
+narrowing
+  myguess: an improper way of converting a type
+  solution: putting a value into an object that may be too small to hold it
+object
+  myguess: a place in memory that stores a variable
+  solution: a region of memory with a type that specifies what kind of informationc an be placed in it
+operation
+  myguess: a tasks that uses operators
+  solution:
+operator
+  myguess: a primitive data type used in operations
+  solution:
+type
+  myguess: a specific type of data
+  solution: defines a set of possible values and a set of operations (for an object)
+type safety
+  myguess: assigning the correct type with a variable
+  solution: every object is given a type when it is defined
+value
+  myguess: the data assigned to a variable
+  solution: a set of bits in memory intepreted according to a type, data items we put into variables
+variable
+  myguess: a named object in memory
+  solution: is a named object
+</pre>
+<p>Exercises</p>
+<p>1 If you haven't done so already, do the Try this exercises from this chapter.</p>
+<pre>did
+</pre>
+<p>2. Write a program in C++ that converts from miles to kilometers. Your program should have a reasonable prompt for the user to enter a number of miles. Hint: There are 1.609 kilometers to the mile.</p>
+<p>convert_miles_to_kilometers.cpp</p>
+<pre>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+using namespace std;
+
+int main()
+{
+	cout&lt;&lt;"enter a number of kilometers to be converted to miles: ";
+	double kilometer = 0;
+	cin&gt;&gt;kilometer;
+	double mile = kilometer * 1.609;
+	cout&lt;&lt;"Your kilometers converted to miles are: "&lt;&lt;mile&lt;&lt;'\n';
+}
+</pre>
+<p>build and run convertkilometerstomiles.cpp</p>
+<pre>$ ./a.out
+enter a number of kilometers to be converted to miles: 1
+Your kilometers converted to miles are: 1.609
+</pre>
+<p>3. Write a program that doesn't do anything, but declares a number of variables with legal and illegal names (such as int do uble = 0; ), so that you can see how the compiler reacts.</p>
+<p>ch3/doesnt_do_a_thing.cpp</p>
+<p>4. Write a program that prompts the user to enter two integer values.  Store these values in int variables named val1 and val2. Write your program to determine the smallest, largest, sum, difference, product, and ratio of these values and report them to the user.</p>
+<p>integer_value_report.cpp</p>
+<pre>/*
+4. Write a program that prompts the user to enter two integer values.
+Store these values in int variables named val1 and val2.
+Write your program to determine the smallest, 
+largest,
+sum,
+difference,
+product,
+and ratio of these values and report them to the user.	
+*/
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+using namespace std;
+
+int main()
+{
+	cout&lt;&lt;"Enter two integer values ";
+	int val1 = 0;
+	int val2 = 0;
+	cin&gt;&gt;val1;
+	cin&gt;&gt;val2;
+	//test input from user
+	cout&lt;&lt;"You first entered: "&lt;&lt;val2&lt;&lt;'\n';
+	cout&lt;&lt;"Then you entered: "&lt;&lt;val1&lt;&lt;'\n';
+	
+	//smallest
+	cout&lt;&lt;"'Smallest Comparison'\n";
+	if(val1 &lt; val2)
+	{
+		cout&lt;&lt;val1&lt;&lt;" which is val1 is smaller than val2 which is "&lt;&lt;val2&lt;&lt;'\n';
+	}
+	else
+	{
+		cout&lt;&lt;val2&lt;&lt;" which is val2 is smaller than val1 which is "&lt;&lt;val1&lt;&lt;'\n';
+	}
+
+	//largest
+	cout&lt;&lt;"'largest Comparison'\n";
+	if(val1 &gt; val2)
+	{
+		cout&lt;&lt;val1&lt;&lt;" which is val1 is greater than val2 which is "&lt;&lt;val2&lt;&lt;'\n';
+	}
+	else
+	{
+		cout&lt;&lt;val2&lt;&lt;" which is val2 is greater than val1 which is "&lt;&lt;val1&lt;&lt;'\n';
+	}
+	
+	//sum
+	cout&lt;&lt;"'Sum'\n";
+	cout&lt;&lt;"The sum of val1 and val2 is "&lt;&lt;val1 + val2&lt;&lt;'\n';
+	
+	//difference
+	cout&lt;&lt;"'Difference'\n";
+	cout&lt;&lt;"The difference between val1 and val2 is "&lt;&lt;val1-val2&lt;&lt;'\n';
+	cout&lt;&lt;"The difference between val2 and val1 is "&lt;&lt;val2-val1&lt;&lt;'\n';
+	
+	//product
+	cout&lt;&lt;"'Product'\n";
+	cout&lt;&lt;"The product of val1 and val2 is "&lt;&lt;val2*val1&lt;&lt;'\n';
+	
+	//ratio
+    cout&lt;&lt;"'Ratio'\n";
+	cout&lt;&lt;"The ratio of val1 and val2 is "&lt;&lt;val1/val2&lt;&lt;" or also "&lt;&lt;val1&lt;&lt;" to "&lt;&lt;val2&lt;&lt;'\n';
+	cout&lt;&lt;"The ratio of val2 and val1 is "&lt;&lt;val2/val1&lt;&lt;" or also "&lt;&lt;val2&lt;&lt;" to "&lt;&lt;val1&lt;&lt;'\n';
+}
+</pre>
+<p>Compile and run</p>
+<pre>$ g++ integer_value_report.cpp
+$ ./a.out
+Enter two integer values 1
+2
+You first entered: 2
+Then you entered: 1
+'Smallest Comparison'
+1 which is val1 is smaller than val2 which is 2
+'largest Comparison'
+2 which is val2 is greater than val1 which is 1
+'Sum'
+The sum of val1 and val2 is 3
+'Difference'
+The difference between val1 and val2 is -1
+The difference between val2 and val1 is 1
+'Product'
+The product of val1 and val2 is 2
+'Ratio'
+The ratio of val1 and val2 is 0 or also 1 to 2
+The ratio of val2 and val1 is 2 or also 2 to 1
+</pre>
+
+<p>5. Modify the program above to ask the user to enter floating point values and store them in double variables. Compare the outputs of the two programs for some inputs of your choice. Are the results the same? Should they be? What's the difference?</p>
+
+<p>integer_value_report_modified.cpp</p>
+<p>The results are slightly different, being that with floating point values the answer is more precise</p>
+
+<p>6. Write a program that prompts the user to enter three integer values, and then outputs the values in numerical sequence separated by commas. So, if the user enters the values 10 4 6, the output should be 4, 6, 10. If two values are the same, they should just be ordered together. So, the input 454 should give 4, 4, 5.</p>
+
+<p>three_integer_values_in_numerical_sequence.cpp</p>
+
+<p>7. Do exercise 6, but with three string values. So, if the user enters the values "Steinbeck", "Hemingway", "Fitzgerald ", the output should be "Filzgerald, Hemingway, Steinbeck".</p>
+
+<p>three_strings_in_alphabetical_order.cpp</p>
+
+<p>8. Write a program to test an integer value to determine if it is odd or even. As always, make sure your output is clear and complete. In other words, don't just output "yes" or "no." Your Output should stand alone, like "The value 4 is an even number." Hint: See the remainder (modulo) operator in §3.4.</p>
+
+<p>test_integer_value_odd_even.cpp</p>
+
+<p>9. Write a program that converts spelled·out numbers such as "zero" and "two" into digits, such as 0 and 2. When the user inputs a number, the program should print out the corresponding digit. Do it for the values 0, 1, 2, 3, and 4 and write out "not a number I know" if the user enters something that doesn't correspond, such as "stupid computer!"</p>
+
+<p>convert_spelledout_numbers.cpp</p>
+
+<pre>10. Write a program that takes an operation followed by two operands and outputs the result. For example:
++ 100 3.14
+• 45
+Read the operation into a string called operation and use an if-statement to figure out which operation the user wants, for example, if (operation=="+"). Read the operands into variables of type double. Implement this for operations called +, - , ., I, plus , minus, mul, and div with their obvious meanings.</pre>
+
+<p>operation_two_operands_output_results.cpp</p>
+
+<pre>11. Write a program that prompts the user to enter some number of pennies (1-cent coins), nickels (5-cent coins), dimes (1O-cent coins), quarters (25-cent coins), half dollars (50-cem coins), and one-dollar coins (1OO-cent coins). Query the user separately for the number of each size coin, e.g., "How many pennies do you have?" Then your program should print out something like this:
+You have 23 pennies.
+You have 17 nickels.
+You have 14 dimes.
+You have 7 quarters.
+You have 3 half dollars.
+The value of all of your coins is 573 cents. You may have to use your imagination to get the numbers to add up right-justified, but try; it can be done. Make some improvements: if only one of a coin is reported, make the output grammatically correct, e.g., " 14 dimes" and "1 dime" (not "1 dimes"). Also, report the sum in dollars and cents, i.e., $5.73 instead of 573 cents.</pre>
+
+<p>Postscript: Do no underestimate the importance of the notion of type safety. Some of the most effective techniques for constructing programs rely on the design and use of types</p>
+
+<br>
+<hr>
+<br>
+
+<h3>Chapter 4: Computation</h3>
+<h4>"If it doesn't have to produce correct results, I can make it arbitrarily fast."- Weinberg</h4>
+<pre>operands(expression)
+choose among alternative actions(selection)
+repeat computation for a series of values(iteration)
+sub-computation(function)
+
+express computations in ways that lead to correct
+and well-organized programs
+
+vector type(to hold sequences of values)
+</pre>
+
+<p>4.1   Computation</p>
+<p>4.2   Objectives and tools</p>
+<p>4.3   Expressions</p>
+<p>4.3.1 Constant expressions</p>
+<p>4.3.2 Operators</p>
+<p>4.3.3 Conversions</p>
+<p>4.4   Statements</p>
+
+<p><b>Try This</b></p>
+<p>convert_to_dollars.cpp</p>
+
+<p>4.4.1 Selection</p>
+
+<p><b>Try This</b></p>
+<p>convert_to_dollars_switch.cpp</p>
+<p>convert_to_dollars_switch.cpp is easier to understand due to the use of a single char to select from</p>
+
+<p>4.4.2 Iteration</p>
+
+<p><b>Try This</b></p>
+<p>use_a_loop_table_of_characters.cpp: fail/incomplete: now working with function</p>
+
+<p>4.4.2.3 for-statements</p>
+
+<p>table_of_squares_0-99.cpp</p>
+
+<p>4.5   Functions</p>
+
+<p>functions.cpp</p>
+<p>implement_square_without_multiplication_operator.cpp</p>
+
+<p>4.5.1 Why bother with functions?</p>
+<p>4.5.2 Function declarations</p>
+<p>4.6   Vector</p>
+<p>4.6.1 Growing a vector</p>
+<p>4.6.2 A numeric example</p>
+<p>4.6.3 A text example</p>
+
+<p><b>Try This</b></p>
+<p>bleep.cpp : incomplete</p>
+
+<p>4.7   Language features</p>
+<pre>iteration(for-statement and while-statement)
+selection (the if-statement)
+simple arithmetic(the ++ and the += operators)
+comparisons and logical operators (the ==, !=, and || operators)
+variables
+function( e.g. main(),sort(),size())
+standard library facilities:
+  vector(a container of elemtns)
+  cout (an output stream)
+  sort() (an algorithm)
+</pre>
+
+<p><b>Drill</b></p>
+<pre>Go through this drill step by step. Do not try to speed up by skipping steps. Test
+each step by entering at least three pairs of values - more values would be better.
+
+1. write a program that consists of a while-loop that (each time around the
+loop) reads in two ints and then prints them. Exit the program when a
+terminating '|' is entered.
+
+2. Change the program to write out the smaller value is: followed by the
+smaller of the numbers and the larger value is: followed by the larger value.
+
+3. Augment the program so that it writes the line the numbers are equal
+(only) if they are equal.
+
+4. Change the program so that it uses doubles instead of ints.
+
+5. Change the program so that it writes out the numbers are almost equal
+after writing out which is the larger and the smaller if the two numbers
+differ by less than 1.0/10000000.
+
+6. Now change the body of the loop so that it reads just one double each
+time around. Define two variables to keep track of which is the smallest
+and which is the largest value you have seen so far. Each time through
+the loop write out the value emered. If it's the smallest so far, write the
+smallest so far after the number. If it is the largest so far, write the largest
+so far after the number.
+
+7. Add a unit to each double entered; that is, enter values such as 10cm,
+2.5in, 5ft, or 3.33m. Accept the four units: cm, m, in, ft. Assume conversion factors 1m == 100cm, 1in == 2.54cm, 1ft == 12in. Read the unit indicator into a string.
+
+8. Reject values without units or with "illegal" representations of units, such
+as y, yard , meter, km, and gallons.
+
+9. Keep track of the sum of values entered (as well as the smallest and the largest) and the number of values entered. When you see the final '|' print the smallest, the largest, the number of values, and the sum of values. Note that to keep the sum, you have to decide on a unit to use for that sum; use meters.
+
+10. Keep all the values entered (converted into meters) in a vector. At the
+end, write out those values.
+
+11. Before writing out the values from the vector, sort them (that'll make
+them come out in increasing order).</pre>
+
+
+<p><b>Review</b></p>
+<pre>1. What is a computation?
+
+the act of producing some outputs based on some inputs, Example: producing the result(output) from the argument(input) using the computation (function) square.
+
+2. What do we mean by inputs and outputs to a computation? Give examples.
+
+Taking in data  and doing something with it(computing).
+Taking input from a user's keyboard and displaying what the input was on a screen/display.
+
+3. What are the three requirements a programmer should keep in mind when expressing computations?
+
+Correctly, simply, efficiently.
+
+4. What does an expression do?
+
+Computes a value from a number of operands.
+
+5. What is the difference between a statement and an expression, as described in this chapter?
+
+An expression computes a value from a set of operands using operators. Expressions are most basic building block of programs is an expression. An expression computes a value from a number of operands. The simplest expression is simply a literal value such as 10, 'a', 3.14, or "Noah." Names of variables are also expressions.
+
+A statement is an instruction
+
+if (expression) statement else statement
+if (expression) statement else if (expression) statement
+
+6. What is an lvalue? List me operators that require an lvalue. Why do
+these operators, and not the others, require an lvalue?
+
+Left value
+Left-hand operand of the assignment or initialization
+Refers to the object
+
+The rvalue is the value of the name of the object
+Refers to the value in the box
+
+7. What is a constant expression?
+
+Programs typically use a lot of constants. A symbolic constant is a named object to which you can't give a new value after it has been initialized. 
+
+8. What is a literal?
+
+A constant expression
+
+9. What is a symbolic constant and why do we use them?
+
+A named object to which you can't give a new value after it has been initialized.
+
+const double pi = 3.14159;
+pi = 7;
+int v = 2*pi/r;
+
+10. What is a magic constant? Give examples.
+
+Non-obvious literals in code (outside const definitions) are derisively referred to magic constants.
+
+11 . What are some operators that we can use for integers and floating·point values?
+
+12. What operators can be used on integers but not on floating·point numbers?
+
+13. What are some operators that can be used for strings?
+
+concatenation
+
+14. When would a programmer prefer a switch·statement to an if·statement?
+
+
+15. What are some common problems with switch·statements?
+
+16. What is the function of each part of the header line in a for-loop, and in what sequence are they executed?
+
+17. When should the for·loop be used and when should the while·loop be used?
+
+18. How do you print the numeric value of a char?
+
+19. Describe what the line char foo(int x) means in a function dermition.
+
+20. When should you define a separate function for part of a program? List reasons.
+
+21. What can you do to an int that you cannot do to a string?
+
+22. What can you do to a string that you cannot do to an int?
+
+23. What is the index of the third element of a vector?
+
+4
+
+24. How do you write a for-loop that prints every clement of a vector?
+
+25. What docs vector char alphabet(26); do?
+
+26. Describe what push_back() docs to a vector.
+
+27. What do vector's member functions begin(), end(), and size() do?
+
+28. What makes vector so popular/useful?
+
+29. How do you sort the elements of a vector?
+</pre>
+
+<p><b>Terms</b></p>
+<pre>'|'
+  myguess:
+  solution: terminate the input
+
+abstraction
+  myguess:
+  solution: hide details that we don't need to use a facility("implementation details") behind a convenient and general interface.
+
+begin()
+  myguess: begin function
+  solution: a member function of vector, just like size(), cal them for their vector using dot.
+
+block
+  myguess:
+  solution: a sequene of statements delimted by curly braces { and } is called a block of a compound statement. A block is a kind of statement.
+
+computation
+  myguess: doing something with data
+  solution: the act of producing some outputs based on some inputs, such as producing the result from the argument(input) using the computation.
+
+conditional statement
+  myguess:
+  solution:
+
+data structures
+  myguess: types of data and their state
+  solution: data contained in a program
+
+declaration
+  myguess:
+  solution:
+
+definition
+  myguess:
+  solution:
+
+divide and conquer
+  myguess:
+  solution: take a large problem and divide it into several little ones.
+
+else
+  myguess:
+  solution:
+
+end()
+  myguess:
+  solution:
+
+expression
+  myguess:
+  solution: most basic building block of programs. Computes a value from a number of operands. The simplest expression is simply a literal value such 10, 'a', 3.14, or "Norah."
+computes a value from a set of operands using operators.
+
+produce several values
+do something many times.
+choose among alternatives.
+get input
+produce output
+
+for-statement
+  myguess:
+  solution:
+
+function
+  myguess:
+  solution: a named sequence of statements. A function can return a result(also called return value). David Wheeler, invented the function(then called a subroutine) in modern computing. Used when we want a separate computation with a name, doing so: makes the computation logically separate, makes the program text clearer(by naming the computation), makes it possible to use the function in more than one place in our program, and eases testing.
+
+function body
+  myguess:
+  solution: is the block that actually does the work
+
+function definition
+  myguess:
+  solution: type identifier (parameter-list) function-body
+  
+function-declaration:
+  myguess:
+  solution: a way of supplying information separate from the complete function definition.
+
+if-statement
+  myguess:
+  solution: the simpletest form of selection, which selects between two alternatives. if(expression) statement else statement
+
+increment
+  myguess:
+  solution:
+
+input
+  myguess:
+  solution: arguments
+
+iteration
+  myguess:
+  solution: repetition to do something to a series of elements of a data structure
+
+loop
+  myguess:
+  solution: a way to repeat something
+
+lvalue
+  myguess:
+  solution:
+
+member function
+  myguess:
+  solution:
+push_back() is a member function of vector and must be called using dot notation
+
+output
+  myguess:
+  solution:
+
+parameters
+  myguess:
+  solution: the elements of a parameter list, the parameter list is the list of arguments required by the function
+
+push_back()
+  myguess:
+  solution: adds a new element to a vector
+
+repetition
+  myguess:
+  solution:
+
+value
+  myguess:
+  solution:
+  
+vector:
+  myguess: hold data as elements,
+  solution: simply a sequence of elemnets that you can access by an index. can start empty and grow it to its desired size as we read or ocmpute the data we want in it.
+
+selection
+  myguess:
+  solution:
+
+size()
+  myguess:
+  solution:
+
+sort()
+  myguess:
+  solution:
+
+statement
+  myguess:
+  solution: language constructs. 
+
+switch-statement
+  myguess:
+  solution: a selection based on comparison of a value against several constants. Compare many constants. The value presented in parentheses after the switch is compared to a set of constants. Each constant is presented as part of a case label. If the value equals the constant in a case label, the statememt for that case is chosen. Each case is terminated by a break. If the value doesn't match any of the case lavels, the statement idenfitified by the default label is chosen.
+
+vector
+  myguess:
+  solution:
+
+while-statement
+  myguess: A type of iteration that states, while something do something, else stop
+  solution: has a condition on top followed by its body. The loop variable for a while-statement must be defined and initialized outside (before) the while-statement.
+</pre>
+
+<p><b>Exercises</b></p>
+<pre>1. If you haven't already, do the Try this exercises from this chapter.
+
+2. If we define the median of a sequence as "the number for which exactly
+half of the elements of the sequence come before it and exactly half come
+after it," fix the program in §4.6.2 so that it always prints out a median.
+Hint: A median need not be an element of the sequence.
+
+3. Read a sequence of double values into a vector. Think of each value as
+the distance between two cities along a given route. Compute and print
+the total distance (the sum of all distances). Find and print the smallest
+and greatest distance between two neighboring cities. Find and print the
+mean distance between two neighboring cities.
+
+4. Write a program to play a numbers guessing game. The user thinks of a
+number between 1 and 100 and your program asks questions to figure
+out what the number is (e.g., "Is the number you are thinking of less
+than 50?") . Your program should be able to identify the number after
+asking no more than seven questions. Hint: Use the &lt; and &lt;= operators
+and the if·else construct.
+
+5 . Write a program that perfonns as a very simple calculator.
+Your calculator should be able to handle the five basic math operations - add, subtract,
+multiply, divide, and modulus (remainder) - on two input values.
+Your program should prompt the user to enter three arguments: two
+double values and a character to represent an operation. If the entry arguments
+are 35.6, 24.1 , and '+', the program output should be "The sum
+of 35.6 and 24.1 is 59.7." In Chapter 6 we look at a much more sophisticated
+simple calculator.
+
+6. Make a vector holding the ten string values "zero", "one", ... "nine".
+Use that in a program that converts a digit to its corresponding spelled-out
+value; e.g., the input 7 gives the output seven. Have the same program,
+using the same input loop, convert spelled-out numbers into their
+digit form; e.g., the input seven gives the output 7.
+
+7. Modify the "mini calculator" from exercise 5 to accept (just) single-digit
+numbers written as either digits or spelled out.
+
+8. There is an old story that the emperor wanted to thank the inventor of
+the game of chess and asked the inventor to name his reward. The inventor
+asked for one grain of rice for the first square, 2 for the second, 4
+for the third, and so on, doubling for each of the 64 squares. That may
+sound modest, but there wasn't that much rice in the empire! Write a
+program to calculate how many squares are required to give the inventor
+at least 1000 grains of rice, at least 1,000,000 grains, and at least
+1,000,000,000 grains. You'll need a loop, of course, and probably an int
+to keep track of which square you are at, an int to keep the number of
+grains on the current square, and an int to keep track of the grains on all
+previous squares. We suggest that you write out the value of all your variables
+for each iteration of the loop so that you can see what's going on.
+
+9. Try to calculate the number of rice grains that the inventor asked for in
+exercise 8 above. You 'll find that the number is so large that it won't fit in
+an int or a double. Observe what happens when the number gets too
+large to represent as an int and as a double. What is the largest number
+of squares for which you can calculate the exact number of grains (using
+an int)? What is the largest number of squares for which you can calculate
+the approximate number of grains (using a double)?
+
+10. Write a program that plays the game "Rock, Paper, Scissors." If you are
+not familiar with the game do some research (e.g., on the web using
+Coogle). Research is a common task for progra.mmers. Use a switchstatement
+to solve this exercise. Also, the machine should give random
+answers (i.e., select the next rock, paper, or scissors randomly). Real randomness
+is too hard to provide just now, so just build a vector with a sequence
+of values to be used as "the next value." If you build the vector
+into the program, it will always play the same game, so maybe you
+should let the user enter some values. Try variations to make it less easy
+for the user to guess which move the machine will make next.
+
+11. Create a program to find all the prime numbers between 1 and 100. One
+way to do this is to write a function that will check if a number is prime
+(i.e., see if the number can be divided by a prime number smaller than it·
+self) using a vector of primes in order (so that if the vector is called
+primes, primes[O]==2, primes[1]==3, primes[2]==5, etc.). Then write a
+loop that goes from 1 to 100, checks each number to see if it is a prime,
+and stores each prime found in a vector. Write another loop that lists the
+primes you found. You might cheek your result by comparing your
+vector of prime numbers with primes. Consider 2 the first prime.
+
+12. Modify the program described in the previous exercise to take an input
+value max and then find all prime numbers from 1 to max.
+
+13. Create a program to find all the prime numbers bctween 1 and 100.
+There is a classic method for doing this, called the "Sieve of Eratos·
+thenes." If you don't know that method, get on the web and look it up.
+Write your program using this method.
+
+14. Modify the program described in the previous exercise to take an input
+value max and then find all prime numbers from 1 to max.
+
+15. Write a program that takes an input value n and then finds the first n
+primes.
+
+16. In the drill, you wrote a program that, given a series of numbers, found
+the max and min of that series. The number that appears the most times
+in a sequence is called the mode. Create a program that finds the mode of
+a set of positive integers.
+
+17. Write a program that finds the min, max, and mode of a sequence of
+strings.
+
+18. Write a program to solve quadratic equations. A quadratic equation is of
+the form
+
+ax2+bx+c=O
+
+If you don't know the quadratic formula for solving such an expression,
+do some research. Remember, researching how to solve a problem is
+often necessary before a programmer can teach the computer how to
+solve it. Use doubles for the user inputs for a, b, and c. Since there are
+two solutions to a quadratic equation, Output both x1 and x2.
+
+19. Write a program where you first enter a set of name·and·value pairs,
+such as Joe 17 and Barbara 22. For each pair, add the name to a vector
+called names and the number to a vector called scores (in corresponding
+positions, so that if names[7]=="Joe" then scores[7]==18). Terminate
+input by the line No more ("more" will make the attempt to read another
+integer fail). Check that each name is unique and terminate with an error
+message if a name is entered twice. Write out all the (name,score) pairs,
+one per line.
+
+20. Modify the program from exercise 19 so that when you enter a name,
+the program will output the corresponding score or "name not found".
+
+21. Modify the program from exercise 19 so that when you enter an integer,
+the program will output all the names with that score or "score not
+found".
+</pre>
+
+<p><b>Postscript:</b></p>
+<pre>
+</pre>
+
+<br>
+<hr>
+<br>
+
+<h3>Chapter 5: Errors</h3>
+<h4></h4>
+
+<br>
+<hr>
+<br>
+
+<h3>Chapter 6: Writing a Program</h3>
+<h4>"Programming is understanding." - Kristen Nygaard</h4>
+<p>Terms</p>
+<pre>analysis
+  myguess:
+  solution:
+class
+  myguess:
+  solution:
+class member
+  myguess:
+  solution:
+data member
+  myguess:
+  solution:
+design
+  myguess:
+  solution:
+divide by zero
+  myguess:
+  solution:
+grammar
+  myguess:
+  solution:
+implementation
+  myguess:
+  solution:
+interface
+  myguess:
+  solution:
+member function
+  myguess:
+  solution:
+parser
+  myguess:
+  solution:
+private
+  myguess:
+  solution:
+prototype
+  myguess:
+  solution:
+pseudo code
+  myguess:
+  solution:
+public
+  myguess:
+  solution:
+syntax analyzer
+  myguess:
+  solution:
+token
+  myguess:
+  solution:
+use case
+  myguess:
+  solution:
+</pre>
+
+<br>
+<hr>
+<br>
+
+<h3>Chapter 7: Completing a Program</h3>
+<h4>"It ain't over till the fat lady sings." - Opera proverb</h4>
+
+<p>Terms</p>
+<pre>code layout
+commenting
+error handling
+feature creep
+maintenance
+recovery
+revision history
+scaffolding
+symbolic constant
+testing
+</pre>
+
+<br>
+<hr>
+<br>
+
+<h3>Chapter 8: Technicalties: Functions, etc.</h3>
+<h4>"No amout of genius can overcome obsession with detail." - Traditional</h4>
+<p>Terms</p>
+<pre>activation record
+  myguess:
+  solution:
+argument
+  myguess:
+  solution:
+argument passing
+  myguess:
+  solution:
+call stack
+  myguess:
+  solution:
+class scope
+  myguess:
+  solution:
+const
+  myguess:
+  solution:
+declaration
+  myguess:
+  solution:
+definition
+  myguess:
+  solution:
+extern
+  myguess:
+  solution:
+forward declaration
+  myguess:
+  solution:
+function
+  myguess:
+  solution:
+function definition
+  myguess:
+  solution:
+global scope
+  myguess:
+  solution:
+header file
+  myguess:
+  solution:
+initializer
+  myguess:
+  solution:
+local scope
+  myguess:
+  solution:
+namespace
+  myguess:
+  solution:
+namespace scope
+  myguess:
+  solution:
+nested block
+  myguess:
+  solution:
+parameter
+  myguess:
+  solution:
+pass-by-const-reference
+  myguess:
+  solution:
+pass-by-reference
+  myguess:
+  solution:
+pass-by-value
+  myguess:
+  solution:
+recursion
+  myguess:
+  solution:
+return
+  myguess:
+  solution:
+return value
+  myguess:
+  solution:
+scope
+  myguess:
+  solution:
+statement scope
+  myguess:
+  solution:
+technicalities
+  myguess:
+  solution:
+undeclared identifier
+  myguess:
+  solution:
+using declaration
+  myguess:
+  solution:
+using directive
+  myguess:
+  solution:
+</pre>
+
+<br>
+<hr>
+<br>
+
+<h3>Technicalities: Classes, etc.</h3>
+<h4>"Remember, things take time." - Piet Hein</h4>
+<p>Terms</p>
+<pre>built-in types
+  myguess:
+  solution:
+class
+  myguess:
+  solution:
+const
+  myguess:
+  solution:
+constructor
+  myguess:
+  solution:
+destructor
+  myguess:
+  solution:
+enum
+  myguess:
+  solution:
+enumeration
+  myguess:
+  solution:
+enumerator
+  myguess:
+  solution:
+helper function
+  myguess:
+  solution:
+implementation
+  myguess:
+  solution:
+inlining
+  myguess:
+  solution:
+interface
+  myguess:
+  solution:
+invariant
+  myguess:
+  solution:
+representation
+  myguess:
+  solution:
+struct
+  myguess:
+  solution:
+structure
+  myguess:
+  solution:
+user-defined types
+  myguess:
+  solution:
+valid state
+  myguess:
+  solution:
+</pre>
+
+<br>
+<hr>
+<hr>
+<hr>
+<br>
+
+<h2>Part 2</h2>
+<h3>Chapter 10: Input and Output Streams</h3>
+<h4>"Science is what we have learned about how to keep from fooling ourselves" - Richard P. Feynman</h4>
+<p>Terms</p>
+<pre>bad()
+buffer
+clear()
+close()
+device driver
+eof()
+fail()
+file
+good()
+ifstream
+input device
+input operator
+iostream
+istream
+ofstream
+open()
+ostream
+output device
+output operator
+stream state
+structured file
+terminator
+unget()
+</pre>
+
+<br>
+<hr>
+<br>
+
+<h3>Chapter 11: Customizing Input and Output</h3>
+<h4>"Keep it simple: as simple as possible, but no simpler" - Albert Einstein</h4>
+
+<br>
+<hr>
+<br>
+
+<h3>Chapter 12:</h3>
+<h4></h4>
+
+<br>
+<hr>
+<br>
+
+<h3>Chapter 13:</h3>
+<h4></h4>
+
+<br>
+<hr>
+<br>
+
+<h3>Chapter 14: Graphics Class Design</h3>
+<h4></h4>
+
+<br>
+<hr>
+<br>
+
+<h3>Chapter 15: Graphinf Functions and Data</h3>
+<h4></h4>
+
+<br>
+<hr>
+<br>
+
+<h3>Chapter 16: Graphical User Interfaces</h3>
+<h4></h4>
+
+<br>
+<hr>
+<hr>
+<hr>
+<br>
+
+<h2>Part 3 Data and Algorithms</h2>
+<h3>Chapter 17: Vector and Free Store</h3>
+<h4></h4>
+
+<br>
+<hr>
+<br>
+
+<h3>Chapter 18: Vectors and Arrays</h3>
+<h4></h4>
+
+<br>
+<hr>
+<br>
+
+<h3>Chapter 19: Vector, Templates, and Exceptions</h3>
+<h4></h4>
+
+<br>
+<hr>
+<br>
+
+<h3>Chapter 20: Containers and Iterators</h3>
+<h4></h4>
+
+<br>
+<hr>
+<br>
+
+<h3>Chapter 21: Algorithms and Maps</h3>
+<h4></h4>
+
+<br>
+<hr>
+<br>
+
+<h2>Part 4 Broadening the View</h2>
+<h3>Chapter 22 Ideals and History</h3>
+<h4></h4>
+
+<br>
+<hr>
+<br>
+
+<h3>Chapter 23: Text Manipulation</h3>
+<h4></h4>
+
+<br>
+<hr>
+<br>
+
+<h3>Chapter 24: Numerics</h3>
+<h4></h4>
+
+<br>
+<hr>
+<br>
+
+<h3>Chapter 25: Embedded Systems Programming</h3>
+<h4></h4>
+
+<br>
+<hr>
+<br>
+
+<h3>Chapter 26: Testing</h3>
+<h4></h4>
+
+<br>
+<hr>
+<br>
+
+<h3>Chapter 27: The C Programming Language</h3>
+<h4></h4>
+
+<br>
+<hr>
+<br>
+
+<h3>Part 5 Appendices</h3>
+<h4></h4>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!doctype html>
+<head>
+</head>
+<body>
+
+<style>
+body {
+	padding-left: 8px;
+	padding-right: 8px;
+}
+pre {
+	white-space: pre-wrap;       /* css-3 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+	padding-left: 5px;
+	padding-right: 5px;
+}
+</style>
+
+<p><a href="../../c.html">Back</a></p>
+
+<br>
+
+<h1>Computer Graphics</h1>
+
+<br>
+
+
+<p>Unit 0</p>
+<pre>
+Lecture 1: Overview
+Lecture 2: Basic Math
+Homework 0
+
+
+</pre>
+
+<hr>
+
+<p>Basic Math</p>
+<pre>
+For those of you looking for a refresher on some of the basic mathematical concepts (vectors, matrices, linear algebra), here are some resources courtesy of previous student Torchlight2. Please also note a minor confusion in the past; ℝ^2 as used in the problems is the set of 2-dimensional vectors.
+Linear algebra for game developers ~ part 1
+http://blog.wolfire.com/2009/07/linear-algebra-for-game-developers-part-1/
+Linear algebra for game developers ~ part 2
+http://blog.wolfire.com/2009/07/linear-algebra-for-game-developers-part-2/
+Vector Math for 3D Computer Graphics
+http://chortle.ccsu.edu/vectorlessons/vectorIndex.html#00
+3D Math Basics (XNA Game Studio 4.0 Programming) Part 1
+http://what-when-how.com/xna-game-studio-4-0-programmingdeveloping-for-windows-phone-7-and-xbox-360/3d-math-basics-xna-game-studio-4-0-programming-part-1/
+3D Math Basics (XNA Game Studio 4.0 Programming) Part 2
+http://what-when-how.com/xna-game-studio-4-0-programmingdeveloping-for-windows-phone-7-and-xbox-360/3d-math-basics-xna-game-studio-4-0-programming-part-2/
+Computer Graphics and Linear Algebra (demonstrated using the Asteroids video game)
+https://math.dartmouth.edu/archive/m22s07/public_html/VectorSlides.pdf
+Math for Game Developers
+https://www.youtube.com/playlist?list=PLW3Zl3wyJwWOpdhYedlD-yCB7WQoHf-My
+Vector Math for 3D Computer Graphics
+http://www.dickbaldwin.com/KjellTutorial/KjellVectorTutorialIndex.htm
+</pre>
+
+<p>Linear Algebra</p>
+<pre>
+Resource: http://blog.wolfire.com/2009/07/linear-algebra-for-game-developers-part-1/
+
+Linear Algebra
+  Vector: store positions, directions, velocities
+
+2D examples
+Position  ( 2,1)
+Velocity  (-2,3)
+Direction ( 1,0)
+
+V (3,5,2)
+3 meters east,
+5 meters up,
+2 meters north.
+
+Vector Addition
+  (0 , 1 , 4) + (3 , -2 , 5) =
+  ( 0 + 3 , 1 - 2 , 4 + 5 )  = 
+  ( 3, -1 , 9 )
+  
+  any physically-based object will likely have vectors for:
+    position,
+	velocity,
+	acceleration
+	every frame is usually (1/60)th of a second
+	integrate these vectors(add the velocity to the position and acceleration to the velocity)
+	
+	example:
+	  mario jumping
+	  (0, 0) // starts at
+	  (1, 3) // starts jump, his velocity, upwards and to the right
+	  (1, 2)
+	  (1, 1)
+	  (1, 0)
+	  (1,-1)
+	  (1,-2)
+	  (1,-3) // gravity is pulling him downwards
+	  
+	7 Frames
+	velocity     = (1,3)
+	acceleration = (0,-1)
+	frame0: add his velocity (1,3) to his position (0,0) to get new position (1,3)
+	frame1: add his acceleration (0,-1) to his velocity (1,3) to get his new velocity (1,2).
+	frame2: add his velocity (1,2) to his position (1,3) to get (2,5). Add his acceleration (0,-1) to his velocity (1,2) to get (1,1).
+
+
+Integral Calculus
+http://en.wikipedia.org/wiki/Integral_calculus
+Usually in games, the player controls a character's acceleration with the keyboard or controller, the game calculates the new velocity and position using physics integration (via vector addition). Fun Fact: This is the same king of integration problem ssolved using integral calculus, we are just using approximate brute-force approach. Easier to pay attention to calculus by thinking about physical applications.
+
+Vector Subtraction
+  useful for getting a vector that points from one position to another.
+  player stands at (1,2)
+  enemy stands at  (4,3)
+  calculate laser from player to enemy // subtract
+  (4,3) - (1,2) = (4-1,3-2) = (3,1)
+  
+  Scalar-vector multiplication
+    in terms of vectors, individual numbers are scalars.
+	(3,4) is a vector, 5 is a scalar.
+	useful to multiply a vector by a scalar.
+	Example: simulate basic air resistance by multiplying the player's velocity by 0.9 every frame. If the players velocity is (10,20) the new velocity is:
+	  0.9*(10,20)     =
+      (0.9*10,0.9*20) =
+	  (9,18)
+</pre>
+
+<hr>
+
+<p>Fundamental Tools</p>
+<pre>
+Fundamental Tools // be able to write function to use them
+  length,
+  normalization,
+  distance,
+  dot product,
+  cross product
+
+Length
+  Example: ship with velocity vector V(4,3)
+  // we want to know how fast it is going, in order to calculate how much fuel to use
+  // we need to find the length(or magnitude) of vector V.
+  // length of a vector is often written using || 
+  // length of V is |V|
+
+  think of V as a right triangle with sides 4 and 3
+  Use Pythagorean theorem to find the hypotenuse:
+  x^2 + y^2 = h^2
+  length of vector H with components (x,y) is sqrt(x^2+y^2)
+  |V| = sqrt(4^2 + 3^2) = sqrt(25) = 5
+        16 + 9 = 25     = sqrt(25) = 5
+
+  3D Vector
+  (x,y,z) is sqrt(x^2 + y^2 + z^2)
+
+
+Distance
+  
+  playerP is at (3,3)
+  explosionE at (1,2)
+    find distance between to calculate player P damage
+	// combine two tools: subtraction and length
+	// subtract P-E to get the vector between
+	// find the length of this vector to get the distance between
+	// order doesn't matter the result is the same
+    Distance = |P-E| = |(3,3)-(1,2)| = |(2,1)| = sqrt(2^2+1^2) = sqrt(5) = 2.23
+
+
+Normalization
+    To normalize a vector, divide each component by vector's length.
+    Normalize vector V with components (3,4) // divide each component by its length, 5
+    (3/5,4/5)
+    Now use the pythagorean theorem to prove it has a length of 1:
+    (3/5)^2 + (4/5)^2 = 9/25 + 16/25 = 25/25 = 1
+
+
+Dot Product
+    (asub1,asub2)*(bsub1*bsub2) = asub1bsub1 + asub2bsub2
+	(3,2)*(1,4) = 3*1 + 2*4 = 11
+
+    pointing in:
+	  same direction = (dot product) positive
+	  perpendicular  = (dot product) zero
+	  opposite       = negative
+	  //basically proportional to how much the vectors are pointing in the same direction
+
+
+  guard at position G (1,3) facing in the direction D (1,1), with a 180 field of view.
+  hero sneaking by at position H (3,2). 
+  Is he in the guard's field of view?
+  find out by checking the sign of the dotproduct of D and V (vector from the guard to the hero)
+
+  V = H-G = (3,2)-(1,3) = (3-1,2-3) = (2,-1)
+  D•V = (1,1)•(2,-1) = 1*2+1*-1 = 2-1 = 1
+
+  We know that the dot product is related to the extent to which the vectors are pointing in the same direction, but what is the exact relation? It turns out that the exact equation for the dot product is:
+
+  AB = |A||B|cosθ
+  Where θ (pronounced "theta") is the angle between A and B. Solve for θ, find out the angle:
+
+  θ = acos([AB]/[|A||B|]).
+  As I mentioned before, normalizing vectors makes our life easier! If A and B are normalized, then the equation is simply:
+
+  θ = acos(AB)
+
+  D' = D/|D| = (1,1)/sqrt(12+12) = (1,1)/sqrt(2) = (0.71,0.71)
+  V' = V/|V| = (2,-1)/sqrt(22+(-1)2) = (2,-1)/sqrt(5) = (0.89,-0.45)
+  θ = acos(D'V') = acos(0.71*0.89 + 0.71*(-0.45)) = acos(0.31) = 72
+  
+  
+  //Initialize starting vectors
+  vec2 guard_pos = vec2(1,3);
+  vec2 guard_facing = vec2(1,1);
+  vec2 hero_pos = vec2(3,2);
+
+  //Prepare normalized vectors
+  vec2 guard_facing_n = normalize(guard_facing);
+  vec2 guard_to_hero = normalize(hero_pos - guard_pos);
+
+  //Check angle
+  float angle = acos(dot(guard_facing_n, guard_to_hero));
+  
+  
+Cross Product
+  
+continue....
+</pre>
+
+<hr>
+
+<p>Computer Graphics and Linear Algebra</p>
+<pre>
+resource: https://math.dartmouth.edu/archive/m22s07/public_html/VectorSlides.pdf
+Vector graphics refers to representing images by mathematical descriptions of geometric objects, rather than by a collection of pixels on the screen (raster graphics)
+
+  A triangle
+  starting at vertices at (0,0),(2,0),(1,3)
+    matrix of vertices:
+      [ 0 2 1
+        0 0 3 ]
+	
+
+</pre>
+
+<hr>
+
+<p>Vector Math for 3D Computer Graphics</p>
+<pre>
+resource: http://chortle.ccsu.edu/vectorlessons/vectorIndex.html#00
+</pre>
+
+<hr>
+
+<p>3D Math Basics</p>
+<pre>
+Resources:
+http://what-when-how.com/xna-game-studio-4-0-programmingdeveloping-for-windows-phone-7-and-xbox-360/3d-math-basics-xna-game-studio-4-0-programming-part-1/
+
+http://what-when-how.com/xna-game-studio-4-0-programmingdeveloping-for-windows-phone-7-and-xbox-360/3d-math-basics-xna-game-studio-4-0-programming-part-2/
+
+</pre>
+
+<hr>
+
+<p>Vector Math for 3D Graphics</p>
+<pre>
+Resources: http://chortle.ccsu.edu/vectorlessons/vectorIndex.html#00
+
+0  Points and Lines
+1  Vectors, Points, and Column Matrices
+2  Matrix Addition
+3  Vector Addition
+4  Vector Length
+5  Vector Direction
+6  Scaling and Unit Vectors
+7  The Dot Product
+8  Length and the Dot Product
+9  The Angle between Two Vectors
+10 The Angle between 3D Vectors
+11 Projecting one Vector onto Another
+12 Vector Cross Product
+13 Matrices and Simple Matrix Operations
+14 Matrix-Column Matrix Multiplication
+15 Matrix-Matrix Multiplication
+16 Identity Matrix and Matrix Inverse
+
+
+
+0  Points and Lines
+
+</pre>
+
+<hr>
+
+<p>Vector Math for 3D Computer Graphics</p>
+<pre>
+resources: http://www.dickbaldwin.com/KjellTutorial/KjellVectorTutorialIndex.htm
+</pre>
+
+<hr>
+
+<p>Math For Game Developers</p>
+<pre>
+resource: https://www.youtube.com/playlist?list=PLW3Zl3wyJwWOpdhYedlD-yCB7WQoHf-My
+</pre>
+<pre>
+#include &lt;iostream>
+
+class Vector
+{
+public:
+  float: x, y; // 2D/3D x, y, z
+};
+class Point
+{
+public:
+  Point AddVector(Vector v);
+  
+  float x, y:
+};
+Point Point::AddVector(Vector v)
+{
+}
+</pre>
+<pre>
+#include &lt;iostream>
+
+class Vector
+{
+public:
+  float: x, y; // 2D/3D x, y, z
+};
+class Point
+{
+public:
+  Point AddVector(Vector v);
+  
+  float x, y:
+};
+Point Point::AddVector(Vector v)
+{
+  Point p2;
+  
+  p2.x = x + v.x;
+  p2.y = y + v.y;
+  
+  return p2;
+}
+// main function
+int main(int argc, char** args)
+{
+  Point p; // (1,0)
+  p.x = 1;
+  p.y = 0;
+  
+  Vector v; // (2,3)
+  v.x = 2;
+  v.y = 3;
+  
+  Point p2 = p.AddVector(v);
+  
+  std::cout &lt;&lt; "Result L (" &lt;&lt; p2.x &lt;&lt; ", " &lt;&lt; p2.y &lt;&lt; ")\n";
+  
+  return 0;
+}
+</pre>
+
+<hr>
+<hr>
+<hr>
+
+<p>Unit 1</p>
+<pre>
+Lecture 3: Transforms 1
+Lecture 4: Transforms 2
+Lecture 5: Viewing
+
+</pre>
+
+<hr>
+<hr>
+<hr>
+	
+<p>Unit 2</p>
+<pre>
+Lecture 6: OpenGL 1
+Lecture 7: OpenGL Shading
+Lecture 8: OpenGL 2
+Homework 2
+
+</pre>
+
+
+<hr>
+<hr>
+<hr>
+
+<p>Unit 3</p>
+<pre>
+Lecture 09: Ray Tracing 1
+Lecture 10: Ray Tracing 2
+Homework 3
+
+</pre>
+
+
+<hr>
+<hr>
+<hr>
+
+<br>
+<br>
+<br>
+
+</body>
+</html>

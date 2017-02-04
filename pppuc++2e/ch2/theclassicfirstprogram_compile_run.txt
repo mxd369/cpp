@@ -1,0 +1,14 @@
+g++ -std=c++11 -c theclassicfirstprogram.cpp
+In file included from theclassicfirstprogram.cpp:1:
+./std_lib_facilities.h:107:8: warning: comparison of unsigned expression < 0 is always false [-Wtautological-compare]
+                if (i<0||size()<=i) throw Range_error(i);
+                    ~^~
+./std_lib_facilities.h:113:8: warning: comparison of unsigned expression < 0 is always false [-Wtautological-compare]
+                if (i<0||size()<=i) throw Range_error(i);
+                    ~^~
+2 warnings generated.
+
+$ g++ -o theclassicfirstprogram theclassicfirstprogram.o
+$ ./theclassicfirstprogram
+
+Hello, World!
