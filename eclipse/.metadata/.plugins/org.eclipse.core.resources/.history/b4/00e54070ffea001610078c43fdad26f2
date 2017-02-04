@@ -1,0 +1,48 @@
+/*
+greetings.cpp
+Feb 4, 2017
+michaeldang
+*/
+#include <iostream>
+#include <sstream>
+#include <iomanip>
+using namespace std;
+int main(){
+	// prompt for user data
+	cout << "Enter integers: " << endl;
+
+	// getline
+	string input;
+	getline(cin,input);
+
+	// variable declaration and initialization
+	int Number;
+	int Count;
+	double Sum;
+	double Average;
+	double Sum_of_Squares;
+	double Variance;
+	stringstream stream(input);
+
+	// start: loop construct and computations
+	while(stream >> Number){
+		// code here
+		Sum += Number;
+		++Count;
+	}
+	Average = Sum / Count;
+	// end: loop construct and computations
+
+
+	// display data
+
+	// cout << "Count is: " << fixed << setprecision(2) << Count << endl;
+	// cout << "Number: " << fixed << setprecision(2) << Number << endl;
+
+	cout << "Sum: " << fixed << setprecision(2) << Sum << endl;
+	cout << "Average: " << fixed << setprecision(2) << Average << endl;
+
+
+	// return control to caller
+	return 0;
+} // main

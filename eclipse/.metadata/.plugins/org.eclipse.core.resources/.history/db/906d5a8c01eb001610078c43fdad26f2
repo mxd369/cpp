@@ -1,0 +1,65 @@
+/*
+stat.cpp:
+Let the user input a one or more integers, space separated, on a single line (as seen below), then work out and display the sum, average, sum of squares and population variance of the numbers. Remember, you do not need nor should you use an array to solve this problem.
+
+Enter integers: 2 4 1 3
+           Sum: 10.0
+       Average: 2.5
+Sum of Squares: 30.0
+      Variance: 1.25
+*/
+#include <iostream>
+#include <sstream>
+#include <iomanip>
+using namespace std;
+int main(){
+	// prompt for user data
+	cout << "Enter integers: " << endl;
+
+	// getline
+	string input;
+	getline(cin,input);
+
+	// variable declaration and initialization
+	int Number;
+	int Count;
+	double Sum;
+	double Average;
+	double Sum_of_Squares;
+	double Variance;
+	stringstream stream(input);
+
+	// start: loop construct and computations
+	while(stream >> Number){
+		// code here
+		Sum += Number;
+		++Count;
+		Sum_of_Squares = Sum_of_Squares + (Number * Number); // compute Sum_of_Squares
+	}
+
+	Average = Sum / Count;// compute average
+	Variance = (Sum_of_Squares/Count) - (Average*Average);
+	// end: loop construct and computations
+
+
+	// Start: display data
+	// cout << "Count is: " << fixed << setprecision(2) << Count << endl;
+	// cout << "Number: " << fixed << setprecision(2) << Number << endl;
+
+	//cout << "Sum: " << fixed << setprecision(1) << Sum << endl;
+	cout << "Sum: " << Sum << endl;
+
+	// cout << "Average: " << fixed << setprecision(1) << Average << endl;
+	cout << "Average: " << Average << endl;
+
+	//cout << "Sum of Squares: " << fixed << setprecision(1) << Sum_of_Squares << endl;
+	cout << "Sum of Squares: " << Sum_of_Squares << endl;
+
+	//cout << "Variance: " << fixed << setprecision(1) << Variance << endl;
+	cout << "Variance: " << Variance << endl;
+
+	// End: display data
+
+	// return control to caller
+	return 0;
+} // main

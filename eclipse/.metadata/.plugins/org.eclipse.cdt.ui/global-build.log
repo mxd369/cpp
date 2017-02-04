@@ -1,30 +1,23 @@
-12:12:58 **** Incremental Build of configuration Debug for project Greetings ****
+13:27:29 **** Incremental Build of configuration Debug for project minmax ****
 make all 
-Building file: ../greetings.cpp
+Building file: ../minmax.cpp
 Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"greetings.d" -MT"greetings.d" -o "greetings.o" "../greetings.cpp"
-../greetings.cpp:21:5: warning: variable 'Count' is uninitialized when used here [-Wuninitialized]
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"minmax.d" -MT"minmax.d" -o "minmax.o" "../minmax.cpp"
+../minmax.cpp:46:5: warning: variable 'Count' is uninitialized when used here [-Wuninitialized]
                 ++Count;
                   ^~~~~
-../greetings.cpp:15:11: note: initialize the variable 'Count' to silence this warning
+../minmax.cpp:23:11: note: initialize the variable 'Count' to silence this warning
         int Count;
                  ^
                   = 0
-../greetings.cpp:20:3: warning: variable 'Sum' is uninitialized when used here [-Wuninitialized]
-                Sum += Number;
-                ^~~
-../greetings.cpp:14:9: note: initialize the variable 'Sum' to silence this warning
-        int Sum;
-               ^
-                = 0
-2 warnings generated.
-Finished building: ../greetings.cpp
+1 warning generated.
+Finished building: ../minmax.cpp
  
-Building target: Greetings
+Building target: minmax
 Invoking: MacOS X C++ Linker
-g++  -o "Greetings"  ./greetings.o   
-Finished building target: Greetings
+g++  -o "minmax"  ./minmax.o   
+Finished building target: minmax
  
-12:13:01 **** Incremental Build of configuration Debug for project Greetings ****
+13:27:32 **** Incremental Build of configuration Debug for project minmax ****
 make all 
 make: Nothing to be done for `all'.

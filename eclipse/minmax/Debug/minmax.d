@@ -1,0 +1,1 @@
+minmax.d: ../minmax.cpp

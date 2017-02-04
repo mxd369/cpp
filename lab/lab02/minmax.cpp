@@ -1,20 +1,27 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
-// Max
+int main()
+{
+	int n;
+	int minimum = 99999;
+	int maximum = -1;
+	int i;
+	int num;
 
-// Min
-for number in input stream
-	int max;
-	firstnum = max
-		if secondnum is > max
-			secondnum = max
-		if secondnum < thirdnum
-			thirdnum = max
-					lastnum -1
+	cout<<"Enter the number you want to enter: ";
+	cin>>n;
+	cout<<"Enter integers: ";
+	for(i=0; i<n; i++)
+	{
+		cin>>num;
+		if(num<minimum)
+			minimum = num;
+		if(num>maximum)
+			maximum = num;
+	}
 
-int main(){
-	// call Max
-	// call Min
+	cout<<"Minimum: "<<minimum<<endl;
+	cout<<"Maximum: "<<maximum<<endl;
 	return 0;
-}
+}//end of main function

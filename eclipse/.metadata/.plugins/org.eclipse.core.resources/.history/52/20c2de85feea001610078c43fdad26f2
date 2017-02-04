@@ -1,0 +1,34 @@
+/*
+greetings.cpp
+Feb 4, 2017
+michaeldang
+*/
+#include <iostream>
+#include <sstream>
+#include <iomanip>
+using namespace std;
+int main(){
+	// prompt for user data
+	cout << "Enter integers: " << endl;
+
+	// getline
+	string input;
+	getline(cin,input);
+
+	// variable declaration and initialization
+	int Number;
+	int Sum;
+	int Count;
+	stringstream stream(input);
+
+	while(stream >> Number){
+		// code here
+		Sum += Number;
+		++Count;
+	}
+
+	cout << "Count is: " << fixed << setprecision(2) << Count << endl;
+	cout << "Sum: " << Sum << endl;
+	cout << "Number: " << Number << endl;
+	return 0;
+} // main
