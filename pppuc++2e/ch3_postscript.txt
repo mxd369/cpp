@@ -1,0 +1,3 @@
+Postscript
+
+Please don’t underestimate the importance of the notion of type safety. Types are at the center of most notions of correct programs, and some of the most effective techniques for constructing programs rely on the design and use of types — as you’ll see in Chapters 6 and 9, Parts II, III, and IV.
