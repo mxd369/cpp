@@ -1,0 +1,9 @@
+68
+
+This construct, called a while-statement, is interesting in its own right, and we’ll examine it further in §4.4.2.1. The while
+says that the statement after (cin>>current) is to be repeated as long as the input operation cin>>current succeeds, and
+cin>>current will succeed as long as there are characters to read on the standard input. Remember that for a string, >>
+reads whitespace-separated words. You terminate this loop by giving the program an end-of-input character (usually referred
+to as end of file). On a Windows machine, that’s Ctrl+Z (Control and Z pressed together) followed by an Enter (return). On a
+Unix or Linux machine that’s Ctrl+D (Control and D pressed together).
+So, what we do is to
