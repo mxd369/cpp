@@ -1,3 +1,0 @@
-/*
-We didn’t present the temperature example because we were particularly interested in temperatures. Many people — such as meteorologists, agronomists, and oceanographers — are very interested in temperature data and values based on it, such as means and medians. However, we are not. From a programmer’s point of view, what’s interesting about this example is its generality: the vector and the simple operations on it can be used in a huge range of applications. It is fair to say that whatever you are interested in, if you need to analyze data, you’ll use vector (or a similar data structure; see Chapter 21). As an example, let’s build a simple dictionary:
-*/

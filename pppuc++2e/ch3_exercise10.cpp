@@ -1,8 +1,15 @@
 /*
 
-9)
+10)
 
-Write a program that converts spelled-out numbers such as “zero” and “two” into digits, such as 0 and 2. When the user inputs a number, the program should print out the corresponding digit. Do it for the values 0, 1, 2, 3, and 4 and write out not a number I know if the user enters something that doesn’t correspond, such as stupid computer!.
+Write a program that takes an operation followed by two operands and outputs the result. For example:
+
+	+ 100 3.14
+	* 4 5
+
+Read the operation into a string called operation and use an if-statement to figure out which operation the user wants,
+for example, if (operation=="+"). Read the operands into variables of type double. Implement this for operations
+called +, –, *, /, plus, minus, mul, and div with their obvious meanings.
 
 */
 
