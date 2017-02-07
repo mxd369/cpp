@@ -10,10 +10,10 @@ int main()
 
 	// 5 basic types
 	// double for floating-point numbers
-	double flying_time = 3.5;
-	char decimal_point = '.'; // char for individual characters
-	string name = "Annemarie";// string for character strings
-	bool tap_on = true;		  // bool for logical variables
+	double flying_time = 3.5; 	// double: a floating-point number
+	char decimal_point = '.'; 	// char for individual characters
+	string name = "Annemarie";	// string for character strings
+	bool tap_on = true;		  	// bool for logical variables
 
 
 

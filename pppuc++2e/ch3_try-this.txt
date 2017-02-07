@@ -1,11 +1,11 @@
-
+1
 Try This:
 
 Get the “name and age” example to run. Then, modify it to write out the age in months: read the input in years and multiply (using the * operator) by 12. Read the age into a double to allow for children who can be very proud of being five and a half years old rather than just five.
 
 
 
-
+2.
 Try This:
 Get this little program to run. Then, modify it to read an int rather than a double. Note that sqrt() is not defined
 for an int so assign n to a double and take sqrt() of that. Also, “exercise” some other operations. Note that for
@@ -14,7 +14,7 @@ definitions of integer *, /, and % guarantee that for two positive ints a and b 
 
 
 
-
+3.
 Try This:
 Execute this program yourself using a piece of paper. Use the input The cat cat jumped. Even experienced
 programmers use this technique to visualize the actions of small sections of code that somehow don’t seem
@@ -22,24 +22,21 @@ completely obvious.
 
 
 
-
+4.
 Try This:
-Get the “repeated word detection program” to run. Test it with the sentence She she laughed He He He
-because what he did did not look very very good good. How many repeated words were there? Why?
-What is the definition of word used here? What is the definition of repeated word? (For example, is She she a
-repetition?)
+Get the “repeated word detection program” to run. Test it with the sentence She she laughed He He He because what he did did not look very very good good. How many repeated words were there? Why? What is the definition of word used here? What is the definition of repeated word? (For example, is She she a repetition?)
 
 
 
 
-
+5.
 Try This
 Compile the “Goodbye, cruel world!” program and examine the error messages. Did the compiler find all the errors? What did it suggest as the problems? Did the compiler get confused and diagnose more than four errors? Remove the errors one by one, starting with the lexically first, and see how the error messages change (and improve).
 
 
 
 
-
+6.
 Try This
 Run this program with a variety of inputs. Try small values (e.g., 2 and 3); try large values (larger than 127, larger than 1000); try negative values; try 56; try 89; try 128; try non-integer values (e.g., 56.9 and 56.2). In addition to showing how conversions from double to int and conversions from int to char are done on your machine, this program shows you what character (if any) your machine will print for a given integer value.
 
@@ -47,7 +44,7 @@ Run this program with a variety of inputs. Try small values (e.g., 2 and 3); try
 
 
 
-
+7.
 Try This:
 
 Run this program with a variety of inputs. Try small values (e.g., 2 and 3); try large values (larger than 127, larger than 1000); try negative values; try 56; try 89; try 128; try non-integer values (e.g., 56.9 and 56.2). In addition to showing how conversions from double to int and conversions from int to char are done on your machine, this program shows you what character (if any) your machine will print for a given integer value.
