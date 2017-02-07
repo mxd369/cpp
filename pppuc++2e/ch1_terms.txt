@@ -1,4 +1,5 @@
-Review
+Terms
+
 affordability
 analysis
 blackboard
@@ -17,3 +18,89 @@ software
 stereotype
 testing
 user
+
+
+
+affordability:
+I might prefer a Rolls-Royce or an executive jet to my usual forms of transport, but unless I’m a zillionaire, cost will enter into my choices.
+
+
+analysis:
+What’s the problem? What does the user want? What does the user need? What can the user afford? What kind of reliability do we need?
+
+
+blackboard:
+The best design tool we know of is a blackboard (use a whiteboard instead if you prefer chemical smells over chalk dust).
+
+
+CAD/CAM:
+(computer-aided design and computer-aided manufacture)
+
+
+communication:
+communication systems or communication between programmers, customers, project-managers, users
+
+
+correctness:
+a program or a piece of a program is correct if it meets its specification. Unfortunately, a specification can be incomplete or inconsistent, or can fail to meet users’ reasonable expectations. Thus, to produce acceptable code, we sometimes have to do more than just follow the formal specification.
+
+
+
+customer:
+pays the programmer or software development firm/consultants money to write software for its use, or the poeple who purchase or use software used by software writters/engineers
+
+
+design:
+How do we solve the problem? What should be the overall structure of the system? Which parts does it consist of? How do those parts communicate with each other? How does the system communicate with its users?
+
+
+feedback:
+We learn from experience and modify our behavior based on what we learn. That’s
+essential for effective software development. For any large project, we don’t know everything there is to know about the problem and its solution before we start. We can try out ideas and get feedback by programming, but in the earlier stages of development it is easier (and faster) to get feedback by writing down design ideas, trying out those design ideas, and using scenarios on friends. The best design tool we know of is a blackboard (use a whiteboard instead if you prefer chemical smells over chalk dust). Never design alone if you can avoid it! Don’t start coding before you have tried out your ideas by explaining them to someone. Discuss designs and programming techniques with friends, colleagues, potential users, and so on before you head for the keyboard. It is amazing how much you can learn from simply trying to articulate an idea. After all, a program is nothing more than an expression (in code) of some ideas. Similarly, when you get stuck implementing a program, look up from the keyboard. Think about the problem itself, rather than your incomplete solution. Talk with someone: explain what you want to do and why it doesn’t work. It’s amazing how often you find the solution just by carefully explaining the problem to someone. Don’t debug (find program errors) alone if you don’t have to!
+
+
+GUI:
+(graphical user interface)
+
+
+ideals:
+the perfect version of something we are striving for. Usually we have to make trade-offs and settle for an approximation.
+
+
+implementation:
+Programming plus testing is often called implementation. (1) the act of writing and testing code; (2) the code that implements a program.
+
+
+programmer:
+Someone who uses programming languages to write software.
+We talk about “programmers” and “programming,” but obviously programming is only part of the overall picture. The people who design a ship or a cell phone don’t think of themselves as programmers. Programming is an important part of software development, but not all there is to software development. Similarly, for most products, software development is an important part of product development, but not all there is to product development.
+
+
+programming:
+Express the solution to the problem (the design) in code. Write the code in a way that meets all constraints (time, space, money, reliability, and so on). Make sure that the code is correct and maintainable.
+the art of expressing solutions to problems as code.
+
+
+software: 
+a collection of programs running on some computer. Sometimes, we can see the computer. Often, we can see only something that contains the computer, such as a telephone, a camera, a bread maker, a car, or a wind turbine. We can see what that software does. We can be annoyed or hurt if it doesn’t do what it is supposed to do. We can be annoyed or hurt if what it is supposed to do doesn’t suit our needs.
+
+it is defined as a collection of programs or instructions running on the computer. It enables a user to interact with a computer and its hardware. Software is very useful because a computer would be useless without the software.
+
+On the basis of their usage software is categorized into two types: application software and system software.
+
+Application software is designed for doing the specific purpose. Ms-off, paint, etc.
+
+System software is required for the proper functioning of computer hardware and other application software. Operating system, bios, system drivers, etc.
+
+stereotype:
+The myth of a programmer being isolated is just that: a myth. People who like to work on their own choose areas of work where that is most feasible and usually complain bitterly about the number of “interruptions” and meetings. People who prefer to interact with other people have an easier time because modern software development is a team activity. The implication is that social and communication skills are essential and valued far more than the stereotypes indicate. On a short list of highly desirable skills for a programmer (however you realistically define programmer), you find the ability to communicate well — with people from a wide variety of backgrounds — informally, in meetings, in writing, and in formal presentations. We are convinced that until you have completed a team project or two, you have no idea of what programming is and whether you really like it. Among the things we like about programming are all the nice and interesting people we meet and the variety of places we get to visit as part of our professional lives.
+
+
+testing:
+Make sure the system works correctly under all circumstances required by systematically trying it out.
+
+
+user:
+people that use the software
+
+

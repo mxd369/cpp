@@ -1,0 +1,19 @@
+1. What is software?
+2. Why is software important?
+3. Where is software important?
+4. What could go wrong if some software fails? List some examples.
+5. Where does software play an important role? List some examples.
+6. What are some jobs related to software development? List some.
+7. What’s the difference between computer science and programming?
+8. Where in the design, construction, and use of a ship is software used?
+9. What is a server farm?
+10. What kinds of queries do you ask online? List some.
+11. What are some uses of software in science? List some.
+12. What are some uses of software in medicine? List some.
+13. What are some uses of software in entertainment? List some.
+14. What general properties do we expect from good software?
+15. What does a software developer look like?
+16. What are the stages of software development?
+17. Why can software development be difficult? List some reasons.
+18. What are some uses of software that make your life easier?
+19. What are some uses of software that make your life more difficult?

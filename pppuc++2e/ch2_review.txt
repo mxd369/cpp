@@ -15,8 +15,10 @@
 Answers
 
 1.
-What’s so important about the “Hello, World!” program? Its purpose is to get us acquainted with the basic tools of
-programming. We tend to do an extremely simple example, such as “Hello, World!,” whenever we approach a new tool. That way, we separate our learning into two parts: first we learn the basics of our tools with a trivial program, and later we learn about more complicated programs without being distracted by our tools. Learning the tools and the language simultaneously is far harder than doing first one and then the other. This approach to simplifying learning a complex task by breaking it into a series of small (and more manageable) steps is not limited to programming and computers. It is common and useful in most areas of life, especially in those that involve some practical skill.
+What’s so important about the “Hello, World!” program? Its purpose is to get us acquainted with the basic tools of programming. We tend to do an extremely simple example, such as “Hello, World!,” whenever we approach a new tool. That way, we separate our learning into two parts: first we learn the basics of our tools with a trivial program, and later we learn about more complicated programs without being distracted by our tools. Learning the tools and the language simultaneously is far harder than doing first one and then the other. This approach to simplifying learning a complex task by breaking it into a series of small (and more manageable) steps is not limited to programming and computers. It is common and useful in most areas of life, especially in those that involve some practical skill.
+
+This is the classic first program for any programming language, provides practical knowledge of programming syntaxes and process of program execution.
+
 
 2.
 example: int main() { }
@@ -30,20 +32,50 @@ example: int main() { }
 * A function body enclosed in a set of “curly braces,” { }, which lists the actions (called statements) that the function is to perform.
 
 
+Summary of question 2:
+  1. Function return type:
+    Gives information of what type of value function will return if any. If function doesn't return any value then its return type should be void. Some possible return types:
+      * int for integer value
+      * float or double for real values
+	  * char for characters
+	  * void if function doesn't return any values
+
+  2. Function Name:
+    used when programmer wants to call it.
+
+  3. Function body:
+    Functions have to execute certain instructions written within curly braces.
+
+  4. Parameter list of function:
+    list of variables or values passed to function in parenthesis(), by calling functions
+	
+	Example Function:
+	  int**<-(1) Return Type** rectArea**<-(2) Function Name** (int length, int breadth)**(3) Parameter list**
+	  { ** (4) function body start **
+	    int result;
+		result = length + breadth;
+		return result;
+	  } ** function body start **
+
 3.
 int main(){}
+
 
 4.
 Since main() is called by “the system,” we won’t use that return value. However, on some systems (notably Unix/Linux) it can be used to check whether the program succeeded. A zero (0) returned by main() indicates that the program terminated successfully.
 
+
 5.
 C++ is a compiled language. That means that to get a program to run, you must first translate it from the human-readable form to something a machine can “understand.” That translation is done by a program called a compiler. What you read and write is called source code or program text, and what the computer executes is called executable, object code, or machine code.
+
 
 6.
 Instructs the computer to make available (“to include”) facilities from a file.
 
+
 7.
 the suffix .h and is called a header or a header file. A header contains definitions of terms, such as cout, that we use in our program.
+
 
 8.
 A program usually consists of several separate parts, often developed by different people. For example, the “Hello, World!” program consists of the part we wrote plus parts of the C++ standard library. These separate parts (sometimes called translation units) must be compiled and the resulting object code files must be linked together to form an executable program. The program that links such parts together is (unsurprisingly) called a linker.
@@ -54,12 +86,15 @@ A program usually consists of several separate parts, often developed by differe
       Linker
         Executable program: hello_world.exe
 
+
 9.
 What you read and write is called source code or program text, and what the computer executes is called executable, object code, or machine code. Typically C++ source code files are given the suffix .cpp (e.g., hello_world.cpp) or .h (as in std_lib_facilities.h), and
 object code files are given the suffix .obj (on Windows) or .o (Unix).
 
+
 10.
 To program, we use a programming language. We also use a compiler to translate our source code into object code and a linker to link our object code into an executable program. In addition, we use some program to enter our source code text into the computer and to edit it. These are just the first and most crucial tools that constitute our programmer’s tool set or “program development environment.” If you work from a command-line window, as many professional programmers do, you will have to issue the compile and link commands yourself. If instead you use an IDE (“interactive development environment” or “integrated development environment”), as many professional programmers also do, a simple click on the correct button will do the job. See Appendix C for a description of how to compile and link on your C++ implementation. IDEs usually include an editor with helpful features like color coding to help distinguish between comments, keywords, and other parts of your program source code, plus other facilities to help you debug your code, compile it, and run it. Debugging is the activity of finding errors in a program and removing them; you’ll hear a lot about that along the way.
+
 
 11.
 You might think you understand everything you read and everything your Mentor or instructor told you, but repetition and

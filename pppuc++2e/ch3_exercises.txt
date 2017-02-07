@@ -1,4 +1,5 @@
 Exercises
+
 1
 If you haven’t done so already, do the Try this exercises from this chapter.
 

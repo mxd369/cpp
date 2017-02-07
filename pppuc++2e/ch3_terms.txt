@@ -17,3 +17,204 @@ type
 type safety
 value
 variable
+
+
+
+
+
+
+assignment:
+In many ways, the most interesting operator is assignment, represented as =. It gives a variable a new value.
+
+int a = 3; // a starts out with the value 3
+	a: 3
+
+a = 4;	   // a gets the value 4 ("becomes 4")
+	a: 4
+
+int b = a; // b starts out with a copy of a's value (that is, 4)
+	a: 4
+	b: 4
+
+b = a + 5; // b gets the value a+5 (this is, 9)
+	a: 4
+	b: 9
+
+a = a + 7; // a gets the value a+7 (this is, 11)
+	a: 11
+	b: 9
+
+
+cin:
+reads characters from input (the keyboard) into a variable:
+
+  cin >> first_name; // read characters into first_name
+
+The name cin refers to the standard input stream (pronounced “see-in,” for “character input”) defined in the standard library. The second operand of the >> operator (“get from”) specifies where that input goes. So, if we type some first name, say Nicholas, followed by a newline, the string "Nicholas" becomes the value of first_name:
+
+              string:
+  first_name: Nicholas
+
+
+concatenation:
+For strings + means concatenation; that is, when s1 and s2 are strings, s1+s2 is a string where the characters from s1 are followed by the characters from s2.
+
+For example, if s1 has the value "Hello" and s2 the value "World", then s1+s2 will
+have the value "HelloWorld".
+
+
+conversion:
+  *safe conversions:
+    In §3.4, we saw that we couldn’t directly add chars or compare a double to an int. However, C++ provides an indirect way to do both. When needed, a char is converted to an int and an int is converted to a double. For example:
+
+  char c = 'x';
+  int i1 = c;
+  int i2 = 'x';
+
+    Here both i1 and i2 get the value 120, which is the integer value of the character 'x' in the most popular 8-bit character set, ASCII. This is a simple and safe way of getting the numeric representation of a character. We call this char-to-int conversion  safe because no information is lost; that is, we can copy the resulting int back into a char and get the original value:
+
+  char c2 = i1;
+  cout << c << ' << i1 << ' << c2 << '\n';
+
+  This will print
+
+  x 120 x
+
+  In this sense — that a value is always converted to an equal value or (for doubles) to the best approximation of an equal value — these conversions are safe:
+
+  bool to char
+  bool to int
+  bool to double
+  char to int
+  char to double
+  int to double
+
+  The most useful conversion is int to double because it allows us to mix ints and doubles in expressions:
+
+  double d1 = 2.3;
+  double d2 = d1+2; // 2 is converted to 2.0 before adding
+  if (d1 < 0) // 0 is converted to 0.0 before comparison
+  cout << "d1 is negative";
+
+  For a really large int, we can (for some computers) suffer a loss of precision when converting to double. This is a rare problem.
+  
+  *unsafe conversions:
+	Safe conversions are usually a boon to the programmer and simplify writing code. Unfortunately, C++ also allows for (implicit) unsafe conversions. By unsafe, we mean that a value can be implicitly turned into a value of another type that does not equal the original value. For example:
+	
+	int main()
+	{
+		int a = 20000;
+		char c = a; // try to squeeze a large int into a small char
+		int b = c;
+		if (a != b) // != means “not equal”
+			cout << "oops!: " << a << "!=" << b << '\n';
+		else
+		cout << "Wow! We have large characters\n";
+	}
+
+	Such conversions are also called “narrowing” conversions, because they put a value into an object that may be too small (“narrow”) to hold it. Unfortunately, few compilers warn about the unsafe initialization of the char with an int. The problem is
+ that an int is typically much larger than a char, so that it can (and in this case does) hold an int value that cannot be represented as a char. Try it to see what value b gets on your machine (32 is a common result); better still, experiment:
+
+	int main()
+	{
+		double d = 0;
+		while (cin>>d) { 	// repeat the statements below
+							// as long as we type in numbers
+			int i = d; // try to squeeze a double into an int
+			char c = i; // try to squeeze an int into a char
+			int i2 = c; // get the integer value of the character
+			cout << "d==" << d // the original double
+				 << " i=="<< i // converted to int
+				 << " i2==" << i2 // int value of char
+				 << " char(" << c << ")\n"; // the char
+		}
+	}
+
+	You’ll find that many input values produce “unreasonable” results. Basically, we are trying to put a gallon into a pint pot (about 4 liters into a 500ml glass). All of the conversions:
+
+	double to int
+	double to char
+	double to bool
+	int to char
+	int to bool
+	char to bool
+
+	are accepted by the compiler even though they are unsafe. They are unsafe in the sense that the value stored might differ from the value assigned. Why can this be a problem? Because often we don’t suspect that an unsafe conversion is taking place.
+
+	Consider:
+	
+	double x = 2.7;
+	// lots of code
+	int y = x;	// y becomes 2
+
+	By the time we define y we may have forgotten that x was a double, or we may have temporarily forgotten that a doubleto- int conversion truncates (always rounds down, toward zero) rather than using the conventional 4/5 rounding. What happens is perfectly predictable, but there is nothing in the int y = x; to remind us that information (the .7) is thrown away.
+
+	Conversions from int to char don’t have problems with truncation — neither int nor char can represent a fraction of an integer. However, a char can hold only very small integer values. On a PC, a char is 1 byte whereas an int is 4 bytes:
+
+	char: []
+	int:  [][][][]
+
+	So, we can’t put a large number, such as 1000, into a char without loss of information: the value is “narrowed.” For example:
+
+	int a = 1000;
+	char b = a; // b becomes –24 (on some machines)
+
+Not all int values have char equivalents, and the exact range of char values depends on the particular implementation. On a PC the range of char values is [–128:127], but only [0:127] can be used portably because not every computer is a PC, and different computers have different ranges for their char values, such as [0:255].
+
+
+declaration:
+
+
+
+decrement:
+
+
+
+definition:
+
+
+
+increment:
+
+
+
+initialization:
+
+
+
+name:
+
+
+
+narrowing:
+
+
+
+object:
+
+
+
+operation:
+
+
+
+operator:
+
+
+
+type:
+
+
+
+type safety:
+
+
+
+value:
+
+
+
+variable:
+
+
+
