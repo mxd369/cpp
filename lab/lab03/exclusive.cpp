@@ -27,7 +27,10 @@ int main(){
 	// if num != any_num, then num = exclusive
 	
 	
-	
+	for (unsigned i=0; i<odd_positive_integers.length(); ++i)
+	  {
+	    cout << odd_positive_integers.at(i) << endl;
+	  }
 	
 	
 	
