@@ -9,6 +9,8 @@ You should also not use string manipulation beyond extraction from an std::strin
 
 Enter integers: 2 1 55 3 2 1 4 4 2 2 55
 Exclusive: 3
+
+piazza note: "Assume that each integer except for one, the exclusive integer, appears an even number of times in the input."
 */
 #include <iostream>
 using namespace std;
@@ -18,12 +20,23 @@ int main(){
 	cout << "Enter odd postive integers, each separated by a space: " << endl;
 	getline(cin, odd_positive_integers);
 
-	cout << "You entered" << odd_positive_integers << endl;
+	cout << "You entered: " << odd_positive_integers << endl;
 	
 	// need a while loop construct
 	// need to test if num == num, then num not exclusive
 	// if num != any_num, then num = exclusive
 	
 	
+	
+	
+	
+	
 	return 0;
 }
+/*
+$ ./exclusive 
+Enter odd postive integers, each separated by a space: 
+2 1 55 3 2 1 4 4 2 2 55
+You entered: 2 1 55 3 2 1 4 4 2 2 55
+*/
+
