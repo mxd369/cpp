@@ -9,6 +9,7 @@ In the first example below, the first 5 prime numbers are 2, 3, 5, 7, and 11.
 
 Enter integer: 5
 Prime sum: 28
+
 Enter integer: 100000
 Prime sum: 62260698721
 */
@@ -17,17 +18,18 @@ using namespace std;
 int main(){
 
 	int single_integer = 0;
+	int prime_sum = 0;
 
-	cout << "Enter a single integer where the integer is greater-than-or-equal-to 1 and less-than-or-equal-to 10000" << endl;
+	cout << "Enter an integer: " << endl;
 
 	cin >> single_integer;
 	int count = 0;
 	for(int i = 0; i < single_integer; i++){
 		count++;
 		// if num something something prime, primesum++
-		
 	}
+
 	cout << count << endl;
-	// cout << primesum << endl;
+	cout << prime_sum << endl;
 	return 0;
 }

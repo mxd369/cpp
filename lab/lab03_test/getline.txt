@@ -1,0 +1,39 @@
+stackoverflow.com/questions/21594533/c-extract-int-from-string-using-stringstream
+
+
+int main() {
+	std::stringstream ss;
+	std::string input = "a b c 4 e";
+	ss << input;
+	int found;
+	std::string temp;
+
+	while(std::getline(ss, temp, ' ')) {
+		if(std::stringstream(temp)>>found)
+		{
+			std::count<<found<<std::endl;
+		}
+	}
+	return 0;
+}
+
+-----
+http://stackoverflow.com/questions/6286371/how-do-you-get-the-remaining-string-after-a-string-extracted-from-a-sstream-vari
+
+#include <iostream>
+#include <sstream>
+using namespace std;
+int main() {
+	stringstream ss("abc gg rrr ff");
+	string s1, s2;
+	getline(ss, s2); // get rest of the string
+	cout << s1 << endl;
+	cout << s2 << endl;
+	return 0;
+}
+http://www.ideone.com/R4kfV
+-----
+
+http://www.cplusplus.com/reference/string/string/getline/
+
+
