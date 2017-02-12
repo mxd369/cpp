@@ -1,0 +1,78 @@
+primesum.cpp:
+
+#include <iostream>
+using namespace std;
+int main(){
+  
+int N,i,j,isPrime,n;
+   long int sum=0;
+   int k=0;
+cout<<"Enter integer:"<<endl;
+cin>>N;
+for(i = 2; k < N;i++){
+isPrime = 0;
+/* Check whether i is prime or not */
+for(j = 2; j <= i/2; j++){
+/* Check If any number between 2 to i/2 divides I
+completely If yes the i cannot be prime number */
+if(i % j == 0){
+isPrime = 1;
+break;
+}
+}
+if(isPrime==0){
+sum=sum+i;
+k++;
+}
+}
+cout<<"The sum of the first "<<N<<" prime numbers is "<<sum<<endl;
+return 0;
+}
+
+-------------------------------------------------------
+
+armstrong.cpp:
+
+#include <iostream>
+using namespace std;
+int main()
+{
+int origNum, num, rem, sum = 0;
+int digit;
+cout << "Enter a positive integer:\n ";
+cin >> origNum;
+num = origNum;
+while(num != 0)
+{
+digit = num % 10;
+sum += digit * digit * digit;
+num /= 10;
+}
+if(sum == origNum)
+cout << origNum << " is an Armstrong number.";
+else
+cout << origNum << " is not an Armstrong number.";
+return 0;
+}
+
+-------------------------------------------------------
+
+bitsum.cpp:
+
+#include <iostream>
+using namespace std;
+int main()
+{ int n;
+cout<<"Enter integer : \n";
+cin>>n;
+int sum=0;
+while(n>0)
+{
+if(n%2==1){
+sum=sum + 1;
+}
+n=n/2;
+}
+cout<<"The bit sum is "<<sum<<endl;
+return 0;
+}
