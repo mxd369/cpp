@@ -5,7 +5,8 @@ using namespace std;
 
 int main()
 {
-  int n, i;
+  int n;
+  int i;
   bool isPrime = true;
 
   cout << "Enter a positive integer: ";
@@ -19,6 +20,7 @@ int main()
           break;
       }
   }
+
   if (isPrime)
       cout << "This is a prime number";
   else
