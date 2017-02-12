@@ -14,3 +14,22 @@ Bit sum: 5
 
 piazza-note: Modulo 2 and dividing by 2 should be all that's needed.
 */
+#include <iostream>
+using namespace std;
+int main()
+{
+	int n;
+	cout<<"Enter integer : \n";
+	cin>>n;
+	int sum=0;
+	while(n>0)
+	{
+		if(n%2==1){		//modulo 2
+			sum=sum + 1;
+		}
+		n=n/2;			// divide by 2
+	}
+	cout<<"The bit sum is "<<sum<<endl;
+
+return 0;
+}

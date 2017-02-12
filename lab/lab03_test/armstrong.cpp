@@ -47,3 +47,11 @@ int main ()
 1 is an armstrong number
 999 is not an armstrong number
 */
+/*
+$ ./armstrong
+1
+153
+370
+371
+407
+*/

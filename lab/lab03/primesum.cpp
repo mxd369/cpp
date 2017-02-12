@@ -16,7 +16,7 @@ Prime sum: 62260698721
 #include <iostream>
 using namespace std;
 int main(){
-
+/*
 	int single_integer = 0;
 	int prime_sum = 0;
 
@@ -33,3 +33,4 @@ int main(){
 	cout << prime_sum << endl;
 	return 0;
 }
+*/

@@ -12,7 +12,7 @@ Prime sum: 62260698721
 #include <iostream>
 using namespace std;
 int main(){
-        
+    // how to use squared to increase performance?
     int N;
     int i;
     int j;
@@ -37,6 +37,16 @@ int main(){
                 k++;
             }
     }
-    cout<<"The sum of the first "<<N<<" prime numbers is "<<sum<<endl;
+    cout << "Prime sum: "<< sum << endl;
     return 0;
 }
+/*
+$ time ./primesum_test_working
+Enter integer:
+100000
+The sum of the first 100000 prime numbers is 62261998442
+
+real	4m49.043s
+user	4m42.943s
+sys     0m0.765s
+*/
