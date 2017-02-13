@@ -55,3 +55,67 @@ $ ./armstrong
 371
 407
 */
+
+/*
+programiz
+
+#include <iostream>
+using namespace std;
+int main(){
+  int start = 1;
+  int end = 999;
+  int i;
+  int num;
+  int numberValue;
+  int sum;
+  // for loop
+  for(i = start; i <= end; i++){
+        sum = 0;
+        num = i;
+		// nested for loop
+        for(; num > 0; num /= 10){
+            numberValue = num % 10;
+            sum = sum + numberValue * numberValue * numberValue;
+        }
+		// conditional
+        if(sum == i) {
+            cout << i << endl;
+        }
+  }
+  return 0;
+}
+*/
+
+/*
+programiz
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int origNum;
+  int num;
+  int rem;
+  int sum = 0;
+  int numberValue;
+  cout << "Enter a positive  integer: ";
+  cin >> origNum;
+
+  num = origNum;
+
+  while(num != 0)
+  {
+      numberValue = num % 10;
+      sum += numberValue * numberValue * numberValue;
+      num /= 10;
+  }
+
+  if(sum == origNum)
+    cout << origNum << " is an Armstrong number.";
+  else
+    cout << origNum << " is not an Armstrong number.";
+
+  return 0;
+}
+*/

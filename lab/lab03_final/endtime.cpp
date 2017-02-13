@@ -12,69 +12,43 @@ Enter in a duration: 	50
 End time is: 			1505
 
 piazza-note: midnight = 0000
-
-
-Supa Mike said just 0 is fine for midnight
-
- assume only positive durations.
-
-100 = 60
-
-If the time is 2300 and the duration is 100, can the end time just be '0' or does it need to be '0000'
-
-Enter in a start time: 2300
-Enter in a duration: 60
-End time is: 0
-this is what I got, should it be 0000?
 */
-#include <iostream>
+#include<iostream>
 using namespace std;
-int main(){
-	int start_time = 0;	// represents a time of day on a 24 hour clock
-	int duration = 0;		// 345 = 3hours 45minutes
-	int end_time = 0;
-	cout << "Enter in a start time: " << endl;
-	cin >> start_time;
-	cout << "Enter in a duration: " << endl;
+int the_time(int time);			// Function prototype (declaration) need return
+void display_time(int time);	// Function prototype (declaration) void
+int main() {
+	int time, duration;
+	cout << "Enter in a start time: ";
+	cin >> time;
+	cout << "Enter in a duration: ";
 	cin >> duration;
-	
-	end_time = (start_time + duration);
-	// int minute;
-	// int hour;
-	//if (hour == 0) return "midnight";
-	//if (hour == 12) return "noon";
-	
-
-	cout << "End time is: " << end_time << endl;
-
-	//int midnight = 0000;
-
+	time = the_time(time);
+	time = the_time(time + duration); 
+	cout << "End time is: ";
+	display_time(time);
 	return 0;
-	
-	
-	
-	
-	/*
-minutes = timeOfDay%100 1245%100 is 45 
-hours = timOfDay / 100; 1245 / 100 is 12 
-
-I would convert every thing to minutes. 
-
-minute += (hours * 60) 
-
-do the same thing with the time offset/duration 
-
-minutes+= minutesDuration; 
-
-convert back to 24 hour time, but this time use minutes % 60 for minutes 
-minute / 60 for hours 
-
-result equals minutes + (100 * hours) 
-	*/
-	
-	
-	
-	
+}
+// need to do minutes, hours, 2 12 hour cycles, and format
+int the_time(int time){
+	// compute minutes
+	int min = time % 100;
+	// compute hours
+	int hour = time / 100;
+	if(min >= 60)
+		{ min -= 60; hour++;}
+	// account for 12 and 24
+	hour %= 24;
+	time = (hour * 100) + min;
+	return time;
+}
+// need to do the correct 0000 00 and 0 format
+void display_time(int time){
+	if(time < 60){ cout << "00"; if(time < 10) cout << "0";
+	}
+	else if((time / 100) < 10) cout << "0";
+	else if((time / 100) == 0) cout << "00";
+	cout << time << endl;
 }
 /*
 	0000 = 0 minute			1200 AM

@@ -17,11 +17,96 @@ Exclusive: 3
 
 there will be an odd number of input values but there will only be one unique value in the list aka the exclusive value
 */
-#include <iostream>
-#include <sstream>
-#include <string>
+#include<iostream>
 using namespace std;
-int main(){
+
+int main()
+{
+	// Raunak Dey said dont need getline just while and cin
+	/*
+	while(stream1 >> storage1){
+
+	stringstream stream2(inputfromuser);
+	while(stream2 >> storage2){
+		if(storage1 == storage2)
+		have a counter here or something to ++
+	}
+
+	if(check if the counter is 1)
+		this is the exclusive number
+	else
+		reset counter
+	}
+	*/
+	int number;
+	int n;// storage
+	int exclusive = 0;// dont give garbage
+	cout<<"Enter number of odd integers: ";// use a counter
+	cin >> n;
+	cout<<"Enter Integers: ";
+	while(n!=0)
+	{
+		cin>>number;
+		exclusive = exclusive ^ number;
+		n--;// reset value
+	}
+	cout << "Exclusive Number: " << exclusive;
+	return 0;
+}//end of main function
+
+/*
+	getline(cin, ourinput);
+	// use the above to get the input
+	stringstream hello(ourinput);// for the outer loop 
+	stringstream hi(ourinput);//for the nested loop
+	// take the input in string stream
+		while(hello >> storage){
+			// basically here you are putting one number at a time into storage variable.
+			// If you print storage u will get a single value
+			// do more stuff here 
+	}
+	return 0;
+}
+
+while(stream1 >> storage1){
+
+    stringstream stream2(inputfromuser);
+    while(stream2 >> storage2){
+      if(storage1 == storage2)
+        have a counter here or something to ++
+    }
+
+    if(check if the counter is 1)
+      this is the exclusive number
+    else
+      reset counter
+  }
+
+
+int counter;
+string stream1;
+string storage1;
+
+while(stream1 >> storage1){
+
+    stringstream stream2(inputfromuser);
+    while(stream2 >> storage2){
+      if(storage1 == storage2)
+        //have a counter here or something to ++
+          counter++;
+    }
+
+    if(counter == 1)
+      cout << storage1 << endl;
+    else
+      counter --;
+  }
+
+  return 0;
+}
+*/
+
+/*
 	cout << "Enter integers: " << endl;
 
 	string x;
@@ -42,31 +127,31 @@ int main(){
 		cout << "previous is: " << previous << endl;
 		
 		++count;
-		/*
+
 		while (y >> a) {	// read a stream of words
 			if(previous == a)	// check if the word is the same as last
 				cout << "repeated word: " << current << '\n';
 		previous = current;
 		}
-		*/
+
 
 		//++count;
 
-		/*
+
 		for ( ; count >= input;){
 			if (a > count)
-		}*/
+		}
 
-		/*
+		
 		for(unsigned i = 0; i < x.length(); ++i){
 			cout << x.at(i) << endl;
 		}
-		*/
+		
 
-		/*
+		
 		if(count == 1) {
 			cout << "a currently is: " << a << endl; 
-		}*/
+		}
 
 		//cout << "x is " << x << endl;
 	}
@@ -76,7 +161,7 @@ int main(){
 	return 0;
 }
 
-/*
+
 $ ./exclusive
 Enter integers: 
 2 1 55 3 2 1 4 4 2 2 55
@@ -115,4 +200,15 @@ a is currently: 55
 previous is: 55
 x is 2 1 55 3 2 1 4 4 2 2 55
 count: 11
+
+*/
+
+
+/*
+Raunak Dey
+hi,
+
+Yes you may do a second loop like you said. 
+Or just have a global variable outside all the loops and
+then just keep using '^' the XOR operator.
 */

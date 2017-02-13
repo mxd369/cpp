@@ -17,21 +17,45 @@ Alec Repczynski
 */
 #include <iostream>
 using namespace std;
-int main()
-{
+int main() {
 	int number;// storage
-	cout << "Enter integer : " << endl;// prompt
+	cout << "Enter integer: ";// prompt on one line
 	cin >> number;// input
-	int sum=0;// does placement matter?
+	int sum = 0;// does placement matter?
 	// need a loop, while or for? Test, choose while
-	while(number>0)
-	{
+	while(number > 0){
 		/* important: use modulo 2 'piazza Alec Repcyznski'*/
-		if(n%2==1){ sum=sum + 1;}
+		// condition
+		if(number % 2 == 1){ sum = sum + 1;}
 		/* Important: divide by 2 'piazza Alec Repcyznski' */
-		n=n/2;
+		number = number / 2;
 	}
-	cout << "Bit sum: " << sum << endl;// display
+	cout << "Bit sum: " << sum << endl;// display, endline 
 
 	return 0;// return to caller
 }// main
+/*
+$ bitsum
+Enter integer: 115
+Bit sum: 5
+
+$ bitsum
+Enter integer: 115
+Bit sum: 5
+1110011
+
+$ bitsum
+Enter integer: 116
+Bit sum: 4
+1110100
+
+$ bitsum
+Enter integer: 117
+Bit sum: 5
+1110101
+
+$ bitsum
+Enter integer: 120
+Bit sum: 4
+1111000
+*/

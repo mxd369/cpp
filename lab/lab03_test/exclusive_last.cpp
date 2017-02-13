@@ -27,52 +27,31 @@ int main(){
 	string x;
 	getline(cin, x);
 	int a;
+	int n;
+	int number;
 	int count = 0;
-	int exclusive_int;
-	int previous = 0;
-	int current = -1;
+	int exclusive= 0;
 	stringstream y(x);
 
 	while(y >> a){
+		cout << "x: " << x << endl;
 		cout << "count: " << count << endl;
-		//cout << "x: " << x << endl;
-		//cout << "a: " << a << endl;
 		cout << "a is currently: " << a << endl;
-		previous = a;
-		cout << "previous is: " << previous << endl;
 		
 		++count;
-		/*
-		while (y >> a) {	// read a stream of words
-			if(previous == a)	// check if the word is the same as last
-				cout << "repeated word: " << current << '\n';
-		previous = current;
+		n = count;
+		while(n!=0)
+		{
+			//cin>>a;
+			//for(int i = 0; )
+			exclusive = exclusive ^ a;
+			n--;// reset value
 		}
-		*/
 
-		//++count;
-
-		/*
-		for ( ; count >= input;){
-			if (a > count)
-		}*/
-
-		/*
-		for(unsigned i = 0; i < x.length(); ++i){
-			cout << x.at(i) << endl;
-		}
-		*/
-
-		/*
-		if(count == 1) {
-			cout << "a currently is: " << a << endl; 
-		}*/
-
-		//cout << "x is " << x << endl;
 	}
-	cout << "x is " << x << endl;
-	cout << "count: " << count << endl;
-	// if (a == x) { cout << "a == x" << endl; }
+	//cout << "x is " << x << endl;
+	//cout << "count: " << count << endl;
+	cout << "Exclusive Number: " << exclusive;
 	return 0;
 }
 
