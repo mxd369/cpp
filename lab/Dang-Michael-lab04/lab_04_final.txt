@@ -1,0 +1,42 @@
+4 Making Assumptions
+1.
+sizeof(char)    = 1
+sizeof(char &)  = 1
+sizeof(char *)  = 8
+sizeof(short)   = 2
+sizeof(short &) = 2
+sizeof(short *) = 8
+sizeof(int)     = 4
+sizeof(int &)   = 4
+sizeof(int *)   = 8
+sizeof(long)    = 8
+sizeof(long &)  = 8
+sizeof(long *)  = 8
+sizeof(int **)  = 8
+sizeof(int ***) = 8
+
+
+
+(a) char     | sizeof(char)    = 1
+(b) char &   | sizeof(char &)  = 1
+(c) char *   | sizeof(char *)  = 8
+(d) short    | sizeof(short)   = 2
+(e) short &  | sizeof(short &) = 2
+(f) short *  | sizeof(short *) = 8
+(g) int      | sizeof(int)     = 4
+(h) int &    | sizeof(int &)   = 4
+(i) int *    | sizeof(int *)   = 8
+(j) long     | sizeof(long)    = 8
+(k) long &   | sizeof(long &)  = 8
+(l) long *   | sizeof(long *)  = 8
+(m) int **   | sizeof(int **)  = 8
+(n) int ***  | sizeof(int ***) = 8
+
+
+2.
+(a)0x00007ffd0f811b840x7ffd0f811b86
+(b)0x7ffd0f811b88
+(c)0x7ffd0f811b8a
+(d)0x7ffd0f811b8c
+(e) ...
+

@@ -1,0 +1,14 @@
+
+---
+
+character constants (p.186 ch5): specifies characters in single quotes such as 'A', '7' or '$' which represents the integer values of characters and enum constants.
+
+---
+
+constant variable (p.186 ch5): a variable contianing a value which does not change for the entire program.
+
+pointer to void (i.e., void*): a generic pointer capable of representing any pointer type. Any pointer to a fundamental type or class type can be assigned to a pointer of type void* without casting. However, a pointer of type void* cannot be assigned directly to a point of another type - the pointer of type void* must first be cast to the proper pointer type.
+
+Assigning a pointer of one type to a pointer of another (other than void*) without using a cast is a compilation error.
+
+---

@@ -1,0 +1,22 @@
+DEITEL 1 - 6
+
+
+APUE 1–2, DEITEL 22.5–22.6 - Due
+DEITEL 6.6, 6.10–6.21 - Due
+DEITEL 8.1–8.12 - Due
+APUE 3.1–3.17 - Due
+
+GDB throughout chapters 2--5.
+APUE 4.1–4.11 - Due
+
+
+
+This is subject to change, but I anticipate the following will be game:
+Anything we cover in lecture through THU (2/23)
+Basics of lab-related and project-related material
+Readings:
+APUE Ch 1—3
+DEITEL Ch 1—10, 22.5—22.6
+UNIX Tutorial for Beginners - Chapters 0–3
+path_resolution(7)
+GDB 2–5 (gdb.pdf; as a supplement to what we cover in class)

@@ -1,0 +1,56 @@
+1.1
+
+a) programs
+answer: programs
+
+b) (1) ALU (2) CPU (3) BUS (4) RAM (5) CONTROL (6) I/O (7) main memory 
+answer: input unit, output unit, memory unit, central processing unit, arithmetic and logic unit, secondary storage unit.
+
+c) (1) Machine (2) Assembly (3) High-Level
+answer: machine languages, assembly languages, high-level languages
+
+d) assembly
+answer: compilers
+
+e) android
+answer: Android
+
+f) production
+answer: Release candidate
+
+g) sensor
+answer: accelerometer
+
+1.2
+
+a) editing
+answer: editor
+
+b) compiler
+answer: preprocessor
+
+c) linker
+answer: linker
+
+d) 
+answer: loader
+
+1.3
+
+a) abstraction
+answer: information-hiding
+
+b) APIs
+answer: classes
+
+c) object-oriented programming
+answer: object-oriented analysis and design (OOAD)
+
+d) inheritance
+answer: inheritance
+
+e) GUi
+answer: The Unified Modeling Language (UML)
+
+f) attributes
+answer: attributes

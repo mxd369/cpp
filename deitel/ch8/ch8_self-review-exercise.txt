@@ -1,0 +1,259 @@
+8.1
+
+a) address
+
+answer: address
+
+b) nullptr ("points to nothing" null pointer) or a memory address when declare/in an assignment 
+
+answer: nullptr, an address
+
+c) the value 0
+
+answer: 0
+
+---------------------------------------------------------------
+
+8.2
+
+a) false, the operand of the address operator must be an lvalue, the address operator cannot be applied to literals or to expressions that result in temporary values (like the results of calculations).
+
+answer: false, the operand of the address operator must be an lvalue, the address operator cannot be applied to literals or to expressions that result in temporary values.
+
+b) false, a pointer that is declared to be of type void* can NOT be dereferenced. A pointer declared to be of type void* can not be dereferenced because the type void is empty, you cannot dereference the type nothing. p 361.
+A void* pointer cannot be dereference. For example, the compiler "knows" than int* points to four bytes of memory on a machine with four-byte integers. Dereferencing an int* creates an lvalue that is an alias for the int's four bytes of memory. A void*, however, simply contains a memory address for an unknown data type
+
+answer: false, a pointer to void cannot be dereferenced. Such a pointer does not have a type that enables the compiler to determine the type of the data and the number of bytes of memory to which the pointer points.
+
+c) false, a pointer of one type CAN be assigned to one of another type without a cast operation.
+
+answer: false, Pointers of any type can be assigned to void pointers. Pointers of type void can be assigned to pointers of other types only with an explicit type cast.
+
+---------------------------------------------------------------
+
+8.3
+
+---
+a)
+
+For each of the following, write C++ statements that perform the specified task. Assume that double-precision, floating-point numbers are stored in eight bytes and that the starting address of the built-in array is at location 1002500 in memory. Each part of the exercise should use the results of previous parts where appropriate.
+
+Declare a built-in array of type double called numbers with 10 elements, and initialize the elements to the values 0.0, 1.1, 2.2, ..., 9.9. Assume that the constant size has been defined as 10.
+
+	int numbers[]{0.0, 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9}
+
+answer: double numbers[size]{0.0, 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9};
+
+---
+b)
+
+Declare a pointer nPtr that points to a variable of type double.
+
+	double* nPtr;
+
+answer: double* nPtr;
+
+---
+c)
+
+Use a for statement to display the elements of built-in array numbers using array subscript notation. Display each number with one digit to the right of the decimal point.
+
+	// output built-in array using array subscript notation
+	for(size_t i{0}; i < 4 ; ++i){
+		cout << "numbers[" << i << "] = " << numbers[i] << '\n';
+		}
+
+answer:
+	cout << fixed << showpoint << setprecision(1);
+	for (size_t i{0}; i < size; ++i){
+		cout << numbers[i] << ' ';
+	}
+
+---
+d)
+
+/*
+note: p. 361 8.9 Relationship between pointers and built-in arrays
+Built-in arrays and pointers are intimately related in C++ and may be used almost interchangeably. Pointers can be used to do any operation involving array subscripting. 
+
+Assume the following declarations
+
+	int b[ 5 ]; // create 5-element int array b; b is a const pointer
+	int* bPtr;  // create int pointer bPtr, which isn't a const pointer
+
+We can set bPtr to the address of the first element in the built-in array b with the statement
+
+	bPtr = b; // assign address of built-in array b to bPtr
+
+This is equivalent to assigning the address of the first element aas follows:
+
+	bPtr = &b[0]; // also assigns address of built-in array b to bPtr
+
+The expression
+
+	b += 3
+
+causes a compilation error, because it attempts to modify the value of the built-in array's name with pointer arithmetic.
+
+
+8.9.1 Pointer/Offset Notation
+
+	*(bPtr + 3)
+
+
+8.9.2 Pointer/Offset Notation with the Built-in Array's Name as the Pointer
+
+	*(b + 3)
+
+also refers to the element b[3].
+
+
+8.9.3 Pointer Subscript Notation
+
+	bPtr[1]
+
+*/
+
+Write two separate statements that each assign the starting address of built-in array numbers to the pointer variable nPtr.
+
+	nPtr = number;// assign address of built-in array number to nPtr
+	
+	// this is the equivalent to assigning the address of the first element as follows
+	nPtr = &number; // also assigns address of built-in array number to nPtr
+
+
+answer:
+	nPtr = numbers;
+	nPtr = &numbers[0];
+
+---
+e)
+
+Use a for statement to display the elements of built-in array numbers using pointer/off-set notation with pointer nPtr.
+
+	// output built-in array number using array name and pointer/off-set notation
+	cout << "\nPointer/offset notation where " << "the pointer is the array name\n";
+
+	for (size_t offset1{0}; offset1 < 10; offset1) {
+		cout << "*(b + " << offset1 << ") = " << *(b + offset1) << '\n';
+	}
+
+
+answer:
+	cout << fixed << showpoint << setprecision(1);
+	for (size_t j{0}; j < size; ++j){
+		cout << *(nPtr + j) << ' ';
+	}
+
+---
+f)
+
+Use a for statement to display the elements of built-in array numbers using pointer/off-set notation with the built-in array's name as the pointer.
+
+	// output built-in array numbers using nPtr and pointer/offset notation
+	for (size_t offset2{0}; offset2 < 10; ++offset2){
+		cout << "*(bPtr + " << offset2 << ") = " << *(bPtr + offset2) << '\n';
+	}
+
+
+answer:
+	cout << fixed << showpoint << setprecision(1);
+	for (size_t k{0}; k < size; ++k) {
+		cout << *(numbers + k) << ' ';
+	}
+
+---
+g)
+
+Use a for statement to display the elements of built-in array numbers using pointer/subscript notation with pointer nPtr.
+
+	// output built-in array numbers using nPtr and array subscript notation : bPtr[1]
+	cout << "Pointer/subscript notation\n";
+
+	for (size_t j{0}; j < 4; ++j){
+		cout << "bPtr[" << j << "] = " << bPtr[j] << '\n';
+	}
+
+answer:
+	cout << fixed << showpoint << setprecision(1);
+	for (size_t m{0}; m < size; ++m) {
+		cout << nPtr[m] << ' ';
+	}
+
+---
+h)
+
+Refer to the fourth element of built-in array numbers using array subscript notation, pointer/offset notation with the built-in array's name as the pointer, pointer subscript notation with nPtr and pointer/offset notation with nPtr.
+
+
+answer:
+
+---
+i)
+
+Assuming that nPtr and points to the beginning of built-in array numbers, what address is referenced by nPtr + 8? What value is stored at that location?
+
+answer:
+
+---
+j)
+
+Assuming that nPtr points to numbers[5], what address is referenced by nPtr after nPtr -= 4 is executed? What's the value stored at that location?
+
+
+answer:
+
+---
+
+---------------------------------------------------------------
+
+8.4
+
+a)
+answer:
+b)
+answer:
+c)
+answer:
+d)
+answer:
+e)
+answer:
+f)
+answer:
+
+---------------------------------------------------------------
+
+8.5
+
+a)
+answer:
+b)
+answer:
+c)
+answer:
+d)
+answer:
+e)
+answer:
+f)
+answer:
+
+---------------------------------------------------------------
+
+8.6
+
+a)
+answer:
+b)
+answer:
+c)
+answer:
+d)
+answer:
+e)
+answer:
+f)
+answer:
+
+---------------------------------------------------------------
