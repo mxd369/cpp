@@ -1,56 +1,218 @@
-1.1
+===========================Self-Review Exercises
+===========================1.1
 
-a) programs
+A) Computers process data under the control of sets of instructions called _____ .
+guess a) programs
 answer: programs
 
-b) (1) ALU (2) CPU (3) BUS (4) RAM (5) CONTROL (6) I/O (7) main memory 
+B) The key logical units of the computer are the _____, _____, _____, _____, _____, and _____ .
+guess b) (1) ALU (2) CPU (3) BUS (4) RAM (5) CONTROL (6) I/O (7) main memory 
 answer: input unit, output unit, memory unit, central processing unit, arithmetic and logic unit, secondary storage unit.
 
-c) (1) Machine (2) Assembly (3) High-Level
+C) The three types of languages discussed in the chapter are _____ , _____ and _____ .
+guess c) (1) Machine (2) Assembly (3) High-Level
 answer: machine languages, assembly languages, high-level languages
 
-d) assembly
+D) The programs that translate high-level language programs into machine language are called _____ .
+guess d) assembly
 answer: compilers
 
-e) android
+E) _____ is a smartphone operating system based on the Linux kernel and Java.
+guess e) android
 answer: Android
 
-f) production
+F) _____ software is generally feature complete and (supposedly) bug free and ready for use by the community.
+guess f) production
 answer: Release candidate
 
-g) sensor
+G) The Wii Remote, as well as many smartphones, uses a(n) _____ which allows the device to respond to motion.
+guess g) sensor
 answer: accelerometer
 
-1.2
+===========================1.2 C++ Environment
 
-a) editing
+A) C++ programs are normally typed into a computer using a(n) _____ program.
+guess a) editing
 answer: editor
 
-b) compiler
+B) In a C++ system, a(n) _____ program executes before the compiler’s translation phase begins.
+guess b) compiler
 answer: preprocessor
 
-c) linker
+C) The _____ program combines the output of the compiler with various library functions to produce an executable program.
+guess c) linker
 answer: linker
 
-d) 
+D) The _____ program transfers the executable program from disk to memory.
+guess d) idk
 answer: loader
 
-1.3
+===========================1.3
 
-a) abstraction
+A) Objects have the property of _____—although objects may know how to communicate with one another across well-defined interfaces, they normally are not allowed to know how other objects are implemented.
+guess a) abstraction
 answer: information-hiding
 
-b) APIs
+B) C++ programmers concentrate on creating , which contain data members and the member functions that manipulate those data members and provide services to clients.
+guess b) APIs
 answer: classes
 
-c) object-oriented programming
+C) The process of analyzing and designing a system from an object-oriented point of view is called _____ .
+guess c) object-oriented programming
 answer: object-oriented analysis and design (OOAD)
 
-d) inheritance
+D) With _____, new classes of objects are derived by absorbing characteristics of existing classes, then adding unique characteristics of their own.
+guess d) inheritance
 answer: inheritance
 
-e) GUi
+E) _____ is a graphical language that allows people who design software systems to use
+an industry-standard notation to represent them.
+guess e) GUi
 answer: The Unified Modeling Language (UML)
 
-f) attributes
+F) The size, shape, color and weight of an object are considered _____ of the object’s class.
+guess f) attributes
 answer: attributes
+
+===========================Exercises
+===========================1.4
+
+A) The logical unit of the computer that receives information from outside the computer for use by the computer is the _____.
+a) IO
+answer: input unit
+
+B) The process of instructing the computer to solve a problem is called _____.
+b) programming
+answer: computer programming
+
+C) _____ is a type of computer language that uses English-like abbreviations for machine-language instructions.
+c) C++
+answer: assembly language
+
+D) _____ is a logical unit of the computer that sends information which has already been processed by the computer to various devices so that it may be used outside the computer.
+d) BUS
+answer: Output Unit
+
+E) _____ and _____ are logical units of the computer that retain information.
+e) main memory and secondary memory
+answer: memory unit and secondary storage
+
+F) _____ is a logical unit of the computer that performs calculations.
+f) CPU
+answer: arithmetic unit
+
+G) _____ is a logical unit of the computer that makes logical decisions.
+g) ALU
+answer: logical unit
+
+H) _____ languages are most convenient to the programmer for writing programs quickly and easily.
+h) High-level-languages
+answer: High level languages
+
+I) The only language a computer can directly understand is that computer’s _____ .
+i) machine-language
+answer: Machine language
+
+J) _____ is a logical unit of the computer that coordinates the activities of all the other logical units.
+j) CPU
+answer: Central Processing Unit
+
+===========================1.5
+
+A) _____ initially became widely known as the development language of the Unix operating
+system.
+a) C
+answer: C language
+
+B) The _____ programming language was developed by Bjarne Stroustrup in the early 1980s at Bell Laboratories.
+b) C++
+answer: C++ language
+
+===========================1.6
+A) C++ programs normally go through six phases— ______, ______, ______,
+______,______ and ______.
+a) compile, link, _____, _____, ______, and ______
+answer:
+Edit: editing of the file done with editig program. such as vi or emacs
+
+Preprocess: In case of preprocess, command is being provided for compiling the program. It is executed before the compiler translator phase begins. It obeys commands known as preprocessing directives which helps in indicating the manipulation that need to be performed before compilation of the program begins.
+
+Compile: In case of compulation, program is being translated to machien language code. It can be said as object code.
+
+Link: Linker is use for linking the object code with the code for the missing function so as to create executable code. If the compilation and linking is doen properly then it results in producing executable image.
+
+Load: Loading of the program is done by the loader. Loader basically takes the executable image which is begin produced by the linker and this that executable image is transfer to the memory.
+
+Execute: Execution of each and every function of the program begins but one instruction is executed at a specified time
+
+B) A(n) _____ provides many tools that support the software development process, such as editors for writing and editing programs, debuggers for locating logic errors in programs, and many other features.
+b) IDE
+answer: IDE integrated development environment
+===========================1.7
+Discuss the following terms and concepts that applies to the notion of a watch:
+object,
+attributes,
+behavior,
+class,
+inheritance(consider for example, an alarm clock),
+modeling,
+messages,
+encapsulation,
+interface,
+information hiding.
+
+
+Object Oriented Concepts
+
+Object - watch itself is an object.
+
+Attributes - some of the attributes of a watch are brand name, color, type, model number.
+
+Behaviors - Displaying time and allowing adjustments. 
+
+Class - A clock is a class from which the object watch is derived.
+
+Inheritance - inherits properties of an alarm clock object, date object.
+
+Abstraction - mechanism of a watch is not known to the user of it. Only the outer appearance and the output functionality of the watch is provided to the user.
+
+Modeling - A watch is modeled by adding various functionalities like displaying time, setting time, rotating needles.
+
+Messages - When the key rod of a watch is rotated, a message is sent to the watch to adjust time accordingly. Since wathc is a mechanical device, messages are in the form of physical action of different parts.
+
+Encapsulation - The mechanism such as how the needles in a watch rotate and how the time is set are encapsulated in a watch.
+
+Interface - An interface between the user and the machine inside a wathc would allow getting and setting the time. The key rod is an interface to the watch.
+
+Information hiding - The details such as how the time is set when key rod is rotated and how the time is being displayed are hidden. The inner functioning and implementations are encapsulated in the machine.
+
+
+===========================Making a Difference
+
+===========================1.8
+
+Carbon Footprint Calculator
+
+===========================1.9
+
+Body Mass Index Calculator
+
+===========================1.10
+
+Attributes of Hybrid Vehicles
+
+===========================1.11
+
+Gender Neutrality
+
+===========================1.12
+
+Privacy
+
+===========================1.13
+
+Programmer Responsibility and Liability
+
+===========================1.14
+
+2010 Flash Crash
