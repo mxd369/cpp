@@ -1,3 +1,5 @@
+Introduction to Computers and C++
+
 ===========================Self-Review Exercises
 ===========================1.1
 
@@ -186,33 +188,18 @@ Interface - An interface between the user and the machine inside a wathc would a
 
 Information hiding - The details such as how the time is set when key rod is rotated and how the time is being displayed are hidden. The inner functioning and implementations are encapsulated in the machine.
 
-
 ===========================Making a Difference
-
 ===========================1.8
-
 Carbon Footprint Calculator
-
 ===========================1.9
-
 Body Mass Index Calculator
-
 ===========================1.10
-
 Attributes of Hybrid Vehicles
-
 ===========================1.11
-
 Gender Neutrality
-
 ===========================1.12
-
 Privacy
-
 ===========================1.13
-
 Programmer Responsibility and Liability
-
 ===========================1.14
-
 2010 Flash Crash
