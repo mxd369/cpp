@@ -1,4 +1,6 @@
-8.1
+Ch8: Pointers
+===========================Self-Review Exercises
+===========================8.1
 
 a) address
 
@@ -12,9 +14,9 @@ c) the value 0
 
 answer: 0
 
----------------------------------------------------------------
 
-8.2
+
+===========================8.2
 
 a) false, the operand of the address operator must be an lvalue, the address operator cannot be applied to literals or to expressions that result in temporary values (like the results of calculations).
 
@@ -29,9 +31,9 @@ c) false, a pointer of one type CAN be assigned to one of another type without a
 
 answer: false, Pointers of any type can be assigned to void pointers. Pointers of type void can be assigned to pointers of other types only with an explicit type cast.
 
----------------------------------------------------------------
 
-8.3
+
+===========================8.3
 
 ---
 a)
@@ -205,26 +207,9 @@ answer:
 
 ---
 
----------------------------------------------------------------
 
-8.4
 
-a)
-answer:
-b)
-answer:
-c)
-answer:
-d)
-answer:
-e)
-answer:
-f)
-answer:
-
----------------------------------------------------------------
-
-8.5
+===========================8.4
 
 a)
 answer:
@@ -239,9 +224,9 @@ answer:
 f)
 answer:
 
----------------------------------------------------------------
 
-8.6
+
+===========================8.5
 
 a)
 answer:
@@ -256,4 +241,30 @@ answer:
 f)
 answer:
 
----------------------------------------------------------------
+
+
+===========================8.6
+
+a)
+answer:
+b)
+answer:
+c)
+answer:
+d)
+answer:
+e)
+answer:
+f)
+answer:
+
+===========================Exercises
+===========================8.7
+===========================8.8
+===========================8.9
+===========================8.10
+===========================8.11
+===========================8.12
+===========================8.13
+===========================8.14
+===========================Special Section: Building Your Own Computer

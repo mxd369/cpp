@@ -1,0 +1,154 @@
+Introduction to C++ Programming, Input/Output and Operators
+
+===========================Self-Review Exercises
+===========================3.1
+a) Every class definition contains the keyword _____ followed immediately by the
+class’s name.
+
+guess:
+
+answer:
+
+b) A class definition is typically stored in a file with the _____ filename extension.
+
+guess:
+
+answer:
+
+c) Each parameter in a function header specifies both a(n) _____ and a(n) _____.
+
+guess:
+
+answer:
+
+d) When each object of a class maintains its own copy of an attribute, the variable that represents the attribute is also known as a(n) _____.
+
+guess:
+
+answer:
+
+e) Keyword public is a(n) _____.
+
+guess:
+
+answer:
+
+f) Return type _____ indicates that a function will perform a task but will not return any information when it completes its task.
+
+guess:
+
+answer:
+
+g) Function _____ from the <string> library reads characters until a newline character is encountered, then copies those characters into the specified string.
+
+guess:
+
+answer:
+
+h) Any file that uses a class can include the class's header via a(n) _____ preprocessing directive
+
+guess:
+
+answer:
+
+===========================3.2
+State whether each of the following is true or false. If false, explain why.
+
+a) By convention, function names begin with a capital letter and all subsequent words in the name begin with a capital letter.
+
+b) Empty parentheses following a function name in a function prototype indicate that the
+function does not require any parameters to perform its task.
+
+c) Data members or member functions declared with access specifier private are accessible to member functions of the class in which they’re declared.
+
+d) Variables declared in the body of a particular member function are known as data members and can be used in all member functions of the class.
+
+e) Every function’s body is delimited by left and right braces ({ and }).
+
+f) The types of arguments in a function call must be consistent with the types of the corresponding parameters in the function prototype’s parameter list.
+
+
+===========================3.3
+
+What is the difference between a local variable and a data member?
+
+===========================3.4
+
+Explain the purpose of a function parameter. What’s the difference between a parameter
+and an argument?
+
+===========================Exercises
+===========================3.5
+
+
+(Default Constructor) What’s a default constructor? How are an object’s data members initialized if a class has only an implicitly defined default constructor?
+
+===========================3.6
+
+(Data Members) Explain the purpose of a data member.
+
+===========================3.7
+
+(Using a Class Without a using Directive) Explain how a program could use class string
+without inserting a using directive.
+
+===========================3.8
+
+(Set and Get Functions) Explain why a class might provide a set function and a get function for a data member.
+
+===========================3.9
+
+(Modified Account Class) Modify class Account (Fig. 3.8) to provide member function called withdraw that withdraws money from an Account. Ensure that the withdrawl amount does not exceed the Account's balance. If it does, the balance should be left unchanged and the member function should display a message indicating "Withdrawal amount exceeded account balance." Modify class AccountTest (Fig 3.9) to test member function withdraw.
+
+===========================3.10
+
+(Invoice Class) Create a class called Invoice that a hardware store might use to represent an invoice for an item sold at the store. An Invoice should include four data members—a part number (type string), a part description (type string), a quantity of the item being purchased (type int) and a price per item (type int). [Note: In subsequent chapters, we’ll use numbers that contain decimal points (e.g., 2.75)—called floating-point values—to represent dollar amounts.] Your class should have a constructor that initializes the four data members. Provide a set and a get function for each data member. In addition, provide a member function named getInvoiceAmount that calculates the invoice amount (i.e., multiplies the quantity by the price per item), then returns the amount as an int value. If the quantity is not positive, it should be set to 0. If the price per item is not positive, it should be set to 0. Write a test program that demonstrates class Invoice’s capabilities.
+
+===========================3.11
+
+(Employee Class) Create a class called Employee that includes three pieces of information as data members—a first name (type string), a last name (type string) and a monthly salary (type int). [Note: In subsequent chapters, we’ll use numbers that contain decimal points (e.g., 2.75)— called floating-point values—to represent dollar amounts.] Your class should have a constructor that initializes the three data members. Provide a set and a get function for each data member. If the monthly salary is not positive, set it to 0. Write a test program that demonstrates class Employee’s capabilities. Create two Employee objects and display each object’s yearly salary. Then give each Employee a 10 percent raise and display each Employee’s yearly salary again.
+
+===========================3.12
+
+(Date Class) Create a class called Date that includes three pieces of information as data members—a month (type int), a day (type int) and a year (type int). Your class should have a constructor with three parameters that uses the parameters to initialize the three data members. For the purpose of this exercise, assume that the values provided for the year and day are correct, but ensure that the month value is in the range 1–12; if it isn’t, set the month to 1. Provide a set and a get function
+for each data member. Provide a member function displayDate that displays the month, day and year separated by forward slashes (/). Write a test program that demonstrates class Date’s capabilities.
+
+===========================3.13
+(Removing Duplicated Code in the main Function) In Fig. 3.9, the main function contains six statements (lines 14-15, 16-17, 26-27, 28-29, 37-38 and 39-40) that each display an Account object's name and balance. Study these statements and you'll notice that they differ only in the Account object being manipulated-account1 or account2. In this exercise, you'll define a new displayAccount function that contains one copy of that output statement. The member function will output the object's name and balance. You'll then replace the six duplicated statements in main with calls to displayAccount, passing as an argument the specific Account object to output.
+	Modify Fig. 3.9 to define the following displayAccount function after the using directive and before main:
+
+	void displayAccount(Account accountToDisplay) {
+		// place the statement that displays
+		// accountToDisplay's name and balance here
+	}
+
+Replace the comment in the member function's body with a statement that displays accountToDisplay's name and balance.
+	Once you've completed displayAccount's declaration, modify main to replace the statements that display each Account's name and balance with calls to displayAccount of the form:
+
+	displayAccount(nameOfAccountObject);
+
+In each call, the argument should be the account1 and account2 object, as appropriate. Then, test the updated program to ensure that it produces the same output as shown in Fig. 3.9.
+
+===========================3.14
+
+(C++ List Initializers) Write a statement that uses list initialization to initialize an object of class Account which provides a constructor that receives an unsigned int, two strings and a double to initialize the accountNumber, firstName, lastName, and balance data members of a new object of the class.
+
+===========================3.Unlisted
+
+(Header and Source-Code Files) What’s a header? What’s a source-code file? Discuss the
+purpose of each.
+
+===========================Making a Difference
+===========================3.15
+
+(Target-Heart-Rate Calculator) While exercising, you can use a heart-rate monitor to see that your heart rate stays within a safe range suggested by your trainers and doctors. According to the American Heart Association (AHA) (www.americanheart.org/presenter.jhtml?identifier=4736), the formula for calculating your maximum heart rate in beats per minute is 220 minus your age in years. Your target heart rate is a range that is 50–85% of your maximum heart rate. [Note: These formulas are estimates provided by the AHA. Maximum and target heart rates may vary based on the health, fitness and gender of the individual. Always consult a physician or qualified health care professional before beginning or modifying an exercise program.] Create a class called HeartRates. The class attributes should include the person’s first name, last name and date of birth (consisting of separate attributes
+for the month, day and year of birth). Your class should have a constructor that receives this data as parameters. For each attribute provide set and get functions. The class also should include a function getAge that calculates and returns the person’s age (in years), a function getMaxiumumHeartRate that calculates and returns the person’s maximum heart rate and a function getTargetHeartRate that calculates
+and returns the person’s target heart rate. Since you do not yet know how to obtain the current date from the computer, function getAge should prompt the user to enter the current month, day and year before calculating the person’s age. Write an application that prompts for the person’s information, instantiates an object of class HeartRates and prints the information from that object— including the person’s first name, last name and date of birth—then calculates and prints the person’s age in (years), maximum heart rate and target-heart-rate range.
+
+===========================3.16
+
+(Computerization of Health Records) A health care issue that has been in the news lately is the computerization of health records. This possibility is being approached cautiously because of sensitive privacy and security concerns, among others. [We address such concerns in later exercises.] Computerizing health records could make it easier for patients to share their health profiles and histories among their various health care professionals. This could improve the quality of health care,
+help avoid drug conflicts and erroneous drug prescriptions, reduce costs and in emergencies, could save lives. In this exercise, you’ll design a “starter” HealthProfile class for a person. The class attributes should include the person’s first name, last name, gender, date of birth (consisting of separate
+attributes for the month, day and year of birth), height (in inches) and weight (in pounds). Your class should have a constructor that receives this data. For each attribute, provide set and get functions. The class also should include functions that calculate and return the user’s age in years, maximum heart rate and target-heart-rate range (see Exercise 3.16), and body mass index (BMI; see Exercise 2.30). Write an application that prompts for the person’s information, instantiates an object
+of class HealthProfile for that person and prints the information from that object—including the person’s first name, last name, gender, date of birth, height and weight—then calculates and prints the person’s age in years, BMI, maximum heart rate and target-heart-rate range. It should also display the “BMI values” chart from Exercise 2.30. Use the same technique as Exercise 3.16 to calculate the person’s age.
+

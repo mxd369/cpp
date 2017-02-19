@@ -231,6 +231,12 @@ b) std::cout
 std::cin means allow input after >>
 std::cout means allow output after <<
 
+answer:
+cin & cout are objects, that are used to read or write data in a C++ program.
+Both the objects need "iostream" file to be included with preprocessor as #include <iostream>
+
+a) cin is used to read data from the keyboard
+b) cout is used to write output to the display
 ===========================2.8
 
 Fill in the blanks in each of the following:
