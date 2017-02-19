@@ -1,0 +1,206 @@
+4 Making Assumptions
+1.
+sizeof(char)    = 1
+sizeof(char &)  = 1
+sizeof(char *)  = 8
+sizeof(short)   = 2
+sizeof(short &) = 2
+sizeof(short *) = 8
+sizeof(int)     = 4
+sizeof(int &)   = 4
+sizeof(int *)   = 8
+sizeof(long)    = 8
+sizeof(long &)  = 8
+sizeof(long *)  = 8
+sizeof(int **)  = 8
+sizeof(int ***) = 8
+
+
+
+(a) char     | sizeof(char)    = 1
+(b) char &   | sizeof(char &)  = 1
+(c) char *   | sizeof(char *)  = 8
+(d) short    | sizeof(short)   = 2
+(e) short &  | sizeof(short &) = 2
+(f) short *  | sizeof(short *) = 8
+(g) int      | sizeof(int)     = 4
+(h) int &    | sizeof(int &)   = 4
+(i) int *    | sizeof(int *)   = 8
+(j) long     | sizeof(long)    = 8
+(k) long &   | sizeof(long &)  = 8
+(l) long *   | sizeof(long *)  = 8
+(m) int **   | sizeof(int **)  = 8
+(n) int ***  | sizeof(int ***) = 8
+
+
+2.
+(a)0x00007ffd0f811b840x7ffd0f811b86
+(b)0x7ffd0f811b88
+(c)0x7ffd0f811b8a
+(d)0x7ffd0f811b8c
+(e) ...
+
+
+3.
+dang@nike:~/Dang-Michael-lab04$ ./making_assumptions_3
+(a) : 0x7ffe330ec624
+(b) : 0x7ffe330ec628
+(c) : 0x7ffe330ec62c
+(d) : 0x7ffe330ec630
+(e) : 0x7ffe330ec634
+dang@nike:~/Dang-Michael-lab04$ ./making_assumptions_3
+(a) : 0x7ffc5df80d64
+(b) : 0x7ffc5df80d68
+(c) : 0x7ffc5df80d6c
+(d) : 0x7ffc5df80d70
+(e) : 0x7ffc5df80d74
+dang@nike:~/Dang-Michael-lab04$ ./making_assumptions_3
+(a) : 0x7ffed2cdbac4
+(b) : 0x7ffed2cdbac8
+(c) : 0x7ffed2cdbacc
+(d) : 0x7ffed2cdbad0
+(e) : 0x7ffed2cdbad4
+
+(f) The output for each run is different.
+
+------------------------------------------------------
+5. Warmup Activity
+
+1.
+dang@nike:~/Dang-Michael-lab04$ ./warmup_activity_1
+integer1 = 10
+p1 = 0x7ffea17e6fc4
+p2 = 0x7ffea17e6fb8
+
+
+2.
+Suppose after the declaration of variables integer1, p1, and p2, we have the following memory map:
+Symbol Name 	Type 		Memory Address 		Value
+integer1 	int 		80
+p1 		int * 		84
+p2 		int ** 		92
+
+(a) Fill in the \Value" column in the in the memory map to reflect the changes that are caused by lines 11, 12, and 13.
+
+(b) If we substitute lines 15-17 with the the following two statements, then what will be the output of the program?
+	(*p1)++;
+	cout << "integer1 = " << *p1 << endl;
+
+(c) Will the output of the program be the same if we substitute the above two lines with the following two statements?
+	integer1++;
+	cout << "integer1 = " << *p1 << endl;
+
+(d) Will the output of the program be the same if we substitute the above two lines with the following two statements?
+	*p2++;
+	cout << "integer1 = " << integer1 << endl;
+
+(e) Explain why the outputs of parts (c) and (d) are the same or different from each other.
+
+
+3.
+dang@nike:~/Dang-Michael-lab04$ ./warmup_activity_3
+integer1 = 10
+p1       = 0x7fffc0b57a64
+p2	  = 0x7fffc0b57a58
+
+(a)
+(b) 
+-----------------------------------------------------
+6. Arrays and Pointer Activity
+
+1.
+
+dang@nike:~/Dang-Michael-lab04$ make
+g++ -o making_assumptions making_assumptions_1.o
+make: Circular arrays_and_pointers_activity1.o <- arrays_and_pointers_activity1.o dependency dropped.
+g++ -Wall -std=c++14 -g -O0 -pedantic-errors -c arrays_and_pointers_activity1.cpp
+arrays_and_pointers_activity1.cpp: In function ‘int main()’:
+arrays_and_pointers_activity1.cpp:9:21: warning: variable ‘p1’ set but not used [-Wunused-but-set-variable]
+  int iarray [10], * p1, * p2;
+                     ^~
+g++ -o arrays_and_pointers_activity1 arrays_and_pointers_activity1.o
+
+
+dang@nike:~/Dang-Michael-lab04$ ./arrays_and_pointers_activity1
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+(a)
+(b)
+(c)
+(d)
+(e)
+(f)
+(g)
+
+
+
+2.
+
+g++ -Wall -std=c++14 -g -O0 -pedantic-errors -c arrays_and_pointers_activity2.cpp
+arrays_and_pointers_activity2.cpp: In function ‘int main()’:
+arrays_and_pointers_activity2.cpp:9:8: warning: unused variable ‘px’ [-Wunused-variable]
+  int * px = &x;
+        ^~
+arrays_and_pointers_activity2.cpp:13:8: warning: unused variable ‘p2’ [-Wunused-variable]
+  int * p2 = b;
+        ^~
+arrays_and_pointers_activity2.cpp:15:8: warning: variable ‘ap1’ set but not used [-Wunused-but-set-variable]
+  int * ap1 [3];
+        ^~~
+arrays_and_pointers_activity2.cpp:19:9: warning: variable ‘ap2’ set but not used [-Wunused-but-set-variable]
+  int (* ap2 [2]) [10];
+         ^~~
+g++ -o arrays_and_pointers_activity2 arrays_and_pointers_activity2.o
+
+
+(a) Complete the memory map given below.
+
+Symbol 		Address 	Value 		Meaning of Symbol's Type
+x 		addr-x 		10 		an int
+px 		addr-px 	addr-x 		a pointer to an int
+a 		addr-a 		addr-a[0] 	an array of 10 ints
+a[0] 		addr-a[0] 	100 		an int
+a[1]
+a[2]
+a[3]
+a[4]
+a[5]
+a[6]
+a[7]
+a[8]
+b 		addr-b 		addr-b[0] 	an array of 5 ints
+b[0] 		addr-b[0] 			an int
+b[1]
+b[2]
+b[3]
+b[4]
+p1 						a pointer to an int
+p2
+parray
+ap1 						an array of 3 pointers to ints
+ap1[0]
+ap1[1]
+ap1[2]
+ap2 						an array of 2 pointers to arrays of 10 ints
+ap2[0]
+ap2[1]
+
+(b) Will the program successfully compile if we substitute line 17 with the following statement? Why or why not?
+int (* parray) [10] = &b;
+
+(c) Will the program successfully compile if we substitute line 17 with the following statement? Why or why not?
+int (* parray) [] = &b;
+
+(d) Will the program successfully compile if we substitute line 25 with the following statement? Why or why not?
+ap2[0] = &(*parray);
+
+

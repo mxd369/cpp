@@ -33,3 +33,22 @@ int main(){
 	cout << "Quotient: "<< quotient << endl;
 	return 0;
 }
+/*
+$ ./ch2_exercise_2_16 
+Give two numbers: 
+19
+17
+Sum: 36
+Product: 323
+Difference: 2
+Quotient: 1
+
+$ ./ch2_exercise_2_16 
+Give two numbers: 
+10
+5
+Sum: 15
+Product: 50
+Difference: 5
+Quotient: 2
+*/

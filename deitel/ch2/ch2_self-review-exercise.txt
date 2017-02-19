@@ -409,6 +409,60 @@ answer:
 
 (Arithmetic) Write a program that asks the user to enter two numbers, obtains the two numbers from the user and prints the sum, product, difference, and quotient of the two numbers.
 
+/*
+(Arithmetic) Write a program that asks the user to enter two numbers, obtains the two numbers from the user and prints the sum, product, difference, and quotient of the two numbers.
+*/
+#include <iostream>
+using namespace std;
+
+int main(){
+	int sum{0};
+	int product{0};
+	int difference{0};
+	int quotient{0};
+	int val1{0};
+	int val2{0};
+	cout << "Give two numbers: " << endl;
+	cin >> val1 >> val2;
+	sum = val1 + val2;
+	product = val1 * val2;
+	if (val1 >= val2){
+		difference = val1 - val2;
+	}
+	else{
+		difference = val2 - val1;
+	}
+	if (val1 >= val2){
+		quotient = val1/val2;
+	}
+	else{
+		quotient = val2/val1;
+	}
+	cout << "Sum: "<< sum << endl;
+	cout << "Product: "<< product << endl;
+	cout << "Difference: "<< difference << endl;
+	cout << "Quotient: "<< quotient << endl;
+	return 0;
+}
+/*
+$ ./ch2_exercise_2_16 
+Give two numbers: 
+19
+17
+Sum: 36
+Product: 323
+Difference: 2
+Quotient: 1
+
+$ ./ch2_exercise_2_16 
+Give two numbers: 
+10
+5
+Sum: 15
+Product: 50
+Difference: 5
+Quotient: 2
+*/
 
 
 ===========================2.17
@@ -418,9 +472,85 @@ a) Using one statement with one stream insertion operator.
 b) Using one statement with four stream insertion operators.
 c) Using four statements.
 
+/*
+(Printing) Write a program that prints the numbers 1 to 4 on the same line with each pair of adjacent numbers separated by one space. Do this several ways:
+a) Using one statement with one stream insertion operator.
+b) Using one statement with four stream insertion operators.
+c) Using four statements.
+*/
+#include <iostream>
+using namespace std;
+
+int main(){
+	cout << "1 2 3 4" << endl;//a
+	cout << "1 " << "2 " << "3 " << "4" << endl;//b
+	cout << "1"; //c
+	cout << " 2";
+	cout << " 3";
+	cout << " 4";
+	return 0;
+}
+/*
+$ ./ch2_exercise_2_17
+1 2 3 4
+1 2 3 4
+1 2 3 4
+*/
+
 ===========================2.18
 
 (Comparing Integers) Write a program that asks the user to enter two integers, obtains the numbers from the user, then prints the larger number followed by the words "is larger." If  numbers are equal, print the message "These numbers are equal."
+
+/*
+(Comparing Integers) Write a program that asks the user to enter two integers, obtains the numbers from the user, then prints the larger number followed by the words "is larger." If  numbers are equal, print the message "These numbers are equal."
+*/
+#include <iostream>
+using namespace std;
+
+int main(){
+	int val1{0};
+	int val2{0};
+	cout << "Enter two numbers: " << endl;
+	cin >> val1 >> val2;
+	
+	if(val1 > val2)
+		cout << "val1: " << val1 << " is larger." << endl;
+	
+	if (val2 > val1)
+		cout << "val2: " << val2 << " is larger." << endl;
+	if (val1 == val2)
+		cout << "These numbers are equal." << endl;
+
+	return 0;
+}
+/*
+$ ./ch2_exercise_2_18
+Enter two numbers: 
+1000
+100000
+val2: 100000 is larger.
+
+$ ./ch2_exercise_2_18
+Enter two numbers: 
+9
+1
+val1: 9 is larger.
+
+$ ./ch2_exercise_2_18
+Enter two numbers: 
+200
+1
+val1: 200 is larger.
+
+$ ./ch2_exercise_2_18
+Enter two numbers: 
+-1000
+-100000
+val1: -1000 is larger.
+*/
+
+
+answer:
 
 ===========================2.19
 
@@ -433,9 +563,82 @@ Product is 4914
 Smallest is 13
 Largest is 27
 
+/*
+(Arithmetic, Smallest and Largest) Write a program that inputs three integers from the keyboard and prints the sum, average, product, smallest and largest of these numbers. The screen dialog should appear as follows:
+
+Input three different integers: 13 27 14
+Sum is 54
+Average is 18
+Product is 4914
+Smallest is 13
+Largest is 27
+*/
+#include <iostream>
+using namespace std;
+
+int main(){
+
+	int Sum{0};
+	int Average{0};
+	int Product{0};
+	int Smallest{0};
+	int Largest{0};
+
+	int val1{0};
+	int val2{0};
+	int val3{0};
+
+	cout << "Input three different integers: " << endl;
+	cin >> val1 >> val2 >> val3;
+
+	Sum = val1 + val2 + val3;
+	Product = val1 * val2 * val3;
+	Average = Sum / 3;
+
+	Largest = val1;
+	if (val2 > val1){
+		Largest = val2;
+	}
+	else if (val3 > val1){
+		Largest = val3;
+	}
+
+	Smallest = val1;
+	if (val2 < val1){
+		Smallest = val2;
+	}
+	else if (val3 < val1){
+		Smallest = val1;
+	}
+
+	cout << "Sum: "<< Sum << endl;
+	cout << "Average: "<< Average << endl;
+	cout << "Product: "<< Product << endl;
+	cout << "Smallest: "<< Smallest << endl;
+	cout << "Largest: "<< Largest << endl;
+
+	return 0;
+}
+/*
+Input three different integers: 
+13
+27
+14
+Sum: 54
+Average: 18
+Product: 4914
+Smallest: 13
+Largest: 27
+*/
+
+answer:
+
 ===========================2.20
 
 (Diameter, Circumference and Area of a Circle) Write a program that reads in the radius of a circle as an integer and prints the circle’s diameter, circumference and area. Use the constant value 3.14159 for π. Do all calculations in output statements. [Note: In this chapter, we’ve discussed only integer constants and variables. In Chapter 4 we discuss floating-point numbers, i.e., values that can have decimal points.]
+
+
+answer:
 
 ===========================2.21
 
@@ -450,6 +653,50 @@ Largest is 27
 *       *   *       *    *     *   *
 *       *    *     *     *      * *
 *********      ***       *       *
+
+
+answer:
+
+/*
+(Displaying Shapes with Asterisks) Write a program that prints a box, an oval, an arrow and a diamond as follows:
+
+*********      ***       *       *
+*       *    *     *    ***     * *
+*       *   *       *  *****   *   *
+*       *   *       *    *    *     *
+*       *   *       *    *   *       *
+*       *   *       *    *    *     *
+*       *   *       *    *     *   *
+*       *    *     *     *      * *
+*********      ***       *       *
+*/
+#include <iostream>
+using namespace std;
+
+int main(){
+	cout << "*********      ***       *       *\n"
+		 << "*       *    *     *    ***     * *\n"
+		 << "*       *   *       *  *****   *   *\n"
+		 << "*       *   *       *    *    *     *\n"
+		 << "*       *   *       *    *   *       *\n"
+		 << "*       *   *       *    *    *     *\n"
+		 << "*       *   *       *    *     *   *\n"
+		 << "*       *    *     *     *      * *\n"
+		 << "*********      ***       *       *\n";
+	return 0;
+}
+/*
+$ ./ch2_exercise_2_21
+*********      ***       *       *
+*       *    *     *    ***     * *
+*       *   *       *  *****   *   *
+*       *   *       *    *    *     *
+*       *   *       *    *   *       *
+*       *   *       *    *    *     *
+*       *   *       *    *     *   *
+*       *    *     *     *      * *
+*********      ***       *       *
+*/
 
 ===========================2.22
 
@@ -466,13 +713,157 @@ cout << "*\n**\n***\n****\n*****" << endl;
 
 (Largest and Smallest Integers) Write a program that reads in five integers and determines and prints the largest and the smallest integers in the group. Use only the programming techniques you learned in this chapter.
 
+/*
+(Largest and Smallest Integers) Write a program that reads in five integers and determines and prints the largest and the smallest integers in the group. Use only the programming techniques you learned in this chapter.
+*/
+#include <iostream>
+using namespace std;
+
+int main(){
+	int smallest{0};
+	int largest{0};
+	int val1{0};
+	int val2{0};
+	int val3{0};
+	int val4{0};
+	int val5{0};
+	cout << "Give five numbers: " << endl;
+	cin >> val1 >> val2 >> val3 >> val4 >> val5;
+
+	smallest = val1;
+	if (val2 < val1){
+		smallest = val2;
+	}
+	if (val3 < val1){
+		smallest = val3;
+	}
+	if (val4 < val1){
+		smallest = val4;
+	}
+	if (val5 < val1){
+		smallest = val5;
+	}
+
+	largest = val1;
+	if (val2 > val1){
+		largest = val2;
+	}
+	if (val3 > val1){
+		largest = val3;
+	}
+	if (val4 > val1){
+		largest = val4;
+	}
+	if (val5 > val1){
+		largest = val5;
+	}
+
+	cout << "largest is: " << largest << endl;
+	cout << "smallest is: " << smallest << endl;
+
+	return 0;
+}
+/*
+$ ./ch2_exercise_2_23
+Give five numbers: 
+10 90 34 77 888
+largest is: 888
+smallest is: 10
+
+$ ./ch2_exercise_2_23
+Give five numbers: 
+800 -112 56940 12 3 4
+largest is: 56940
+smallest is: 3
+*/
+
+answer:
+
 ===========================2.24
 
 (Odd or Even) Write a program that reads an integer and determines and prints whether it’s odd or even. [Hint: Use the modulus operator. An even number is a multiple of two. Any multiple of two leaves a remainder of zero when divided by 2.]
 
+/*
+(Odd or Even) Write a program that reads an integer and determines and prints whether it’s odd or even. [Hint: Use the modulus operator. An even number is a multiple of two. Any multiple of two leaves a remainder of zero when divided by 2.]
+*/
+#include <iostream>
+using namespace std;
+
+int main(){
+	int value{0};
+	cout << "Give an integer: " << endl;
+	cin >> value;
+	if (value % 2 == 0){
+		cout << value << " is even." << endl;
+	}
+	else {
+		cout << value << " is odd." << endl;
+	}
+	return 0;
+}
+/*
+$ ./ch2_exercise_2_24
+Give an integer: 
+10
+10 is even.
+
+$ ./ch2_exercise_2_24
+Give an integer: 
+333
+333 is odd.
+*/
+
+answer:
+
 ===========================2.25
 
 (Multiples) Write a program that reads in two integers and determines and prints if the first is a multiple of the second. [Hint: Use the modulus operator.]
+
+/*
+(Multiples) Write a program that reads in two integers and determines and prints if the first is a multiple of the second. [Hint: Use the modulus operator.]
+*/
+#include <iostream>
+using namespace std;
+
+int main(){
+	int first{0};
+	int second{0};
+	cout << "Input two integers: " << endl;
+	cin >> first >> second;
+	if (second % first == 0){
+		cout << first << " is a multiple of " << second << endl;
+	}
+	if (first % second == 0){
+		cout << second << " is a multiple of " << first << endl;
+	}
+	return 0;
+}
+/*
+$ ./ch2_exercise_2_25
+Input two integers: 
+100
+10
+10 is a multiple of 100
+
+$ ./ch2_exercise_2_25
+Input two integers: 
+90
+9
+9 is a multiple of 90
+
+$ ./ch2_exercise_2_25
+Input two integers: 
+90
+9
+9 is a multiple of 90
+
+$ ./ch2_exercise_2_25
+Input two integers: 
+9
+90
+9 is a multiple of 90
+
+*/
 
 ===========================2.26
 
@@ -487,9 +878,51 @@ cout << "*\n**\n***\n****\n*****" << endl;
 * * * * * * * *
  * * * * * * * *
 
+#include <iostream>
+using namespace std;
+
+int main(){
+	string first = "* * * * * * * *";
+	string second =  " * * * * * * * *";
+	/*
+	cout << first << '\n' << second << '\n'
+		<< first << '\n' << second << '\n'
+		<< first << '\n' << second << '\n'
+		<< first << '\n' << second << '\n';
+	*/
+	for(int i = 0; i < 4; i++){
+		cout << first << '\n' << second << '\n';
+	}
+	return 0;
+}
+
+/*
+first
+$ ./ch2_exercise_2_26
+* * * * * * * *
+ * * * * * * * *
+* * * * * * * *
+ * * * * * * * *
+* * * * * * * *
+ * * * * * * * *
+* * * * * * * *
+ * * * * * * * *
+
+second
+$ ./ch2_exercise_2_26
+* * * * * * * *
+ * * * * * * * *
+* * * * * * * *
+ * * * * * * * *
+* * * * * * * *
+ * * * * * * * *
+* * * * * * * *
+ * * * * * * * *
+*/
+
 ===========================2.27
 
-(Integer Equivalent of a Character) Here is a peek ahead. In this chapter you learned about integers and the type int. C++ can also represent uppercase letters, lowercase letters and a considerable variety of special symbols. C++ uses small integers internally to represent each different  The set of characters a computer uses and the corresponding integer representations for those characters are called that computer’s character set. You can print a character by enclosing that character in single quotes, as with
+(Integer Equivalent of a Character) Here is a peek ahead. In this chapter you learned about integers and the type int. C++ can also represent uppercase letters, lowercase letters and a considerable variety of special symbols. C++ uses small integers internally to represent each different character. The set of characters a computer uses and the corresponding integer representations for those characters are called that computer’s character set. You can print a character by enclosing that character in single quotes, as with
 
 	cout << 'A'; // print an uppercase A
 
@@ -499,12 +932,137 @@ You can print the integer equivalent of a character using static_cast as follows
 
 This is called a cast operation (we formally introduce casts in Chapter 4). When the preceding statement executes, it prints the value 65 (on systems that use the ASCII character set). Write a program that prints the integer equivalent of a character typed at the keyboard. Store the input in a variable of type char. Test your program several times using uppercase letters, lowercase letters, digits and special characters (like $).
 
+
+/*
+(Integer Equivalent of a Character) Here is a peek ahead. In this chapter you learned about integers and the type int. C++ can also represent uppercase letters, lowercase letters and a considerable variety of special symbols. C++ uses small integers internally to represent each different character. The set of characters a computer uses and the corresponding integer representations for those characters are called that computer’s character set. You can print a character by enclosing that character in single quotes, as with
+
+	cout << 'A'; // print an uppercase A
+
+You can print the integer equivalent of a character using static_cast as follows:
+
+	cout << static_cast< int >( 'A' ); // print 'A' as an integer
+
+This is called a cast operation (we formally introduce casts in Chapter 4). When the preceding statement executes, it prints the value 65 (on systems that use the ASCII character set). Write a program that prints the integer equivalent of a character typed at the keyboard. Store the input in a variable of type char. Test your program several times using uppercase letters, lowercase letters, digits and special characters (like $).
+
+*/
+#include <iostream>
+using namespace std;
+
+int main(){
+	//cout << static_cast< int >( 'A' ); // print 'A' as an integer
+	char x{'A'};
+	cout<<"Give a char: "<<endl;
+	cin>>x;
+	cout << static_cast< int >( x ) << endl;
+	return 0;
+}
+/*
+$ ./ch2_exercise_2_27
+Give a char: 
+A
+65
+$ make
+
+$ ./ch2_exercise_2_27
+Give a char: 
+U
+85
+
+$ ./ch2_exercise_2_27
+Give a char: 
+p
+112
+
+$ ./ch2_exercise_2_27
+Give a char: 
+$
+36
+
+$ ./ch2_exercise_2_27
+Give a char: 
+%
+37
+
+$ ./ch2_exercise_2_27
+Give a char: 
+ 
+
+_
+95
+*/
+
+
+answer:
+
+
 ===========================2.28
 
 (Digits of an Integer) Write a program that inputs a five-digit integer, separates the integer into its digits and prints them separated by three spaces each. [Hint: Use the integer division and modulus operators.] For example, if the user types in 42339, the program should print:
 
 4	2	3	3	9
 
+/*
+(Digits of an Integer) Write a program that inputs a five-digit integer, separates the integer into its digits and prints them separated by three spaces each. [Hint: Use the integer division and modulus operators.] For example, if the user types in 42339, the program should print:
+
+4	2	3	3	9
+*/
+#include <iostream>
+using namespace std;
+
+int main(){
+	int five_digit_num{0};
+	int first{0};
+	int second{0};
+	int third{0};
+	int fourth{0};
+	int fifth{0};
+	cout << "Enter a five digit integer: " << endl;
+	cin >> five_digit_num;
+	//cout << five_digit_num % 10000 << endl;// 2339
+	//cout << five_digit_num / 10000 << endl;// 4
+
+	first = five_digit_num / 10000;
+	second = five_digit_num / 1000 % 10;
+	third = five_digit_num % 1000 / 100;
+	fourth = five_digit_num % 100 / 10;
+	fifth = five_digit_num % 10;
+
+	/*
+		42339 / 1000 = 42.339
+		42339 / 100  = 423.39
+		42339 / 10   = 4233.9
+	*/
+
+	cout << first << "   ";
+	cout << second << "   ";
+	cout << third << "   ";
+	cout << fourth << "   ";
+	cout << fifth << endl;
+	return 0;
+}
+/*
+$ ./ch2_exercise_2_28
+Enter a five digit integer: 
+12345
+1   2   3   4   5
+
+$ ./ch2_exercise_2_28
+Enter a five digit integer: 
+42339
+4   2   3   3   9
+*/
+/*
+>>> 42339 % 100 / 100
+0.39
+>>> 42339 % 100 % 100
+39
+>>> 42339 % 1000 % 100
+39
+>>> 42339 % 1000 / 100
+3.39
+*/
+
+answer:
 ===========================2.29
 
 (Table) Using the techniques of this chapter, write a program that calculates the squares and cubes of the integers from 0 to 10. Use tabs to print the following neatly formatted table of values:
@@ -546,9 +1104,74 @@ Obese:		 30 or greater
 [Note: In this chapter, you learned to use the int type to represent whole numbers. The BMI calculations when done with int values will both produce whole-number results. In Chapter 4 you’ learn to use the double type to represent numbers with decimal points. When the BMI calculations are performed with doubles, they’ll both produce numbers with decimal points—these are called
 “floating-point” numbers.]
 
+
+/*
+2.30 (Body Mass Index Calculator) We introduced the body mass index (BMI) calculator in Exercise 1.9. The formulas for calculating BMI are
+
+	BMI = weightInPounds * 703 / heightInInches * heightInInches
+
+or
+
+	BMI = weightInKilograms / heightInMeters
+
+Create a BMI calculator application that reads the user’s weight in pounds and height in inches (or, if you prefer, the user’s weight in kilograms and height in meters), then calculates and  the user’s body mass index. Also, the application should display the following information from the Department of Health and Human Services/National Institutes of Health so the user can evaluate his/her BMI:
+
+
+BMI VALUES
+Underweight: less than 18.5
+Normal:		 between 18.5 and 24.9
+Overweight:	 between 25 and 29.9
+Obese:		 30 or greater
+
+
+[Note: In this chapter, you learned to use the int type to represent whole numbers. The BMI calculations when done with int values will both produce whole-number results. In Chapter 4 you’ learn to use the double type to represent numbers with decimal points. When the BMI calculations are performed with doubles, they’ll both produce numbers with decimal points—these are called
+“floating-point” numbers.]
+
+*/
+#include <iostream>
+using namespace std;
+
+int main(){
+	int weightInPounds{0};
+	int heightInInches{0};
+	int BMI;
+	cout << "Give your weight in pounds and height in inches: ";
+	cin >> weightInPounds >> heightInInches;
+
+	BMI = (weightInPounds * 703) / (heightInInches * heightInInches);
+	
+	if (BMI < 18.5) {
+		cout << "BMI = Underweight: less than 18.5" << endl;
+	}
+	if (BMI >= 18.5 && BMI <= 24.9) {
+		cout << "BMI = Normal: between 18.5 and 24.9" << endl;
+	}
+	if (BMI >= 25 && BMI <= 29.9) {
+		cout << "BMI = Overweight: between 25 and 29.9" << endl;
+	}
+	if (BMI > 30){
+		cout << "BMI = Obese: 30 or greater" << endl;
+	}
+	return 0;
+}
+/*
+$ ./ch2_exercise_2_30
+Give your weight in pounds and height in inches: 175
+70
+BMI = Overweight: between 25 and 29.9
+
+$ ./ch2_exercise_2_30
+Give your weight in pounds and height in inches: 172
+70  
+BMI = Normal: between 18.5 and 24.9
+
+
+
+answer:
+
 ===========================2.31
 
-(Car-Pool Savings Calculator) Research several car-pooling websites. Create an  that calculates your daily driving cost, so that you can estimate how much money could be saved by car pooling, which also has other advantages such as reducing carbon emissions and reducing traffic congestion. The application should input the following information and display the user’s cost per day of driving to work:
+(Car-Pool Savings Calculator) Research several car-pooling websites. Create an application that calculates your daily driving cost, so that you can estimate how much money could be saved by car pooling, which also has other advantages such as reducing carbon emissions and reducing traffic congestion. The application should input the following information and display the user’s cost per day of driving to work:
 
 a) Total miles driven per day.
 b) Cost per gallon of gasoline.
@@ -556,3 +1179,57 @@ c) Average miles per gallon.
 d) Parking fees per day.
 e) Tolls per day.
 
+/*
+(Car-Pool Savings Calculator) Research several car-pooling websites. Create an application that calculates your daily driving cost, so that you can estimate how much money could be saved by car pooling, which also has other advantages such as reducing carbon emissions and reducing traffic congestion. The application should input the following information and display the user’s cost per day of driving to work:
+
+a) Total miles driven per day.
+b) Cost per gallon of gasoline.
+c) Average miles per gallon.
+d) Parking fees per day.
+e) Tolls per day.
+
+*/
+#include <iostream>
+using namespace std;
+
+int main(){
+	int Total_miles_driven_per_day{0};
+	float Cost_per_gallon_of_gasoline{0};
+	int Average_miles_per_gallon{0};
+	int Parking_fees_per_day{0};
+	int Tolls_per_day{0};
+	int User_cost_per_day_driving_to_work{0};
+	int User_cost_per_day_driving_to_work_and_back{0};
+
+	cout << "Enter Total miles driven per day: ";
+	cin >> Total_miles_driven_per_day ;
+	cout << "Enter Cost per gallon of gasoline: ";
+	cin >> Cost_per_gallon_of_gasoline ;
+	cout << "Enter Average miles per gallon: ";
+	cin >> Average_miles_per_gallon ;
+	cout << "Enter Parking fees per day: ";
+	cin >> Parking_fees_per_day ;
+	cout << "Enter Toll fees per day: ";
+	cin >> Tolls_per_day;
+
+	User_cost_per_day_driving_to_work = Total_miles_driven_per_day * (Cost_per_gallon_of_gasoline / Average_miles_per_gallon) +  Parking_fees_per_day + Parking_fees_per_day + Tolls_per_day;
+	User_cost_per_day_driving_to_work_and_back = User_cost_per_day_driving_to_work * 2;
+	
+	//total miles driven per day = 50
+	// 30 miles per gallon
+	// cost per gallon = 2.50
+	
+	cout << "Your cost to drive to work per day is: " << User_cost_per_day_driving_to_work << endl;
+	cout << "Your cost to drive to work and back per day is: " << User_cost_per_day_driving_to_work_and_back << endl;
+	return 0;
+}
+/*
+$ ./ch2_exercise_2_31
+Enter Total miles driven per day: 50
+Enter Cost per gallon of gasoline: 2.50
+Enter Average miles per gallon: 30
+Enter Parking fees per day: 0
+Enter Toll fees per day: 0
+Your cost to drive to work per day is: 4
+Your cost to drive to work and back per day is: 8
+*/
