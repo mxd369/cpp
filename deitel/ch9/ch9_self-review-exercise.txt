@@ -1,11 +1,61 @@
 Ch9 Classes: A Deeper Look
 ===========================Self-Review Exercises
-===========================
-===========================
-===========================
+===========================9.1
+
+Fill in the blanks in each of the following:
+
+a) Class members are accessed via the operator in conjunction with the name of an object (or reference to an object) of the class or via the operator in conjunction with a pointer to an object of the class.
+
+b) Class members specified as are accessible only to member functions of the class and friends of the class.
+
+c) Class members specified as are accessible anywhere an object of the class is in scope.
+
+d) can be used to assign an object of a class to another object of the same class.
+
+===========================9.2
+
+Find the error(s) in each of the following and explain how to correct it (them):
+a) Assume the following prototype is declared in class Time:
+void ~Time( int );
+b) The following is a partial definition of class Time:
+class Time
+{
+public:
+// function prototypes
+private:
+int hour = 0;
+int minute = 0;
+int second = 0;
+}; // end class Time
+c) Assume the following prototype is declared in class Employee:
+int Employee( string, string );
+
+
 ===========================Exercises
-===========================
-===========================
-===========================
-===========================
-===========================
+===========================9.3
+===========================9.4
+===========================9.5
+===========================9.6
+===========================9.7
+===========================9.8
+===========================9.9
+===========================9.10
+===========================9.11
+===========================9.12
+===========================9.13
+===========================9.14
+===========================9.15
+===========================9.16
+===========================9.17
+===========================9.18
+===========================9.19
+===========================9.20
+===========================9.21
+===========================9.22
+===========================9.23
+===========================9.24
+===========================9.25
+===========================9.26
+===========================9.27
+===========================Making A Difference
+===========================9.28

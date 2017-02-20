@@ -2,64 +2,72 @@ Ch8: Pointers
 ===========================Self-Review Exercises
 ===========================8.1
 
-a) address
-
+a) A pointer is a variable that contains as its value the of another variable.
+guess: address
 answer: address
 
-b) nullptr ("points to nothing" null pointer) or a memory address when declare/in an assignment 
 
+b) A pointer should be intialized to _____ or _____.
+guess: nullptr ("points to nothing" null pointer) or a memory address when declare/in an assignment 
 answer: nullptr, an address
 
-c) the value 0
 
+c) The only integer that can be assigned directly to a pointer is
+guess: the value 0
 answer: 0
-
-
 
 ===========================8.2
 
-a) false, the operand of the address operator must be an lvalue, the address operator cannot be applied to literals or to expressions that result in temporary values (like the results of calculations).
+State whether the following are true or false. If the answer is false, explain why.
+a) The address operator & can be applied only to constants and to expressions.
+
+guess: false, the operand of the address operator must be an lvalue, the address operator cannot be applied to literals or to expressions that result in temporary values (like the results of calculations).
 
 answer: false, the operand of the address operator must be an lvalue, the address operator cannot be applied to literals or to expressions that result in temporary values.
 
-b) false, a pointer that is declared to be of type void* can NOT be dereferenced. A pointer declared to be of type void* can not be dereferenced because the type void is empty, you cannot dereference the type nothing. p 361.
+---
+
+b) A pointer that is declared to be of type void * can be dereferenced.
+
+guess: false, a pointer that is declared to be of type void* can NOT be dereferenced. A pointer declared to be of type void* can not be dereferenced because the type void is empty, you cannot dereference the type nothing. p 361.
 A void* pointer cannot be dereference. For example, the compiler "knows" than int* points to four bytes of memory on a machine with four-byte integers. Dereferencing an int* creates an lvalue that is an alias for the int's four bytes of memory. A void*, however, simply contains a memory address for an unknown data type
 
 answer: false, a pointer to void cannot be dereferenced. Such a pointer does not have a type that enables the compiler to determine the type of the data and the number of bytes of memory to which the pointer points.
 
-c) false, a pointer of one type CAN be assigned to one of another type without a cast operation.
+---
+
+c) A pointer of one type can’t be assigned to one of another type without a cast operation.
+
+guess: false, a pointer of one type CAN be assigned to one of another type without a cast operation.
 
 answer: false, Pointers of any type can be assigned to void pointers. Pointers of type void can be assigned to pointers of other types only with an explicit type cast.
 
-
-
 ===========================8.3
-
----
-a)
 
 For each of the following, write C++ statements that perform the specified task. Assume that double-precision, floating-point numbers are stored in eight bytes and that the starting address of the built-in array is at location 1002500 in memory. Each part of the exercise should use the results of previous parts where appropriate.
 
-Declare a built-in array of type double called numbers with 10 elements, and initialize the elements to the values 0.0, 1.1, 2.2, ..., 9.9. Assume that the constant size has been defined as 10.
+---
+a) Declare a built-in array of type double called numbers with 10 elements, and initialize the elements to the values 0.0, 1.1, 2.2, ..., 9.9. Assume that the constant size has been defined as 10.
 
+guess:
 	int numbers[]{0.0, 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9}
 
-answer: double numbers[size]{0.0, 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9};
+answer:
+	double numbers[size]{0.0, 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9};
 
 ---
-b)
+b) Declare a pointer nPtr that points to a variable of type double.
 
-Declare a pointer nPtr that points to a variable of type double.
-
+guess:
 	double* nPtr;
 
-answer: double* nPtr;
+answer:
+	double* nPtr;
 
 ---
-c)
+c) Use a for statement to display the elements of built-in array numbers using array subscript notation. Display each number with one digit to the right of the decimal point.
 
-Use a for statement to display the elements of built-in array numbers using array subscript notation. Display each number with one digit to the right of the decimal point.
-
+guess:
 	// output built-in array using array subscript notation
 	for(size_t i{0}; i < 4 ; ++i){
 		cout << "numbers[" << i << "] = " << numbers[i] << '\n';
@@ -72,74 +80,55 @@ answer:
 	}
 
 ---
-d)
+d) Write two separate statements that each assign the starting address of array numbers to the pointer variable nPtr.
 
 /*
-note: p. 361 8.9 Relationship between pointers and built-in arrays
-Built-in arrays and pointers are intimately related in C++ and may be used almost interchangeably. Pointers can be used to do any operation involving array subscripting. 
+note: p. 361 8.9 Relationship between pointers and built-in arrays. Built-in arrays and pointers are intimately related in C++ and may be used almost interchangeably. Pointers can be used to do any operation involving array subscripting. 
 
 Assume the following declarations
-
 	int b[ 5 ]; // create 5-element int array b; b is a const pointer
 	int* bPtr;  // create int pointer bPtr, which isn't a const pointer
 
 We can set bPtr to the address of the first element in the built-in array b with the statement
-
 	bPtr = b; // assign address of built-in array b to bPtr
 
 This is equivalent to assigning the address of the first element aas follows:
-
 	bPtr = &b[0]; // also assigns address of built-in array b to bPtr
-
 The expression
-
 	b += 3
-
 causes a compilation error, because it attempts to modify the value of the built-in array's name with pointer arithmetic.
 
-
 8.9.1 Pointer/Offset Notation
-
 	*(bPtr + 3)
 
-
 8.9.2 Pointer/Offset Notation with the Built-in Array's Name as the Pointer
-
 	*(b + 3)
-
 also refers to the element b[3].
-
-
 8.9.3 Pointer Subscript Notation
-
 	bPtr[1]
-
 */
 
-Write two separate statements that each assign the starting address of built-in array numbers to the pointer variable nPtr.
-
 	nPtr = number;// assign address of built-in array number to nPtr
-	
+
 	// this is the equivalent to assigning the address of the first element as follows
 	nPtr = &number; // also assigns address of built-in array number to nPtr
 
+guess:
 
 answer:
 	nPtr = numbers;
 	nPtr = &numbers[0];
 
 ---
-e)
+e) Use a for statement to display the elements of built-in array numbers using pointer/off-set notation with pointer nPtr.
 
-Use a for statement to display the elements of built-in array numbers using pointer/off-set notation with pointer nPtr.
-
+guess:
 	// output built-in array number using array name and pointer/off-set notation
 	cout << "\nPointer/offset notation where " << "the pointer is the array name\n";
 
 	for (size_t offset1{0}; offset1 < 10; offset1) {
 		cout << "*(b + " << offset1 << ") = " << *(b + offset1) << '\n';
 	}
-
 
 answer:
 	cout << fixed << showpoint << setprecision(1);
@@ -148,10 +137,9 @@ answer:
 	}
 
 ---
-f)
+f) Use a for statement to display the elements of built-in array numbers using pointer/off-set notation with the built-in array's name as the pointer.
 
-Use a for statement to display the elements of built-in array numbers using pointer/off-set notation with the built-in array's name as the pointer.
-
+guess:
 	// output built-in array numbers using nPtr and pointer/offset notation
 	for (size_t offset2{0}; offset2 < 10; ++offset2){
 		cout << "*(bPtr + " << offset2 << ") = " << *(bPtr + offset2) << '\n';
@@ -165,10 +153,9 @@ answer:
 	}
 
 ---
-g)
+g) Use a for statement to display the elements of built-in array numbers using pointer/subscript notation with pointer nPtr.
 
-Use a for statement to display the elements of built-in array numbers using pointer/subscript notation with pointer nPtr.
-
+guess:
 	// output built-in array numbers using nPtr and array subscript notation : bPtr[1]
 	cout << "Pointer/subscript notation\n";
 
@@ -183,88 +170,212 @@ answer:
 	}
 
 ---
-h)
+h) Refer to the fourth element of built-in array numbers using array subscript notation, pointer/offset notation with the built-in array's name as the pointer, pointer subscript notation with nPtr and pointer/offset notation with nPtr.
 
-Refer to the fourth element of built-in array numbers using array subscript notation, pointer/offset notation with the built-in array's name as the pointer, pointer subscript notation with nPtr and pointer/offset notation with nPtr.
-
-
-answer:
-
----
-i)
-
-Assuming that nPtr and points to the beginning of built-in array numbers, what address is referenced by nPtr + 8? What value is stored at that location?
+guess:
 
 answer:
 
 ---
-j)
+i) Assuming that nPtr and points to the beginning of built-in array numbers, what address is referenced by nPtr + 8? What value is stored at that location?
 
-Assuming that nPtr points to numbers[5], what address is referenced by nPtr after nPtr -= 4 is executed? What's the value stored at that location?
-
+guess:
 
 answer:
 
 ---
+j) Assuming that nPtr points to numbers[5], what address is referenced by nPtr after nPtr -= 4 is executed? What's the value stored at that location?
 
+guess:
 
+answer:
 
 ===========================8.4
 
-a)
-answer:
-b)
-answer:
-c)
-answer:
-d)
-answer:
-e)
-answer:
-f)
+For each of the following, write a single statement that performs the specified task. Assume that double variables number1 and number2 have been declared and that number1 has been initialized to 7.3. 
+
+a) Declare the variable doublePtr to be a pointer to an object of type double and initialize the pointer to nullptr.
+
+guess:
 answer:
 
+b) Assign the address of variable number1 to pointer variable doublePtr.
+
+guess:
+answer:
+
+c) Display the value of the object pointed to by doublePtr.
+
+guess:
+answer:
+
+d) Assign the value of the object pointed to by doublePtr to variable number2.
+
+guess:
+answer:
+
+e) Display the value of number2.
+
+guess:
+answer:
+
+f) Display the address of number1.
+
+guess:
+answer:
+
+g) Display the address stored in doublePtr. Is the value printed the same as the address of number1?
+
+guess:
+answer:
 
 
 ===========================8.5
 
-a)
-answer:
-b)
-answer:
-c)
-answer:
-d)
-answer:
-e)
-answer:
-f)
+Perform the task specified by each of the following statements:
+
+a) Write the function header for a function called exchange that takes two pointers to double-precision, floating-point numbers x and y as parameters and does not return a value.
+
+guess:
 answer:
 
+
+b) Write the function prototype without parameter names for the function in part (a).
+
+guess:
+answer:
+
+c) Write two statements that each initialize character array vowel with the string of vowels,
+"AEIOU".
+
+guess:
+answer:
 
 
 ===========================8.6
 
-a)
+int *zPtr; // zPtr will reference array z
+void *sPtr = 0;
+int number;
+int z[ 5 ] = { 1, 2, 3, 4, 5 };
+
+a) ++zPtr;
+guess:
 answer:
-b)
+
+b) // use pointer to get first value of array
+   number = zPtr;
+guess:
 answer:
-c)
+
+c) // assign array element 2 (the value 3) to number
+   number = *zPtr[ 2 ];
+guess:
 answer:
-d)
+
+d) // print entire array z
+   for ( int i = 0; i <= 5; ++i )
+      cout << zPtr[ i ] << endl;
+guess:
 answer:
-e)
+
+e) // assign the value pointed to by sPtr to number
+   number = *sPtr;
+guess:
 answer:
-f)
+
+f) ++z;
+guess:
 answer:
 
 ===========================Exercises
 ===========================8.7
+
+(True or False) State whether the following are true or false. If false, explain why.
+
+a) Two pointers that point to different arrays cannot be compared meaningfully.
+
+b) Because the name of an array is a pointer to the first element of the array, array names can be manipulated in precisely the same manner as pointers.
+
 ===========================8.8
+
+
 ===========================8.9
+
+
 ===========================8.10
+
+
 ===========================8.11
 ===========================8.12
 ===========================8.13
+
+(What Does This Code Do?) What does this program do?
+
+1 	// Ex. 8.13: ex08_13.cpp
+2 	// What does this program do?
+3 	#include <iostream>
+4 using namespace std;
+5
+6 void mystery1( char *, const char * ); // prototype
+7
+8 int main()
+9 {
+10 char string1[ 80 ];
+11 char string2[ 80 ];
+12
+13 cout << "Enter two strings: ";
+14 cin >> string1 >> string2;
+15 mystery1( string1, string2 );
+16 cout << string1 << endl;
+17 } // end main
+18
+19 // What does this function do?
+20 void mystery1( char *s1, const char *s2 )
+21 {
+22 while ( *s1 != '\0' )
+23 ++s1;
+24
+25 for ( ; *s1 = *s2; ++s1, ++s2 )
+26 ; // empty statement
+27 } // end function mystery1
+
+
 ===========================8.14
+
+(What Does This Code Do?) What does this program do?
+
+1 // Ex. 8.14: ex08_14.cpp
+2 // What does this program do?
+3 #include <iostream>
+4 using namespace std;
+5
+6 int mystery2( const char * ); // prototype
+7
+8 int main()
+9 {
+10 char string1[ 80 ];
+11
+12 cout << "Enter a string: ";
+13 cin >> string1;
+14 cout << mystery2( string1 ) << endl;
+15 } // end main
+16
+17 // What does this function do?
+18 int mystery2( const char *s )
+19 {
+20 int x;
+21
+22 for ( x = 0; *s != '\0'; ++s )
+23 ++x;
+24
+25 return x;
+26 } // end function mystery2
+
 ===========================Special Section: Building Your Own Computer
+
+In the next several problems, we take a temporary diversion away from the world of high-level-language
+programming. We “peel open” a computer and look at its internal structure. We introduce machine-language programming and write several machine-language programs. To make this an especially valuable experience, we then build a computer (using software-based simulation) on which you can execute your machine-language programs!
+
+8.18 (Machine-Language Programming) Let’s create a computer we’ll call the Simpletron. As its name implies, it’s a simple machine, but, as we’ll soon see, it’s a powerful one as well. The Simpletron runs programs written in the only language it directly understands, that is, Simpletron Machine Language, or SML for short. The Simpletron contains an accumulator—a “special register” in which information is put before the Simpletron uses that information in calculations or examines it in various ways. All information in the Simpletron is handled in terms of words. A word is a signed four-digit decimal number, such as +3364, -1293, +0007, -0001, etc. The Simpletron is equipped with a 100-word memory, and these words are referenced by their location numbers 00, 01, …, 99. Before running an SML program, we must load, or place, the program into memory. The first instruction (or statement) of every SML program is always placed in location 00. The simulator will start executing at this location. Each instruction written in SML occupies one word of the Simpletron’s memory; thus, instructions are signed four-digit decimal numbers. Assume that the sign of an SML instruction is always plus, but the sign of a data word may be either plus or minus. Each location in the Sim-pletron’s memory may contain an instruction, a data value used by a program or an unused (and hence undefined) area of memory. The first two digits of each SML instruction are the operation code that specifies the operation to be performed. SML operation codes are shown in Fig. 8.23. The last two digits of an SML instruction are the operand—the address of the memory location containing the word to which the operation applies.
+
