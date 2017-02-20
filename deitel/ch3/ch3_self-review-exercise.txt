@@ -5,104 +5,186 @@ Introduction to C++ Programming, Input/Output and Operators
 a) Every class definition contains the keyword _____ followed immediately by the
 class’s name.
 
-guess:
+guess: class
 
-answer:
+answer: class
 
 b) A class definition is typically stored in a file with the _____ filename extension.
 
-guess:
+guess: .h
 
-answer:
+answer: .h
 
 c) Each parameter in a function header specifies both a(n) _____ and a(n) _____.
 
-guess:
+guess: data type and function name
 
-answer:
+answer: type, name
 
 d) When each object of a class maintains its own copy of an attribute, the variable that represents the attribute is also known as a(n) _____.
 
-guess:
+guess: idk
 
-answer:
+answer: data member
 
 e) Keyword public is a(n) _____.
 
-guess:
+guess: access specifier
 
-answer:
+answer: access specifier
 
 f) Return type _____ indicates that a function will perform a task but will not return any information when it completes its task.
 
-guess:
+guess: void
 
-answer:
+answer: void
 
 g) Function _____ from the <string> library reads characters until a newline character is encountered, then copies those characters into the specified string.
 
-guess:
+guess: getline
 
-answer:
+answer: getline
 
 h) Any file that uses a class can include the class's header via a(n) _____ preprocessing directive
 
-guess:
+guess: #include
 
-answer:
+answer: #include
 
 ===========================3.2
 State whether each of the following is true or false. If false, explain why.
 
 a) By convention, function names begin with a capital letter and all subsequent words in the name begin with a capital letter.
 
-b) Empty parentheses following a function name in a function prototype indicate that the
-function does not require any parameters to perform its task.
+guess: true
+
+answer: False. Function names begin with a lowercase letter and all subsequent words in the
+name begin with a capital letter.
+
+b) Empty parentheses following a function name in a function prototype indicate that the function does not require any parameters to perform its task.
+
+guess: true
+
+answer: True
 
 c) Data members or member functions declared with access specifier private are accessible to member functions of the class in which they’re declared.
 
+guess: false, a private datamember is accessible only to its clas's member functions.
+
+answer:  True
+
 d) Variables declared in the body of a particular member function are known as data members and can be used in all member functions of the class.
+
+guess: true
+
+answer: False. Such variables are local variables and can be used only in the member function in which they’re declared.
 
 e) Every function’s body is delimited by left and right braces ({ and }).
 
+guess: true
+
+answer: True
+
 f) The types of arguments in a function call must be consistent with the types of the corresponding parameters in the function prototype’s parameter list.
 
+guess: true
+
+answer: True
 
 ===========================3.3
 
 What is the difference between a local variable and a data member?
+
+guess:
+
+local variables - variables declared in a particular function's body, can be used only in that function. When a function terminates, the values of its local variables are lost.
+
+data member - each object of a class has its own copy of the class's data members. An object's data members exist before a program calls member functions on an object, while they are executing and after the member functions complete execution. Data members are declared inside a class definition but outside its member function's bodies.
+
+answer:
+
+A local variable is declared in the body of a function and can be used only from its declaration
+to the closing brace of the block in which it’s declared. A data member is declared in a class,
+but not in the body of any of the class’s member functions. Every object of a class has a separate copy of the class’s data members. Data members are accessible to all member functions of the class.
 
 ===========================3.4
 
 Explain the purpose of a function parameter. What’s the difference between a parameter
 and an argument?
 
+guess:
+
+function parameter - 
+
+parameters - specify additional information the function needs to perform its task.
+
+argument -
+
+
+answer:
+
+A parameter represents additional information that a function requires to perform its task.
+Each parameter required by a function is specified in the function header. An argument is the value supplied in the function call. When the function is called, the argument value is passed into the function parameter so that the function can perform its task.
+
 ===========================Exercises
 ===========================3.5
 
-
 (Default Constructor) What’s a default constructor? How are an object’s data members initialized if a class has only an implicitly defined default constructor?
+
+guess:
+When you create an object without placing braces to the right of the object's variable name. C++ implicity calls the class's default constructor.
+
+In any class that does not explicitly define a constructor, the compiler provides a default constructor (which always has no parameters).
+
+The default constructor does not initlaize the class's fundamental-type data members, but does class the default constructor for each data member that's an object of another class.
+
+answer:
 
 ===========================3.6
 
 (Data Members) Explain the purpose of a data member.
+
+guess:
+A class' data members maintain data for each object of the class.
+
+answer:
+To keep track of the object's attributes even when the control goes from one function to another.
 
 ===========================3.7
 
 (Using a Class Without a using Directive) Explain how a program could use class string
 without inserting a using directive.
 
+guess:
+
+answer:
+A program can use class string without inserting a using directive by creating string variables without using declaration, if each occurrence of the word string is prefixed by the namespace std and the binary scope resolution operator, as in std::string
+
 ===========================3.8
 
 (Set and Get Functions) Explain why a class might provide a set function and a get function for a data member.
 
+guess:
+Set and get functions allow clients of a class to indirectly access the hidden data. The client does not know how the object performs these operations. A class’s set and get functions should be used by other member functions of the class to manipulate the class’s private data. If the class’s data representation is changed, member functions that access the data only via the set and get functions will not require modification.
+
+answer:
+In classes the data memebers are declared with private access specifiers. These data members can not be accessed outside the class. To initialize/modify the data member set function is used. Similarly to retrieve the values of the data members get function is used.
+
 ===========================3.9
 
-(Modified Account Class) Modify class Account (Fig. 3.8) to provide member function called withdraw that withdraws money from an Account. Ensure that the withdrawl amount does not exceed the Account's balance. If it does, the balance should be left unchanged and the member function should display a message indicating "Withdrawal amount exceeded account balance." Modify class AccountTest (Fig 3.9) to test member function withdraw.
+(Modified Account Class) Modify class Account (Fig. 3.8) to provide member function called withdraw that withdraws money from an Account. Ensure that the withdrawal amount does not exceed the Account's balance. If it does, the balance should be left unchanged and the member function should display a message indicating "Withdrawal amount exceeded account balance."
+
+Modify class AccountTest (Fig 3.9) to test member function withdraw.
+
+soltuion:
+ch3_exercise_9_AccountTest.cpp
+ch3_exercise_9_Account.h
 
 ===========================3.10
 
 (Invoice Class) Create a class called Invoice that a hardware store might use to represent an invoice for an item sold at the store. An Invoice should include four data members—a part number (type string), a part description (type string), a quantity of the item being purchased (type int) and a price per item (type int). [Note: In subsequent chapters, we’ll use numbers that contain decimal points (e.g., 2.75)—called floating-point values—to represent dollar amounts.] Your class should have a constructor that initializes the four data members. Provide a set and a get function for each data member. In addition, provide a member function named getInvoiceAmount that calculates the invoice amount (i.e., multiplies the quantity by the price per item), then returns the amount as an int value. If the quantity is not positive, it should be set to 0. If the price per item is not positive, it should be set to 0. Write a test program that demonstrates class Invoice’s capabilities.
+
+Invoice.h
 
 ===========================3.11
 
@@ -110,8 +192,7 @@ without inserting a using directive.
 
 ===========================3.12
 
-(Date Class) Create a class called Date that includes three pieces of information as data members—a month (type int), a day (type int) and a year (type int). Your class should have a constructor with three parameters that uses the parameters to initialize the three data members. For the purpose of this exercise, assume that the values provided for the year and day are correct, but ensure that the month value is in the range 1–12; if it isn’t, set the month to 1. Provide a set and a get function
-for each data member. Provide a member function displayDate that displays the month, day and year separated by forward slashes (/). Write a test program that demonstrates class Date’s capabilities.
+(Date Class) Create a class called Date that includes three pieces of information as data members—a month (type int), a day (type int) and a year (type int). Your class should have a constructor with three parameters that uses the parameters to initialize the three data members. For the purpose of this exercise, assume that the values provided for the year and day are correct, but ensure that the month value is in the range 1–12; if it isn’t, set the month to 1. Provide a set and a get function for each data member. Provide a member function displayDate that displays the month, day and year separated by forward slashes (/). Write a test program that demonstrates class Date’s capabilities.
 
 ===========================3.13
 (Removing Duplicated Code in the main Function) In Fig. 3.9, the main function contains six statements (lines 14-15, 16-17, 26-27, 28-29, 37-38 and 39-40) that each display an Account object's name and balance. Study these statements and you'll notice that they differ only in the Account object being manipulated-account1 or account2. In this exercise, you'll define a new displayAccount function that contains one copy of that output statement. The member function will output the object's name and balance. You'll then replace the six duplicated statements in main with calls to displayAccount, passing as an argument the specific Account object to output.
@@ -152,3 +233,50 @@ help avoid drug conflicts and erroneous drug prescriptions, reduce costs and in 
 attributes for the month, day and year of birth), height (in inches) and weight (in pounds). Your class should have a constructor that receives this data. For each attribute, provide set and get functions. The class also should include functions that calculate and return the user’s age in years, maximum heart rate and target-heart-rate range (see Exercise 3.16), and body mass index (BMI; see Exercise 2.30). Write an application that prompts for the person’s information, instantiates an object
 of class HealthProfile for that person and prints the information from that object—including the person’s first name, last name, gender, date of birth, height and weight—then calculates and prints the person’s age in years, BMI, maximum heart rate and target-heart-rate range. It should also display the “BMI values” chart from Exercise 2.30. Use the same technique as Exercise 3.16 to calculate the person’s age.
 
+===========================Notes:
+
+driver program: main is reffered to, the main function can "drive" an Account object by calling its member functions-without knowing how the class is implemented.
+
+
+Defining an Account Constructor for Custom Object Initialization
+
+	explicit Account(std::string accountName)
+		: name{accountName} { // member initializer
+		// empty body
+	}
+
+
+Set and Get Member functions
+set functions can be programmed to validate their arguments and reject any atttempts to set the data to bad values.
+	example:
+		negative body temperature
+		a day in March outside the range 1 through 31
+		product code not in the company's product catalog
+get function can present the data in a different form, while the actual data representation remains hidden from the user.
+	example:
+		Grade class stores a grade data memebr as int 0-100 but getGrade returns letter grade as a string "A" = 90-100
+		
+// perform validation
+public:
+   // Account constructor with two parameters  
+   Account(std::string accountName, int initialBalance) 
+      : name{accountName} { // assign accountName to data member name
+
+      // validate that the initialBalance is greater than 0; if not,
+      // data member balance keeps its default initial value of 0
+      if (initialBalance > 0) { // if the initialBalance is valid
+         balance = initialBalance; // assign it to data member balance
+      }
+   }
+
+   // function that deposits (adds) only a valid amount to the balance
+   void deposit(int depositAmount) {
+      if (depositAmount > 0) { // if the depositAmount is valid
+         balance = balance + depositAmount; // add it to the balance 
+      }
+   }
+
+   // function returns the account balance
+   int getBalance() const {
+      return balance;
+   }

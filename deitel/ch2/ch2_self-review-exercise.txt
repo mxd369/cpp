@@ -254,6 +254,10 @@ d) arthimetic
 e) std::cin
 
 answer:
+a) comments
+b) cout
+c) assignment
+d) cin
 
 ===========================2.9
 
@@ -270,6 +274,11 @@ c) // performs a payroll calculation
 d) cin >> a >> b >> c;
 
 answer:
+
+a) std::cout<<"Enter two numbers";
+b) a = b * c;
+c) // Program performs a payroll calculation
+d) std::cin >> a >> b >> c;
 
 ===========================2.10
 
@@ -289,6 +298,12 @@ e) true
 
 answer:
 
+a) false, determined by rules of operator precedence
+b) true
+c) false, cout << "a = 5;" is a string, shouldn't have quotations not a c++ statement
+d) true
+e) false, cannot have numbers in front of variable names
+
 ===========================2.11
 
 Fill in the blanks in each of the following:
@@ -304,6 +319,10 @@ b) innermost, or right to left
 c) address
 
 answer:
+
+a) /,%
+b) innermost
+c) variable
 
 ===========================2.12
 
@@ -327,19 +346,19 @@ e) 5 = 5
 f) nothing
 g) nothing
 h) nothing
-i) 
+i)  
 
 answer:
 
-a)
-b)
-c)
-d)
-e)
-f)
-g)
-h)
-i)
+a) 2
+b) 4
+c) x=
+d) x = 2
+e) 5 = 5
+f) Nothing
+g) Nothing
+h) Nothing
+i) Nothing
 
 ===========================2.13
 
@@ -352,7 +371,10 @@ d) cout << "a = 5";
 a) cin >> b >> c >> d >> e >> f;
 
 answer:
-
+a) the given statement replaced the values of b, c, e, d, f.
+b) the given statement replaced the value of p
+c) the given statement does not replace the values, just prints out a string
+d) the given statement does not replace the values, just prints out a string
 
 ===========================2.14
 
@@ -367,6 +389,13 @@ f) y = a * x * ( x * x + 7 );
 e) y = a * ( x * x * x ) + 7;
 
 answer:
+
+a) correct statement
+b) incorrect statement
+c) incorrect statement
+d) correct statement
+e) correct statement
+f) incorrect statement
 
 ===========================2.15
 
@@ -409,8 +438,38 @@ x = ( 27 * 12 );
 x = 414;
 
 answer:
+a)
+x = 7 + 3 * 6 / 2 - 1;
+x = 7 + 18 / 2 - 1;
+x = 7 + 9 - 1;
+x = 16 - 1;
+x = 15
 
+b)
+x = 2 % 2 + 2 * 2 - 2 / 2;
+x = 0 + 2 * 2 - 2 / 2;
+x = 0 + 4 - 2 / 2;
+x = 0 + 4 - 1;
+x = 4 - 1;
+x = 3
 
+c)
+x = (3 * 9 (3 + (9 * 3/(3))));
+x = (3 * 9 * (3 + (9 * 3/3)));
+x = (3 * 9 * (3 + (27 / 3)));
+x = (3 * 9 * (3 + (9)));
+x = (3 * 9 * (3 + 9));
+x = (3 * 9 * (12));
+x = (3 * 9 * 12);
+x = (27 * 12);
+x = ()
+x = 
+   1
+   27
+   12
+   54
+  27x
+x=324
 ===========================2.16
 
 (Arithmetic) Write a program that asks the user to enter two numbers, obtains the two numbers from the user and prints the sum, product, difference, and quotient of the two numbers.
@@ -557,6 +616,7 @@ val1: -1000 is larger.
 
 
 answer:
+
 
 ===========================2.19
 

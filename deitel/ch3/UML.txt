@@ -1,0 +1,39 @@
+-----------------------------------------
+|				Account					| <-- Top compartment
+-----------------------------------------
+| - name : string 						| <-- Middle compartment
+-----------------------------------------
+| + setName(accountName : string)		|
+| + getName() : string					| <-- Bottom compartment
+-----------------------------------------
+
+-----------------------
+
+Top compartment:
+class name
+
+-----------------------
+
+Middle compartment:
+class's attribute name, corresponds to the data member of the same name, data member name is private, a minus sign (-) access modifier before the attribute name, following the arribute name are a colon and the attribute type, in this case string
+
+-----------------------
+
+Bottom compartment:
+class's operations,
+setName   <-- public member function
+getName   <-- public member function
+
+-----------------------
+
+Return Types:
+indicates a return type by placing a colon and the teturn type after parentheses after the operation name.
+
+-----------------------
+
+Parameters:
+lists the parameter name, followed by a colon and the parameter type in the parentheses after the operation name.
+Account member function setName has a string parameter called accountName, accountName : string
+Operation getName has no parameters, therefore empty parentheses following the operation name.
+
+-----------------------
