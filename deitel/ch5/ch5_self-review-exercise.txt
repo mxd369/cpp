@@ -1,0 +1,231 @@
+Control Statements Part 2: Logical Operators
+===========================Self-review Exercises
+===========================5.1
+Fill in tht eblanks in each of the following statements:
+a) Typically, _____ statements are used for counter-controlled iteration and _____ statements for setinel-controlled iteration.
+
+guess:
+
+answer:
+
+
+b) The do...while statement tests the loop-continuation condition _____ executing the loop's body; therefore the body always executes at least once.
+
+guess:
+
+answer:
+
+c) The _____ statement selects among multiple actions based on the posible values of an integer variable or expression.
+
+guess:
+
+answer:
+
+d) The _____ statement, when executed in an iteration statement, skips the remaining statements in the loop body and proceeds with the enxt iteration of the loop.
+
+guess:
+
+answer:
+
+e) The _____ operator can be used to ensure that two conditions are both true before choosing a certain path of execution.
+
+guess:
+
+answer:
+
+f) If the loop-continuation condition in a for header is initially _____, the program does not execute the for statement's body.
+
+guess:
+
+answer:
+
+===========================5.2
+State whether the following are true or false. If the answer is false, explain why.
+
+a) The default case is required in the switch selection statement.
+
+guess:
+
+answer
+
+
+b) The break statement is required in the default case of a switch selection statement to
+exit the switch properly.
+
+guess:
+
+answer
+
+
+c) The expression ( x > y && a < b ) is true if either the expression x > y is true or the
+expression a < b is true.
+
+guess:
+
+answer
+
+
+d) An expression containing the || operator is true if either or both of its operands are
+true.
+
+guess:
+
+answer
+
+===========================5.3
+Write a C++ statement or a set of C++ statements to accomplish each of the following:
+
+a) Sum the odd integers between 1 and 99 using a for statement. Assume the integer variables
+sum and count have been declared.
+
+b) Print the value 333.546372 in a 15-character field with precisions of 1, 2 and 3. Print each number on the same line. Left-justify each number in its field. What three values print?
+
+c) Calculate the value of 2.5 raised to the power 3 using function pow. Print the result with a precision of 2 in a field width of 10 positions. What prints?
+
+d) Print the integers from 1 to 20 using a while loop and the counter variable x. Assume that the variable x has been declared, but not initialized. Print only 5 integers per line. [Hint: When x % 5 is 0, print a newline character; otherwise, print a tab character.]
+
+
+e) Repeat Exercise 5.3(d) using a for statement.
+
+===========================5.4
+a)
+unsigned int x{1};
+while (x <= 10); {
+	++x;
+}
+
+guess:
+
+answer:
+
+b)
+for (double y{0.1}; y != 1.0; y += .1) {
+	cout << y << endl;
+}
+
+guess:
+
+answer:
+
+c)
+switch ( n ) {
+	case 1:
+		cout << "The number is 1" << endl;
+	case 2:
+		cout << "The number is 2" << endl;
+		break;
+	default:
+		cout << "The number is not 1 or 2" << endl;
+}
+
+guess:
+
+answer:
+
+d)
+The following code should print the values 1 to 10.
+unsigned int n{1};
+while (n < 10) {
+	cout << n++ << endl;
+}
+
+guess:
+
+answer:
+
+===========================Exercises
+===========================5.5
+===========================5.6
+===========================5.7
+===========================5.8
+===========================5.9
+
+(Find the Code Errors) Find the error(s), if any, in each of the following:
+
+a)
+For (unsigned int x{100}, x >= 1, ++x )
+	cout << x << endl;
+}
+
+b)
+The following code should print whether integer value is odd or even:
+
+switch ( value % 2 ) {
+	case 0:
+		cout << "Even integer" << endl;
+	case 1:
+		cout << "Odd integer" << endl;
+}
+
+c)
+The following code should output the odd integers from 19 to 1:
+
+for (unsigned int x{19}; x >= 1; x += 2 ) {
+	cout << x << endl;
+}
+
+d)
+The following code should output the even integers from 2 to 100:
+
+unsigned int counter{2};
+do {
+	cout << counter << endl;
+	counter += 2;
+} While ( counter < 100 );
+
+===========================5.10
+What does the following program do?
+
+1 // Exercise 5.10: Printing.cpp
+2 #include <iostream>
+3 using namespace std;
+4
+5 int main() {
+6 	for ( int i {1}; i <= 10; i++ ) {
+7		for ( int j{1}; j <= 5; j++ ) {
+8			cout << '@';
+9		}
+10
+11		cout << endl;
+12 	}
+13 }
+
+===========================5.11
+(Find the Smallest Integer) Write a program that uses a for statement to find the smallest of several integers. Assume that the first value read specifies the number of values remaining.
+
+
+===========================5.12
+
+(Calculates the Product of Odd Integers) Write a program that calculates the product of the odd integers from 1 to 15.
+
+===========================5.13
+
+(Factorials) The factorial function is used frequently in probability problems. The factorial of a positive integer n (written n! and pronounced "n factorial") is equal to the product of the positive integers from 1 to n. 
+Write a program that uses a for statement to evaluate the factorials of the integers from 1 to 20. Use type long. Display the results in tabular format. What difficulty might prevent you from calculating the factorial of 100?
+
+===========================5.14
+===========================5.15
+===========================5.16
+===========================5.17
+===========================5.18
+===========================5.19
+===========================5.20
+===========================5.21
+===========================5.22
+===========================5.23
+===========================5.24
+===========================5.25
+===========================5.26
+===========================5.27
+===========================5.28
+===========================5.29
+===========================5.30
+===========================5.31
+===========================5.32
+===========================5.33
+===========================5.34
+===========================5.35
+===========================5.36
+===========================Making a difference
+===========================5.37
+===========================5.38

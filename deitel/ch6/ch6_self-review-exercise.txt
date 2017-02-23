@@ -135,12 +135,164 @@ answer:
 
 
 
+===========================6.2
+For the program in Fig. 6.34, state the scope (either function scope, global namespace
+scope, local scope or function-prototype scope) of each of the following elements:
+a) The variable x in main.
+b) The variable y in function cube's definition.
+c) The function cube.
+d) The function main.
+e) The function prototype for cube.
+
+1 // Exercise 6.2: Ex06_02.cpp
+2 #include <iostream>
+3 using namespace std;
+4
+5 int cube( int y ); // function prototype
+6
+7 int main()
+8 {
+9 		int x;
+10
+11 		for ( x = 1; x <= 10; x++ ) // loop 10 times
+12 			cout << cube( x ) << endl; // calculate cube of x and output results
+13 } // end main
+14
+15 // definition of function cube
+16 int cube( int y )
+17 {
+18 		return y * y * y;
+19 } // end function cube
+
+===========================6.3
+Write a program that tests whether the examples of the math library function calls shown
+in Fig. 6.2 actually produce the indicated results.
+
+===========================6.4
+Give the function header for each of the following functions:
+
+a) Function hypotenuse that takes two double-precision, floating-point arguments, side1 and side2, and returns a double-precision, floating-point result.
+
+b) Function smallest that takes three integers, x, y and z, and returns an integer.
+
+c) Function instructions that does not receive any arguments and does not return a value.
+[Note: Such functions are commonly used to display instructions to a user.]
+
+d) Function intToDouble that takes an integer argument, number, and returns a doubleprecision,
+floating-point result.
+
+===========================6.5
+Give the function prototype (without parameter names) for each of the following:
+a) The function described in Exercise 6.4(a).
+b) The function described in Exercise 6.4(b).
+c) The function described in Exercise 6.4(c).
+d) The function described in Exercise 6.4(d).
+
+===========================6.6
+
+Write a declaration for each of the following:
+
+a) Integer count that should be maintained in a register. Initialize count to 0.
+
+b) Double-precision, floating-point variable lastVal that is to retain its value between calls
+to the function in which it’s defined.
+
+===========================6.7
 ===========================
 ===========================
 ===========================
 ===========================
 ===========================
 ===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================
+===========================6.31
+(Greatest Common Divisor) The greatest common divisor (GCD) of two integers is the largest integer that evenly divides each of the numbers. Write a function gcd that returns the greatest common divisor of two integers.
+===========================6.32
+===========================6.33
+===========================6.34
+(Guess-the-Number Game) Write a program that plays the game of “guess the number” as
+follows: Your program chooses the number to be guessed by selecting an integer at random in the range 1 to 1000. The program then displays the following:
+
+I have a number between 1 and 1000.
+Can you guess my number?
+Please type your first guess.
+
+The player then types a first guess. The program responds with one of the following:
+
+1. Excellent! You guessed the number!
+Would you like to play again (y or n)?
+2. Too low. Try again.
+3. Too high. Try again.
+
+If the player’s guess is incorrect, your program should loop until the player finally gets the number right. Your program should keep telling the player Too high or Too low to help the player “zero in” on the correct answer.
+
+===========================6.3
+===========================6.3
+===========================6.37
+
+(Fibonacci Series: Iterative Solution) Write a nonrecursive version of the function fibonacci from Fig. 6.26
+
+===========================6.38
+===========================6.39
+===========================6.40
+===========================6.41
+===========================6.42
+(Distance Between Points) Write function distance that calculates the distance btween two points (x1, y1) and (x2, y2). All numbers and reutnr values should be of type double.
+===========================6.43
+===========================6.44
+===========================6.45
+===========================6.46
+===========================6.47
+===========================6.48
+===========================6.49
+===========================6.5
+===========================6.5
+===========================6.5
+===========================6.5
+===========================6.5
+===========================6.5
+===========================6.5
+===========================6.5
+===========================6.5
+===========================6.5
+===========================6.60
+===========================6.61
 
 
 
