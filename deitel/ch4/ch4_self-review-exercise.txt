@@ -7,20 +7,20 @@ a) All programs can be written in terms of three types of control structures: __
 
 guess:
 
-answer
+answer:
 
 b) The _____ selection statement is used to execute one action when a condition is true or a different action when that condition is false.
 
 guess:
 
-answer
+answer:
 
 
 c) Repeating a set of instructions a specific number of times is called _____ iteration.
 
 guess:
 
-answer
+answer:
 
 
 d) When it isn’t known in advance how many times a set of statements will be repeated,
@@ -28,23 +28,178 @@ a(n) _____ value can be used to terminate the repetition.
 
 guess:
 
-answer
+answer:
 
 ===========================4.2
 Write four different C++ statements that each add 1 to integer variable x.
+
+
+guess:
+
+answer:
+
+
 ===========================4.3
+Write C++ statements to accomplish each of the following:
+
+a) In one statement, assign the sum of the current value of x and y to z and postincrement the value of x.
+
+guess:
+
+answer:
+
+b) Determine whether the value of the variable count is greater than 10. If it is, print "Count is greater than 10."
+
+guess:
+
+answer:
+
+c) Predecrement the variable x by 1, then subtract it from the variable total.
+
+guess:
+
+answer:
+
+d) Calculate the remainder after q is divided by divisor and assign the result to q. Write this statement two different ways.
+
+guess:
+
+answer:
+
 ===========================4.4
+Write C++ statements to accomplish each of the following tasks.
+
+a) Declare variables sum and x to be of type int.
+
+guess:
+
+answer:
+
+b) Set variable x to 1.
+
+guess:
+
+answer:
+
+c) Set variable sum to 0.
+
+guess:
+
+answer:
+
+d) Add variable x to variable sum and assign the result to variable sum.
+
+guess:
+
+answer:
+
+e) Print "The sum is: " followed by the value of variable sum.
+
+guess:
+
+answer:
+
 ===========================4.5
+Combine the statements that you wrote in Exercise 4.4 into a program that calculates and prints the sum of the integers from 1 to 10. Use the while statement to loop through the calculation and increment statements. The loop should terminate when the value of x becomes 11.
+
 ===========================4.6
+State the values of each of these int variables after the calculation is performed. Assume that, when each statement begins executing, all variables have the integer value 5.
+
+a) product *= x++;
+b) quotient /= ++x;
+
 ===========================4.7
+Write single C++ statements or portions of statements that do the following:
+a) Input integer variable x with cin and >>.
+b) Input integer variable y with cin and >>.
+c) Set integer variable i to 1.
+d) Set integer variable power to 1.
+e) Multiply variable power by x and assign the result to power.
+f) Preincrement variable i by 1.
+g) Determine whether i is less than or equal to y.
+h) Output integer variable power with cout and <<.
 ===========================4.8
+
+Write a C++ program that uses the statements in Exercise 4.7 to calculate x raised to the y power. The program should have a while repetition statement.
+
 ===========================4.9
+
+Identify and correct the errors in each of the following:
+a)
+while ( c <= 5 ) {
+	product *= c;
+	++c;
+
+b)
+cin << value;
+
+c)
+if ( gender == 1 ){
+	cout << "Woman" << endl;
+else; {
+	cout << "Man" << endl;
+}
 ===========================4.10
+
+What’s wrong with the following while iteration statement?
+
+	while ( z >= 0 )
+		sum += z;
 ===========================Exercises
 ===========================4.11
 ===========================4.12
 ===========================4.13
+(Gas Mileage) Drivers are concerned with the mileage obtained by their automobiles. One driver has kept track of several trips by recording miles driven and gallons used for each trip. Develop a C++ program that uses a while statement to input the miles driven and gallons used for each trip. The program should calculate and display the miles per gallon obtained for each trip and print the combined miles per gallon obtained for all tankfuls up to this point.
+
+
+Enter miles driven (-1 to quit): 287
+Enter gallons used: 13
+MPG this trip: 22.076923
+Total MPG: 22.076923
+Enter miles driven (-1 to quit): 200
+Enter gallons used: 10
+MPG this trip: 20.000000
+Total MPG: 21.173913
+Enter the miles driven (-1 to quit): 120
+Enter gallons used: 5
+MPG this trip: 24.000000
+Total MPG: 21.678571
+Enter the miles used (-1 to quit): -1
+
+
 ===========================4.14
+(Credit Limits) Develop a C++ program that will determine whether a department-store customer has exceeded the credit limit on a charge account. For each customer, the following facts are available:
+
+a) Account number (an integer)
+
+b) Balance at the beginning of the month
+
+c) Total of all items charged by this customer this month
+
+d) Total of all credits applied to this customer's account this month
+
+e) Allowed credit limit
+
+The program should use a while statement to input each of these facts, calculate the new balance (= beginning balance + charges – credits) and determine whether the new balance exceeds the customer’s credit limit. For those customers whose credit limit is exceeded, the program should display the customer’s account number, credit limit, new balance and the message “Credit Limit Exceeded.”
+
+Enter account number (or -1 to quit): 100
+Enter beginning balance: 5394.78
+Enter total charges: 1000.00
+Enter total credits: 500.00
+Enter credit limit: 5500.00
+New balance is 5894.78
+Account: 100
+Credit limit: 5500.00
+Balance: 5894.78
+Credit Limit Exceeded.
+Enter Account Number (or -1 to quit): 200
+Enter beginning balance: 1000.00
+Enter total charges: 123.45
+Enter total credits: 321.00
+Enter credit limit: 1500.00
+New balance is 802.45
+Enter Account Number (or -1 to quit): -1
+
 ===========================4.15
 ===========================4.16
 ===========================4.17

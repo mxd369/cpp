@@ -1,4 +1,4 @@
-all: AccountTest ch3_fig_3_1_AccountTest ch3_exercise_9_AccountTest InvoiceTestSolution InvoiceTest EmployeeTestSolution
+all: AccountTest ch3_fig_3_1_AccountTest ch3_exercise_9_AccountTest InvoiceTestSolution InvoiceTest EmployeeTestSolution DateTestSolution
 
 AccountTest: AccountTest.o
 	g++ -o AccountTest AccountTest.o
@@ -42,6 +42,11 @@ EmployeeTestSolution: EmployeeTestSolution.o
 EmployeeTestSolution.o: EmployeeTestSolution.cpp
 	g++ -Wall -std=c++14 -g -O0 -pedantic-errors -c EmployeeTestSolution.cpp
 
+DateTestSolution: DateTestSolution.o
+	g++ -o DateTestSolution DateTestSolution.o
+
+DateTestSolution.o: DateTestSolution.cpp
+	g++ -Wall -std=c++14 -g -O0 -pedantic-errors -c DateTestSolution.cpp
 
 clean:
 	rm -f AccountTest
@@ -56,3 +61,5 @@ clean:
 	rm -f InvoiceTest.o
 	rm -f EmployeeTestSolution
 	rm -f EmployeeTestSolution.o
+	rm -f DateTestSolution
+	rm -f DateTestSolution.o
