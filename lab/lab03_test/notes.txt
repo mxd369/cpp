@@ -1,3 +1,0 @@
-exclusive.cpp
-
-I can nest a for loop to check if the number repeated
