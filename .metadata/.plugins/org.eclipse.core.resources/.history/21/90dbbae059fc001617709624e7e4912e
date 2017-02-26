@@ -1,0 +1,17 @@
+/*
+ * Calculator.h
+ *
+ *  Created on: Feb 26, 2017
+ *      Author: michaeldang
+ */
+
+#ifndef CALCULATOR_H_
+#define CALCULATOR_H_
+
+class Calculator {
+public:
+	Calculator();
+	virtual ~Calculator();
+};
+
+#endif /* CALCULATOR_H_ */

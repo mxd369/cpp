@@ -1,0 +1,9 @@
+add	10
+add	7
+multiply	31
+subtract	42
+divide by	7
+add	3
+subtract	1
+clear	
+exit

@@ -1,0 +1,20 @@
+14:31:25 **** Build of configuration Debug for project Calculator ****
+make all 
+Building file: ../Calculator.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Calculator.d" -MT"Calculator.o" -o "Calculator.o" "../Calculator.cpp"
+Finished building: ../Calculator.cpp
+ 
+Building file: ../driver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"driver.d" -MT"driver.o" -o "driver.o" "../driver.cpp"
+Finished building: ../driver.cpp
+ 
+Building target: Calculator
+Invoking: MacOS X C++ Linker
+g++  -o "Calculator"  ./Calculator.o ./driver.o   
+Finished building target: Calculator
+ 
+14:35:47 **** Incremental Build of configuration Debug for project Calculator ****
+make all 
+make: Nothing to be done for `all'.
