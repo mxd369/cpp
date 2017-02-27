@@ -1,0 +1,72 @@
+/*
+ * p1.cpp
+ *
+ *  Created on: Feb 27, 2017
+ *      Author: michaeldang
+ */
+
+
+//
+//  main.cpp
+//  matrix
+//
+//  Created by MXD on 2/26/17.
+//  Copyright © 2017 MXD. All rights reserved.
+//
+
+#include <iostream>
+#include "Matrix.h"
+
+// global
+
+//void display(int marks[5]);
+
+int main(int argc, const char * argv[]) {
+    // insert code here...
+    /*
+    // test0
+    std::cout << "Hello, World!\n";
+
+    int age[] = {1,1,1,1,1,1,1,1,1,1};//100 element array of type int
+
+    // std::cout << ::age[0];
+    std::cout << age[0] << std::endl;
+
+    int sum{0};
+
+    for (int i = 0; i < sizeof(age)/sizeof(age[0]); i++)
+    {
+        sum += age[i];
+    }
+
+    std::cout << sum << std::endl;
+    // test0
+    */
+
+    /*
+    // test1
+    int marks[5] = {88, 76, 90, 61, 69};
+    display(marks);
+    // test1
+    */
+
+
+
+    return 0;
+}
+
+
+/*
+// test2
+void display(int m[5])
+{
+    std::cout << "Displaying marks: "<< std::endl;
+
+    for (int i = 0; i < 5; ++i)
+    {
+        std::cout << "Student "<< i + 1 <<": "<< m[i] << std::endl;
+    }
+}
+// test2
+*/
+
