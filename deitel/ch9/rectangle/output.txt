@@ -1,0 +1,25 @@
+$ ./main
+
+
+	A program that works with Rectangle class.
+
+Initial values of the rectangle were: 
+
+Length = 1
+
+Width = 1
+
+	Modify the rectangle dimensions.
+
+	Enter length: 10
+
+	Enter width: 5
+
+
+	After modifying the values, the dimensions were : 
+	Length = 10
+	Width = 10
+
+	The area of the rectangle is 50
+
+	The perimeter of the rectangle is 30

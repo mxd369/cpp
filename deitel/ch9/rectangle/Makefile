@@ -5,13 +5,13 @@ LFLAGS = -Wall $(DEBUG)
 
 all: main
 
-main: main.o Rational.o
-	$(CC) $(LFLAGS) -o main main.o Rational.o
+main: main.o Rectangle.o
+	$(CC) $(LFLAGS) -o main main.o Rectangle.o
 
-main.o: main.cpp Rational.h
+main.o: main.cpp Rectangle.h
 	$(CC) $(CFLAGS) main.cpp
 
-Rational.o: main.cpp Rational.h
+Rectangle.o: main.cpp Rectangle.h
 	$(CC) $(CFLAGS) main.cpp
 
 .PHONY: clean
