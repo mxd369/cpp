@@ -1,0 +1,6 @@
+$ g++ -std=c++14 -c read_two_ints_output_sum.cpp
+$ g++ -o read_two_ints_output_sum read_two_ints_output_sum.o
+$ ./read_two_ints_output_sum 
+1
+2
+3
