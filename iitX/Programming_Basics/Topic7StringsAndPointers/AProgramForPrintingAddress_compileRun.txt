@@ -1,0 +1,6 @@
+$ g++ -c AProgramForPrintingAddress.cpp 
+$ g++ -o AProgramForPrintingAddress AProgramForPrintingAddress.o
+$ ./AProgramForPrintingAddress 
+Address of a is: 0x7fff5117f338
+Address of b is: 0x7fff5117f334
+Address of c is: Q?
