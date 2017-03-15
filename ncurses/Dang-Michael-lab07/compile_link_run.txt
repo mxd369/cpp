@@ -1,18 +1,45 @@
+==============================first.cpp
+
 g++ first.cpp -lncurses
 ./a.out
-
 
 $ g++ -Wall -std=c++14 -g -O0 -pedantic-errors -lncurses -c first.cpp
 $ g++ -Wall -g -lncurses -o first first.o
 
+==============================second.cpp
 
 $ vi second.cpp
 $ g++ -Wall -std=c++14 -g -O0 -pedantic-errors -lncurses -c second.c$ g++ -Wall -g -lncurses -o second second.o
 $ ./second
 
-
-
+==============================third.cpp
+==============================fourth.cpp
+==============================fifth.cpp
+==============================sixth.cpp
+==============================nt-1-MovingCursors.cpp
 
 $ g++ -Wall -std=c++14 -g -O0 -pedantic-errors -lncurses -c nt-1-MovingCursors.cpp
 $ g++ -Wall -g -lncurses -o nt-1-MovingCursors nt-1-MovingCursors.o
 $ ./nt-1-MovingCursors 
+
+==============================nt-2-Windows-basics.cpp
+
+$ g++ -Wall -std=c++14 -g -O0 -pedantic-errors -lncurses -c nt-2-Windows-basics.cpp
+$ g++ -Wall -g -lncurses -o nt-2-Windows-basics nt-2-Windows-basics.o
+$ ./nt-2-Windows-basics
+
+==============================.cpp
+
+
+
+
+==============================.cpp
+==============================.cpp
+==============================.cpp
+==============================nt-7-BasicMenuSystem.cpp
+
+g++ -Wall -std=c++14 -g -O0 -pedantic-errors -lncurses -c nt-7-BasicMenuSystem.cpp
+g++ -Wall -g -lncurses -o nt-7-BasicMenuSystem nt-7-BasicMenuSystem.o
+./nt-7-BasicMenuSystem
+
+==============================.cpp
