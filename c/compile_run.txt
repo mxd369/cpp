@@ -1,0 +1,11 @@
+(~/cla): make example
+
+clang -ggdb -std=c99 -Wall -Werror example.c -lcrypt -lcs50 -lm -o example
+
+(~/cla): ./example argument1 argument2
+
+argv[0] is: ./example
+argv[1] is: argument1
+argv[2] is: argument2
+
+(~/cla): 

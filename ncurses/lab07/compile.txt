@@ -1,0 +1,15 @@
+g++ -Wall -std=c++14 -g -O0 -pedantic-errors -lncurses -c anonymous_sol.cpp
+
+g++ -Wall -g -lncurses -o anonymous_sol anonymous_sol.o
+
+./anonymous_sol
+
+
+
+
+
+g++ -Wall -std=c++14 -g -O0 -pedantic-errors -lncurses -c anonymous_sol2.cpp
+
+g++ -Wall -g -lncurses -o anonymous_sol2 anonymous_sol2.o
+
+./anonymous_sol2

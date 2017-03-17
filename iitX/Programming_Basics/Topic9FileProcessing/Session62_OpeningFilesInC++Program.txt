@@ -1,0 +1,67 @@
+// file pointer
+
+/*
+ostensibly: adverb | apparently or purportedly, but perhaps not actually. "portrayed as a blue-collar type, ostensibly a carpenter" synonyms: apparently, seemingly, on the face of it, to all intents and purposes, outwardly, superficially, allegedly, supposedly, purportedly.
+*/
+
+/*
+The first thing that we need to do in a program is to establish
+an association with an internal file name and a corresponding external name.
+
+There are a whole lot of library functions provided in C++.
+These actually come from a library called "cstdio".
+*/
+
+FILE * infile;  // arbitrary name of my choice
+FILE * outfile; // arbitrary name of my choice
+
+// -----------------------
+
+// OPEN, R
+
+fopen(<filename>, <mode>) //mode:input mode, output mode
+
+fopen("participants.txt", "r"); // r= readmode
+
+infile = fopen("partipants.txt");
+
+if(infile == NULL) { // not able to open the file
+	// output the message
+	cout << "file does not exist" << endl;
+	return -1;
+}
+
+
+/*
+This function will return a pointer and that pointer we wish to associate with our own internal file pointer called "infile" which was declared here. There are two possibilities. One, of course the program with the help of the operating system
+is able to locate this file and open it for reading operations but there is a possibility that the file does not exist. May be we have misspell the name in which case what will be created by "fopen" as a pointer? What pointer will get assigned to "infile" ? The simple answer by C++ is in case the file can be correctly opened a pointer a valid pointer is associated to "infile". In case "fopen" is unable to locate the file or for some reason not able to open it for your operations it will return a null pointer
+that means "infile" will be a null pointer. We can actually do that testing by saying if, (infile = = NULL) that means I was not able to open the file. I can simply output a message for example I can say "file does not exist" and give this message on my terminal and then return -1. This is the typical way in which the opening of a file is handled. You can easily guess that in exactly the same fashion an "fclose" could be handled when
+you close the file. That is when you are finished reading or writing from that file. If you want to open a file for writing such as "outfile" in which you want to write something out here
+you will use exactly similar "fopen" statement. The only difference will be that in that case you will not use "r" as the mode but you will use "w" as the mode.
+*/
+
+
+// OUT, W       'W');
+// how an output file can be opened
+
+FILE * outfile;
+
+outfile = fopen("statistics.txt", "w");
+
+if (outfile == NULL) {
+  ....
+  cout << "Difficulties.." << endl;
+  return -1;
+}
+
+
+/* 
+Ordinarily, you should succeed in creating such a file in which case the program will return a valid pointer for "outfile". But it is possible for example that you do not have permission to open such a file in the subdirectory in which your current execution is going on. Or there may be no space on the disk. For any reason if the operating system is not able to open this file that means it is not able to create this file it will return again
+a null pointer which you can check. So once again you can have statements like "if (outfile= = NULL)" then you can create an output message and you can say "return -1" for example to indicate that the operation of opening an "outfile" has not succeeded. With this, we have now understood how we can associate external files with internal file pointers.
+*/
+
+
+/*
+To recapitulate, we use the "fopen" statement to associate an actual file with our program pointer and we indicate the mode in which the file is to be opened which could be either "r" for reading and "w" for writing. There are additional indicators that can be given in this mode. All of these are described in a separate handout which is included in the course material.
+Thank you.
+*/

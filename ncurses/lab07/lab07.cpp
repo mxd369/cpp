@@ -21,10 +21,9 @@ int main(const int argc, const char * argv [])
 #include <fstream>
 #include <iostream>
 #include <string>
-
 #include <ncurses.h>
 
-/*
+
 class ncursewrap
 {
     public:
@@ -32,14 +31,14 @@ class ncursewrap
     ~ncursewrap()  { endwin();     }
     void refresh() { ::refresh();  }
 };
-*/
+
 
 int main(const int argc, const char * argv [])
 {
     std::ifstream inputfile("filename.txt");
     std::string line;
 
-    //ncursewrap nc;
+    ncursewrap nc;
 
     if(inputfile.is_open())
     {
@@ -49,10 +48,10 @@ int main(const int argc, const char * argv [])
         }
     } else
     {
-        printw("didnt find file `file.txt`\n");
+        printw("didnt find file `filename.txt`\n");
     }
 
-    //nc.refresh();
-	refresh();
+    nc.refresh();
+    refresh();
     std::cin.ignore();
 }
