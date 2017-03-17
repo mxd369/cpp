@@ -48,7 +48,7 @@ int main(const int argc, const char * argv [])
         }
     } else
     {
-        printw("didnt find file `filename.txt`\n");
+        printw("err no file called:'filename.txt'\n");
     }
 
     nc.refresh();

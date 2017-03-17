@@ -1,0 +1,86 @@
+// keypad
+gcc keypad.c -lncurses -o keypad
+
+
+// get the window size
+gcc getmaxyx.c -lncurses -o getmaxyx
+
+
+// how to set the size of the screen
+
+
+// how to scroll
+
+
+// how to exit
+
+
+// how to read
+
+
+// big black screen
+gcc mvwin.c -lncurses -o mvwin
+
+
+// explore newpad
+gcc newpad.c -lncurses -o newpad
+
+
+// pnoutrefresh
+gcc pnoutrefresh.c -lncurses -o pnoutrefresh
+
+
+// just prints out a shit load of numbers in columns endlessly
+scrollok.c
+gcc scrollok.c -lncurses -o scrollok
+
+
+// something about a pad
+test.c
+gcc test.c -lncurses -o test
+
+
+
+typeahead
+gcc typeahead.c -lncurses -o typeahead
+
+
+// border.c
+gcc border.c -lncurses -o border
+
+
+// box.c
+gcc box.c -lncurses -o box
+
+
+// paddy2
+gcc paddy2.c -lncurses -o paddy2
+
+
+
+// scroll.c
+gcc scroll.c -lncurses -o scroll
+
+
+
+// subpad.c
+gcc subpad.c -lncurses -o subpad
+
+
+// scrup2.c
+gcc scrup2.c -lncurses -o scrup2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
