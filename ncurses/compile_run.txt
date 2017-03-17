@@ -1,4 +1,0 @@
-$ g++ -Wall -std=c++14 -g -O0 -pedantic-errors -lncurses -c helloworldncurses.cpp
-clang: warning: -lncurses: 'linker' input unused
-$ g++ -Wall -g -lncurses -o helloworldncurses helloworldncurses.o
-$ ./helloworldncurses 
