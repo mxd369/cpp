@@ -1,0 +1,53 @@
+-------------------------fstream
+
+p.239 10. INPUT and OUTPUT Streams
+
+
+cout << "Please enter input file name: ";
+
+string iname;
+
+cin >> iname;
+
+ifstream ist
+{
+	iname
+};
+
+// The test of !ist checks if the file was properly opened.
+if (!st) error("can't open input file",iname);
+
+Data source:
+input device -> device driver -> input library -> our program -> 
+Data destination:
+-> output library -> device driver -> output device
+
+
+standard library
+	iostream library
+		standard istream = cin
+		standard ostream = cout
+
+ostream:
+	turns values of various types into character sequences
+	sends those characters "somewhere" (console, file, main memory, another comp)
+
+values of various types		 character sequences
+'c'      \
+(12,34)  -> ostream          "Somewhere"
+123      /          \        /
+                     > Buffer
+
+
+Buffer = data structure that the ostrea, uses internally to store the data you give it while communicating with the os.
+
+
+istream:
+	turns character sequences into values of various types
+	gets those characters from somewhere (console, file, main memory, another comp)
+
+values of various types		 character sequences
+'c'      \
+(12,34)  <- ostream <        "Somewhere"
+123      /           \      /
+                      Buffer
